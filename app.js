@@ -1,3 +1,111 @@
+// --- Buckwalter Transliteration Converter ---
+const BuckwalterConverter = {
+  // Buckwalter ASCII -> Arabic Unicode
+  charMap: {
+    "'": "\u0621", ">": "\u0623", "&": "\u0624", "<": "\u0625", "}": "\u0626",
+    "A": "\u0627", "b": "\u0628", "p": "\u0629", "t": "\u062A", "v": "\u062B",
+    "j": "\u062C", "H": "\u062D", "x": "\u062E", "d": "\u062F", "*": "\u0630",
+    "r": "\u0631", "z": "\u0632", "s": "\u0633", "$": "\u0634", "S": "\u0635",
+    "D": "\u0636", "T": "\u0637", "Z": "\u0638", "E": "\u0639", "g": "\u063A",
+    "_": "\u0640", "f": "\u0641", "q": "\u0642", "k": "\u0643", "l": "\u0644",
+    "m": "\u0645", "n": "\u0646", "h": "\u0647", "w": "\u0648", "Y": "\u0649",
+    "y": "\u064A", "F": "\u064B", "N": "\u064C", "K": "\u064D", "a": "\u064E",
+    "u": "\u064F", "i": "\u0650", "~": "\u0651", "o": "\u0652", "^": "\u0653",
+    "#": "\u0654", "`": "\u0670", "{": "\u0671", ":": "\u06DC", "@": "\u06DF",
+    "\"": "\u06E0", "[": "\u06E2", ";": "\u06E3", ",": "\u06E5", ".": "\u06E6",
+    "!": "\u06E8", "-": "\u06EA", "+": "\u06EB", "%": "\u06EC", "]": "\u06ED"
+  },
+  
+  // Buckwalter ASCII -> Readable Phonetics
+  phoneticMap: {
+    "'": "’", ">": "a", "&": "u", "<": "i", "}": "i",
+    "A": "ā", "b": "b", "p": "h", "t": "t", "v": "th",
+    "j": "j", "H": "ḥ", "x": "kh", "d": "d", "*": "dh",
+    "r": "r", "z": "z", "s": "s", "$": "sh", "S": "ṣ",
+    "D": "ḍ", "T": "ṭ", "Z": "ẓ", "E": "‘", "g": "gh",
+    "f": "f", "q": "q", "k": "k", "l": "l", "m": "m",
+    "n": "n", "h": "h", "w": "w", "Y": "ā", "y": "y",
+    "a": "a", "u": "u", "i": "i", "o": "", "`": "ā",
+    "{": "a", "^": "", "#": ""
+  },
+
+  toArabic(buck) {
+    if (!buck) return "";
+    let result = "";
+    for (let i = 0; i < buck.length; i++) {
+      const c = buck[i];
+      result += this.charMap[c] || c;
+    }
+    return result;
+  },
+
+  toPhonetic(buck) {
+    if (!buck) return "";
+    
+    // Check if it's already converted to friendly phonetic (no Buckwalter characters present)
+    if (!/[<>{}~&*$E#`^]/.test(buck) && !buck.includes('ll~ah') && buck.toLowerCase() === buck) {
+      return buck;
+    }
+
+    let clean = buck;
+    
+    // Merge vowel indicators and long vowels
+    clean = clean.replace(/<i/g, "i");
+    clean = clean.replace(/>a/g, "a");
+    clean = clean.replace(/>u/g, "u");
+    clean = clean.replace(/iY/g, "ī");
+    clean = clean.replace(/iy/g, "ī");
+    clean = clean.replace(/uw/g, "ū");
+    clean = clean.replace(/uW/g, "ū");
+    clean = clean.replace(/aY`/g, "ā");
+    clean = clean.replace(/aY/g, "ā");
+    clean = clean.replace(/`Y/g, "ā");
+
+    let result = [];
+    for (let i = 0; i < clean.length; i++) {
+      const c = clean[i];
+      
+      // Handle Shadda (double consonant)
+      if (c === "~") {
+        if (result.length > 0) {
+          const lastChar = result[result.length - 1];
+          if (lastChar.length > 1) {
+            // Digraph: double first letter (e.g. "th" -> "tth", "sh" -> "ssh")
+            result[result.length - 1] = lastChar[0] + lastChar;
+          } else {
+            result.push(lastChar);
+          }
+        }
+        continue;
+      }
+      
+      const mapped = this.phoneticMap[c] !== undefined ? this.phoneticMap[c] : c;
+      result.push(mapped);
+    }
+    
+    let phonetic = result.join("");
+    
+    // Post-processing corrections
+    phonetic = phonetic.replace(/allāh/gi, "Allah");
+    phonetic = phonetic.replace(/’l~/g, "l-");
+    phonetic = phonetic.replace(/’/g, ""); // strip final hamza for cleaner presentation if it stands alone
+    phonetic = phonetic.replace(/aa/g, "a");
+    phonetic = phonetic.replace(/ii/g, "ī");
+    phonetic = phonetic.replace(/uu/g, "ū");
+    
+    // Capitalize first letter (but skip Ain)
+    if (phonetic.length > 0) {
+      if (phonetic.startsWith("‘") && phonetic.length > 1) {
+        phonetic = "‘" + phonetic[1].toUpperCase() + phonetic.substring(2);
+      } else {
+        phonetic = phonetic[0].toUpperCase() + phonetic.substring(1);
+      }
+    }
+    
+    return phonetic;
+  }
+};
+
 // --- DOM Elements ---
 const flashcardContainer = document.getElementById('flashcard-container');
 const flashcard = document.getElementById('flashcard');
@@ -261,10 +369,10 @@ function displayWord(index) {
   setTimeout(() => {
     // Populate elements
     arabicWord.textContent = currentWord.arabic;
-    wordTransliteration.textContent = currentWord.transliteration;
+    wordTransliteration.textContent = BuckwalterConverter.toPhonetic(currentWord.transliteration);
     
     arabicWordMini.textContent = currentWord.arabic;
-    wordTransliterationMini.textContent = currentWord.transliteration;
+    wordTransliterationMini.textContent = BuckwalterConverter.toPhonetic(currentWord.transliteration);
     wordMeaning.textContent = currentWord.meaning;
     
     // Set Study Corpus Link
@@ -422,10 +530,15 @@ function setupEventListeners() {
   // Card click flips the card
   flashcard.addEventListener('click', toggleCardFlip);
   
-  // Stop propagation on corpus study link so clicking it does not flip the card
+  // Stop propagation and prevent default page reset on corpus study link click
   if (corpusLink) {
     corpusLink.addEventListener('click', (e) => {
+      e.preventDefault();
       e.stopPropagation();
+      const url = corpusLink.href;
+      if (url && url !== '#' && !url.endsWith('#')) {
+        window.open(url, '_blank', 'noopener,noreferrer');
+      }
     });
   }
   
