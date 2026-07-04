@@ -587,10 +587,10 @@ body.desktop-device .btn-secondary:hover {
 }
 
 .meaning-text {
-  font-size: 2.5rem; /* Scaled up further for primary focus */
+  font-size: 1.45rem; /* Decreased to fit combined comma-separated meanings list comfortably */
   font-weight: 600;
   color: var(--text-primary);
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
 .card-footer {
@@ -926,7 +926,7 @@ body.desktop-device .study-link:hover {
   }
 
   .meaning-text {
-    font-size: 1.7rem;
+    font-size: 1.15rem;
   }
 
   .controls-deck {
