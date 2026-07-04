@@ -403,7 +403,7 @@ body.desktop-device .btn-secondary:hover {
 .flashcard-container {
   width: 100%;
   max-width: 520px;
-  height: 420px;
+  height: 440px;
   perspective: 1200px;
 }
 
@@ -546,7 +546,7 @@ body.desktop-device .btn-secondary:hover {
 
 .arabic-text {
   font-family: var(--font-arabic);
-  font-size: 4.8rem;
+  font-size: 5.6rem; /* Scaled up for majestic presence */
   font-weight: 700;
   line-height: 1.1;
   color: var(--text-primary);
@@ -557,20 +557,20 @@ body.desktop-device .btn-secondary:hover {
 /* Arabic text back face layout */
 .arabic-mini {
   font-family: var(--font-arabic);
-  font-size: 2.2rem;
+  font-size: 3.3rem; /* Scaled up for extremely high readability */
   font-weight: 700;
   color: var(--text-secondary);
 }
 
 .transliteration {
-  font-size: 1.25rem;
+  font-size: 1.75rem; /* Scaled up further */
   color: var(--accent-blue);
   font-weight: 500;
   letter-spacing: 0.5px;
 }
 
 .transliteration-mini {
-  font-size: 0.95rem;
+  font-size: 1.35rem; /* Scaled up further */
   color: var(--text-muted);
 }
 
@@ -587,7 +587,7 @@ body.desktop-device .btn-secondary:hover {
 }
 
 .meaning-text {
-  font-size: 1.8rem;
+  font-size: 2.5rem; /* Scaled up further for primary focus */
   font-weight: 600;
   color: var(--text-primary);
   line-height: 1.3;
@@ -792,7 +792,7 @@ body.desktop-device .reference-link:hover {
 
 .context-title {
   display: block;
-  font-size: 0.7rem;
+  font-size: 0.85rem; /* Scaled up further */
   color: var(--text-muted);
   font-weight: 700;
   text-transform: uppercase;
@@ -812,9 +812,9 @@ body.desktop-device .reference-link:hover {
 
 /* Glassmorphic Capsule Chips */
 .context-chip {
-  font-size: 0.75rem;
+  font-size: 0.9rem; /* Scaled up further */
   font-weight: 500;
-  padding: 4px 10px;
+  padding: 5px 12px;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
@@ -892,11 +892,11 @@ body.desktop-device .study-link:hover {
   }
   
   .flashcard-container {
-    height: 390px;
+    height: 440px; /* Increased to support scaled fonts on tablet */
   }
 
   .arabic-text {
-    font-size: 4rem;
+    font-size: 4.8rem;
   }
 }
 
@@ -918,15 +918,15 @@ body.desktop-device .study-link:hover {
   }
 
   .flashcard-container {
-    height: 360px;
+    height: 390px; /* Increased to support scaled fonts on mobile */
   }
 
   .arabic-text {
-    font-size: 3.4rem;
+    font-size: 4rem;
   }
 
   .meaning-text {
-    font-size: 1.4rem;
+    font-size: 1.7rem;
   }
 
   .controls-deck {
