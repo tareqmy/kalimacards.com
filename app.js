@@ -18,6 +18,7 @@ const yesBtn = document.getElementById('yes-btn');
 const noBtn = document.getElementById('no-btn');
 const resetBtn = document.getElementById('reset-session');
 const themeToggle = document.getElementById('theme-toggle');
+const corpusLink = document.getElementById('corpus-link');
 
 // Selects / Inputs
 const frequencyFilter = document.getElementById('frequency-filter');
@@ -266,6 +267,17 @@ function displayWord(index) {
     wordTransliterationMini.textContent = currentWord.transliteration;
     wordMeaning.textContent = currentWord.meaning;
     
+    // Set Study Corpus Link
+    if (corpusLink) {
+      if (currentWord.url) {
+        corpusLink.href = currentWord.url;
+        corpusLink.parentElement.style.display = 'block';
+      } else {
+        corpusLink.href = '#';
+        corpusLink.parentElement.style.display = 'none';
+      }
+    }
+    
     const formattedFreq = Number(currentWord.frequency).toLocaleString();
     freqTagFront.innerHTML = `<i class="fa-solid fa-wave-square"></i> Freq: ${formattedFreq}`;
     freqTagBack.innerHTML = `<i class="fa-solid fa-wave-square"></i> Freq: ${formattedFreq}`;
@@ -409,6 +421,13 @@ function resetSessionStats() {
 function setupEventListeners() {
   // Card click flips the card
   flashcard.addEventListener('click', toggleCardFlip);
+  
+  // Stop propagation on corpus study link so clicking it does not flip the card
+  if (corpusLink) {
+    corpusLink.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+  }
   
   // Card keyboard trigger (Enter/Space on focus)
   flashcard.addEventListener('keydown', (e) => {
