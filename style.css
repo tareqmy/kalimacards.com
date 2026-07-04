@@ -217,6 +217,7 @@ body.desktop-device .icon-btn:hover {
   grid-template-columns: 320px 1fr;
   gap: 24px;
   flex: 1;
+  align-items: start; /* Aligns columns to the top naturally */
 }
 
 /* --- Card Blur Effect --- */
@@ -230,11 +231,16 @@ body.desktop-device .icon-btn:hover {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
 }
 
-/* --- Controls Panel (Sidebar) --- */
-.controls-panel {
+/* --- Controls Sidebar (Left Column) --- */
+.controls-sidebar {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
+  align-self: start;
+}
+
+.sidebar-card {
+  width: 100%;
 }
 
 .panel-section {
@@ -388,8 +394,9 @@ body.desktop-device .btn-secondary:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 20px;
+  padding-top: 10px; /* Visually aligns with the first sidebar card */
 }
 
 /* 3D Card Flipping Container */
@@ -707,6 +714,29 @@ footer {
   margin-top: auto;
 }
 
+.rules-reference {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.reference-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition-smooth);
+}
+
+body.desktop-device .reference-link:hover {
+  color: var(--accent-blue);
+  transform: translateY(-1px);
+}
+
 /* --- Page Transitions / Dynamic Animation Classes --- */
 .scale-down {
   transform: scale(0.95);
@@ -770,7 +800,7 @@ body.desktop-device .study-link:hover {
     gap: 20px;
   }
   
-  .controls-panel {
+  .controls-sidebar {
     order: 2; /* Sidebar goes down on mobile */
   }
   

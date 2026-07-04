@@ -48,9 +48,10 @@
 
     <!-- Main Content Grid -->
     <main class="main-content">
-      <!-- Sidebar / Filters Panel -->
-      <section class="controls-panel card-blur" aria-label="Controls and Filters">
-        <div class="panel-section">
+      <!-- Sidebar / Controls Area -->
+      <aside class="controls-sidebar" aria-label="Controls and Statistics">
+        <!-- Filters Card -->
+        <div class="sidebar-card card-blur">
           <h3><i class="fa-solid fa-sliders"></i> Filters</h3>
           <div class="control-group">
             <label for="frequency-filter">Word Frequency</label>
@@ -76,7 +77,8 @@
           </div>
         </div>
 
-        <div class="panel-section">
+        <!-- Session Statistics Card -->
+        <div class="sidebar-card card-blur">
           <h3><i class="fa-solid fa-chart-simple"></i> Session Stats</h3>
           <div class="stats-grid">
             <div class="stat-card">
@@ -99,14 +101,13 @@
           <div class="progress-bar-container">
             <div class="progress-bar-fill" id="session-progress" style="width: 0%"></div>
           </div>
+          <div class="action-divider" style="margin-top: 14px; border-top: 1px solid var(--panel-border); padding-top: 14px;">
+            <button id="reset-session" class="btn btn-secondary btn-full">
+              <i class="fa-solid fa-rotate-left"></i> Reset Statistics
+            </button>
+          </div>
         </div>
-
-        <div class="panel-section actions-section">
-          <button id="reset-session" class="btn btn-secondary btn-full">
-            <i class="fa-solid fa-rotate-left"></i> Reset Statistics
-          </button>
-        </div>
-      </section>
+      </aside>
 
       <!-- Flashcard Deck Area -->
       <section class="card-display-area">
@@ -188,6 +189,13 @@
         <div class="keyboard-shortcuts">
           <span>Shortcuts:</span>
           <kbd>Space</kbd> Flip Card &bull; <kbd>&rarr;</kbd> Next &bull; <kbd>&larr;</kbd> Prev &bull; <kbd>1</kbd> Hard &bull; <kbd>2</kbd> Easy
+        </div>
+
+        <!-- Transliteration Rules Reference -->
+        <div class="rules-reference">
+          <a href="https://corpus.quran.com/java/buckwalter.jsp" target="_blank" class="reference-link">
+            <i class="fa-solid fa-circle-info"></i> Transliteration Rules Reference
+          </a>
         </div>
       </section>
     </main>
