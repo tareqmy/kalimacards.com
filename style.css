@@ -403,7 +403,7 @@ body.desktop-device .btn-secondary:hover {
 .flashcard-container {
   width: 100%;
   max-width: 520px;
-  height: 380px;
+  height: 420px;
   perspective: 1200px;
 }
 
@@ -466,10 +466,35 @@ body.desktop-device .btn-secondary:hover {
 .card-back {
   background: var(--card-bg-back);
   transform: rotateY(180deg);
+  padding: 22px; /* More compact padding to maximize internal height */
 }
 
 .card-back::before {
   background: var(--accent-gold-gradient);
+}
+
+/* Ensure card back body doesn't overflow */
+.card-back .card-body {
+  gap: 10px; /* Tighter spacing on the back to fit meanings and links */
+  overflow-y: auto; /* Scroll safety guard if content exceeds boundary */
+  max-height: 100%;
+  width: 100%;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+}
+
+/* Styled scrollbar for card back body */
+.card-back .card-body::-webkit-scrollbar {
+  width: 4px;
+}
+
+.card-back .card-body::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+
+.card-back .card-body::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 /* Card Substructures */
@@ -867,7 +892,7 @@ body.desktop-device .study-link:hover {
   }
   
   .flashcard-container {
-    height: 340px;
+    height: 390px;
   }
 
   .arabic-text {
@@ -893,7 +918,7 @@ body.desktop-device .study-link:hover {
   }
 
   .flashcard-container {
-    height: 300px;
+    height: 360px;
   }
 
   .arabic-text {
