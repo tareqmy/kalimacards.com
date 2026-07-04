@@ -206,7 +206,7 @@ header {
   transition: var(--transition-smooth);
 }
 
-.icon-btn:hover {
+body.desktop-device .icon-btn:hover {
   background: var(--btn-secondary-hover);
   transform: translateY(-2px);
 }
@@ -378,7 +378,7 @@ header {
   border: 1px solid var(--btn-secondary-border);
 }
 
-.btn-secondary:hover {
+body.desktop-device .btn-secondary:hover {
   background: var(--btn-secondary-hover);
   transform: translateY(-1px);
 }
@@ -577,7 +577,7 @@ header {
   gap: 6px;
 }
 
-.card-face:hover .interaction-hint {
+body.desktop-device .card-face:hover .interaction-hint {
   color: var(--text-secondary);
 }
 
@@ -619,7 +619,7 @@ header {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.btn-nav:hover {
+body.desktop-device .btn-nav:hover {
   background: var(--btn-secondary-hover);
   border-color: var(--accent-blue);
   color: var(--accent-blue);
@@ -647,7 +647,7 @@ header {
   flex: 1;
 }
 
-.btn-danger:hover:not(:disabled) {
+body.desktop-device .btn-danger:hover:not(:disabled) {
   background: var(--color-danger);
   color: #FFF;
   transform: translateY(-2px);
@@ -661,7 +661,7 @@ header {
   flex: 1;
 }
 
-.btn-success:hover:not(:disabled) {
+body.desktop-device .btn-success:hover:not(:disabled) {
   background: var(--color-success);
   color: #FFF;
   transform: translateY(-2px);

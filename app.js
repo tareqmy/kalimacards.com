@@ -48,11 +48,37 @@ let stats = {
 
 // --- Initializing App ---
 document.addEventListener('DOMContentLoaded', () => {
+  detectDevice();
   loadTheme();
   loadStats();
   fetchWords();
   setupEventListeners();
 });
+
+// --- Device Detection ---
+function detectDevice() {
+  const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+  const userAgent = navigator.userAgent.toLowerCase();
+  const isMobile = /iphone|ipad|ipod|android|blackberry|mini|windows\sphone|iemobile/i.test(userAgent) || (isTouch && window.innerWidth <= 860);
+
+  if (isMobile) {
+    document.body.classList.add('mobile-device');
+    document.body.classList.remove('desktop-device');
+  } else {
+    document.body.classList.add('desktop-device');
+    document.body.classList.remove('mobile-device');
+  }
+
+  // Update shortcuts visibility/text dynamically based on device capability
+  const shortcutsEl = document.querySelector('.keyboard-shortcuts');
+  if (shortcutsEl) {
+    if (isMobile) {
+      shortcutsEl.innerHTML = '<span class="mobile-tip"><i class="fa-solid fa-fingerprint"></i> Tap card to flip. Rate recall with buttons below.</span>';
+    } else {
+      shortcutsEl.innerHTML = '<span>Shortcuts:</span> <kbd>Space</kbd> Flip &bull; <kbd>&rarr;</kbd> Next &bull; <kbd>&larr;</kbd> Prev &bull; <kbd>1</kbd> Hard &bull; <kbd>2</kbd> Easy';
+    }
+  }
+}
 
 // --- Theme Management ---
 function loadTheme() {
