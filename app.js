@@ -1,0 +1,450 @@
+// --- DOM Elements ---
+const flashcardContainer = document.getElementById('flashcard-container');
+const flashcard = document.getElementById('flashcard');
+const arabicWord = document.getElementById('arabic-word');
+const wordTransliteration = document.getElementById('word-transliteration');
+const arabicWordMini = document.getElementById('arabic-word-mini');
+const wordTransliterationMini = document.getElementById('word-transliteration-mini');
+const wordMeaning = document.getElementById('word-meaning');
+const freqTagFront = document.getElementById('freq-tag-front');
+const freqTagBack = document.getElementById('freq-tag-back');
+const cardIndexFront = document.getElementById('card-index-front');
+const cardIndexBack = document.getElementById('card-index-back');
+
+// Buttons
+const prevBtn = document.getElementById('prev-btn');
+const nextBtn = document.getElementById('next-btn');
+const yesBtn = document.getElementById('yes-btn');
+const noBtn = document.getElementById('no-btn');
+const resetBtn = document.getElementById('reset-session');
+const themeToggle = document.getElementById('theme-toggle');
+
+// Selects / Inputs
+const frequencyFilter = document.getElementById('frequency-filter');
+const learningMode = document.getElementById('learning-mode');
+
+// Stats Counters
+const scorePercentage = document.getElementById('score-percentage');
+const statsSeen = document.getElementById('stats-seen');
+const statsKnown = document.getElementById('stats-known');
+const statsLearning = document.getElementById('stats-learning');
+const statsRemaining = document.getElementById('stats-remaining');
+const sessionProgress = document.getElementById('session-progress');
+
+// --- State Variables ---
+let allWords = [];         // Loaded from JSON
+let filteredWords = [];    // Filtered by frequency
+let historyStack = [];     // Array of indices visited in filteredWords
+let historyPointer = -1;   // Current pointer in historyStack
+let isFlipped = false;     // Is the card currently flipped?
+let currentWord = null;    // Current active word object
+
+// Persistent Stats (saved to localStorage)
+let stats = {
+  known: [],      // Array of word transliterations or unique keys
+  learning: [],   // Array of word transliterations or unique keys
+  seen: []        // Array of word transliterations or unique keys
+};
+
+// --- Initializing App ---
+document.addEventListener('DOMContentLoaded', () => {
+  loadTheme();
+  loadStats();
+  fetchWords();
+  setupEventListeners();
+});
+
+// --- Theme Management ---
+function loadTheme() {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'light') {
+    document.body.classList.add('light-theme');
+    themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+  } else {
+    document.body.classList.remove('light-theme');
+    themeToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
+  }
+}
+
+function toggleTheme() {
+  document.body.classList.toggle('light-theme');
+  const isLight = document.body.classList.contains('light-theme');
+  localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  themeToggle.innerHTML = isLight ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+}
+
+// --- Load and Save Progress Stats ---
+function loadStats() {
+  const savedStats = localStorage.getItem('kalima_stats');
+  if (savedStats) {
+    try {
+      stats = JSON.parse(savedStats);
+      // Ensure all keys exist
+      if (!stats.known) stats.known = [];
+      if (!stats.learning) stats.learning = [];
+      if (!stats.seen) stats.seen = [];
+    } catch (e) {
+      console.error('Failed to parse saved stats, resetting.', e);
+    }
+  }
+}
+
+function saveStats() {
+  localStorage.setItem('kalima_stats', JSON.stringify(stats));
+}
+
+// --- Fetch Data ---
+async function fetchWords() {
+  try {
+    const response = await fetch('words.json');
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    allWords = await response.json();
+    applyFilterAndReset();
+  } catch (error) {
+    console.error('Error fetching words:', error);
+    arabicWord.textContent = 'خطأ';
+    arabicWord.style.fontSize = '3rem';
+    wordTransliteration.textContent = 'Failed to load words.json';
+    wordMeaning.textContent = 'Please make sure words.json is present in the root folder.';
+  }
+}
+
+// --- Filter & Order Controls ---
+function applyFilterAndReset() {
+  const filterVal = frequencyFilter.value;
+  
+  // Apply frequency filtering
+  if (filterVal === 'all') {
+    filteredWords = [...allWords];
+  } else if (filterVal === 'high') {
+    filteredWords = allWords.filter(w => w.frequency >= 1000);
+  } else if (filterVal === 'medium') {
+    filteredWords = allWords.filter(w => w.frequency >= 200 && w.frequency < 1000);
+  } else if (filterVal === 'low') {
+    filteredWords = allWords.filter(w => w.frequency < 200);
+  }
+
+  // Sort initially by frequency descending (default)
+  filteredWords.sort((a, b) => b.frequency - a.frequency);
+
+  // Reset navigation history
+  historyStack = [];
+  historyPointer = -1;
+
+  if (filteredWords.length > 0) {
+    loadNextCard(true); // Load first card
+  } else {
+    showEmptyState();
+  }
+  updateStatsDisplay();
+}
+
+function showEmptyState() {
+  arabicWord.textContent = 'خالي';
+  wordTransliteration.textContent = 'No words match filter';
+  wordMeaning.textContent = 'Try choosing a different category.';
+  freqTagFront.innerHTML = '<i class="fa-solid fa-wave-square"></i> Freq: 0';
+  freqTagBack.innerHTML = '<i class="fa-solid fa-wave-square"></i> Freq: 0';
+  cardIndexFront.textContent = 'Word 0/0';
+  cardIndexBack.textContent = 'Word 0/0';
+  currentWord = null;
+  disableAssessment();
+}
+
+// --- Navigation Logic ---
+function loadNextCard(isFirst = false) {
+  if (filteredWords.length === 0) return;
+
+  // Close card flip state before updating content
+  closeCardFlip();
+
+  setTimeout(() => {
+    let nextIndex;
+
+    // Check if we are browsing history
+    if (historyPointer < historyStack.length - 1 && !isFirst) {
+      historyPointer++;
+      nextIndex = historyStack[historyPointer];
+    } else {
+      // Choose next card index based on mode
+      const mode = learningMode.value;
+      if (mode === 'random') {
+        nextIndex = getRandomIndex();
+      } else {
+        // Sequential
+        if (historyStack.length === 0) {
+          nextIndex = 0;
+        } else {
+          const lastIndex = historyStack[historyStack.length - 1];
+          nextIndex = (lastIndex + 1) % filteredWords.length;
+        }
+      }
+      // Add to history stack
+      historyStack.push(nextIndex);
+      historyPointer = historyStack.length - 1;
+    }
+
+    displayWord(nextIndex);
+  }, isFirst ? 0 : 200); // Small delay to let card spin back if it was flipped
+}
+
+function loadPrevCard() {
+  if (historyPointer <= 0) return;
+
+  closeCardFlip();
+
+  setTimeout(() => {
+    historyPointer--;
+    const prevIndex = historyStack[historyPointer];
+    displayWord(prevIndex);
+  }, 200);
+}
+
+// Choose a random index, preferably one not already seen in the current stack
+function getRandomIndex() {
+  if (filteredWords.length <= 1) return 0;
+  
+  // Find indices that haven't been visited in the last history cycle
+  const recentHistory = historyStack.slice(-Math.min(filteredWords.length - 1, 10));
+  let availableIndices = [];
+  for (let i = 0; i < filteredWords.length; i++) {
+    if (!recentHistory.includes(i)) {
+      availableIndices.push(i);
+    }
+  }
+
+  // Fallback if somehow all are recently visited
+  if (availableIndices.length === 0) {
+    availableIndices = Array.from({length: filteredWords.length}, (_, i) => i);
+  }
+
+  const randomIndex = Math.floor(Math.random() * availableIndices.length);
+  return availableIndices[randomIndex];
+}
+
+// Display the selected word index
+function displayWord(index) {
+  currentWord = filteredWords[index];
+  
+  // Apply a smooth card enter animation
+  flashcard.classList.add('scale-down');
+  
+  setTimeout(() => {
+    // Populate elements
+    arabicWord.textContent = currentWord.arabic;
+    wordTransliteration.textContent = currentWord.transliteration;
+    
+    arabicWordMini.textContent = currentWord.arabic;
+    wordTransliterationMini.textContent = currentWord.transliteration;
+    wordMeaning.textContent = currentWord.meaning;
+    
+    const formattedFreq = Number(currentWord.frequency).toLocaleString();
+    freqTagFront.innerHTML = `<i class="fa-solid fa-wave-square"></i> Freq: ${formattedFreq}`;
+    freqTagBack.innerHTML = `<i class="fa-solid fa-wave-square"></i> Freq: ${formattedFreq}`;
+    
+    // Index indicator
+    const currentNum = index + 1;
+    const totalNum = filteredWords.length;
+    cardIndexFront.textContent = `Word ${currentNum}/${totalNum}`;
+    cardIndexBack.textContent = `Word ${currentNum}/${totalNum}`;
+    
+    // Add to seen stats if not already added
+    markAsSeen(currentWord.transliteration);
+
+    // Update navigation button states
+    prevBtn.disabled = (historyPointer <= 0);
+    
+    // Remove scale animation
+    flashcard.classList.remove('scale-down');
+    
+    updateStatsDisplay();
+  }, 100);
+}
+
+// --- Assessment & Mastery Tracker ---
+function markAsSeen(wordKey) {
+  if (!stats.seen.includes(wordKey)) {
+    stats.seen.push(wordKey);
+    saveStats();
+  }
+}
+
+function markAsKnown() {
+  if (!currentWord) return;
+  const key = currentWord.transliteration;
+  
+  // Add to known, remove from learning
+  if (!stats.known.includes(key)) {
+    stats.known.push(key);
+  }
+  stats.learning = stats.learning.filter(w => w !== key);
+  
+  saveStats();
+  animateButtonFeedback(yesBtn);
+  loadNextCard();
+}
+
+function markAsLearning() {
+  if (!currentWord) return;
+  const key = currentWord.transliteration;
+  
+  // Add to learning, remove from known
+  if (!stats.learning.includes(key)) {
+    stats.learning.push(key);
+  }
+  stats.known = stats.known.filter(w => w !== key);
+  
+  saveStats();
+  animateButtonFeedback(noBtn);
+  loadNextCard();
+}
+
+// Button visual ripple/glow feedback
+function animateButtonFeedback(btn) {
+  btn.style.transform = 'scale(0.95)';
+  setTimeout(() => {
+    btn.style.transform = '';
+  }, 150);
+}
+
+// --- Card Flip Interactions ---
+function toggleCardFlip() {
+  if (!currentWord) return;
+  isFlipped = !isFlipped;
+  flashcard.classList.toggle('is-flipped', isFlipped);
+  
+  // Set accessibility tags
+  flashcard.setAttribute('aria-expanded', isFlipped);
+
+  // Enable/disable assessment buttons based on flip state (active recall)
+  if (isFlipped) {
+    enableAssessment();
+  } else {
+    disableAssessment();
+  }
+}
+
+function closeCardFlip() {
+  isFlipped = false;
+  flashcard.classList.remove('is-flipped');
+  flashcard.setAttribute('aria-expanded', 'false');
+  disableAssessment();
+}
+
+function enableAssessment() {
+  yesBtn.removeAttribute('disabled');
+  noBtn.removeAttribute('disabled');
+}
+
+function disableAssessment() {
+  yesBtn.setAttribute('disabled', 'true');
+  noBtn.setAttribute('disabled', 'true');
+}
+
+// --- Stats Display Updates ---
+function updateStatsDisplay() {
+  // Count stats specifically for the CURRENT list of filtered words
+  const filteredKeys = new Set(filteredWords.map(w => w.transliteration));
+  
+  const seenCount = stats.seen.filter(w => filteredKeys.has(w)).length;
+  const knownCount = stats.known.filter(w => filteredKeys.has(w)).length;
+  const learningCount = stats.learning.filter(w => filteredKeys.has(w)).length;
+  
+  const totalInFilter = filteredWords.length;
+  const remainingCount = Math.max(0, totalInFilter - knownCount);
+
+  // Update DOM elements
+  statsSeen.textContent = seenCount;
+  statsKnown.textContent = knownCount;
+  statsLearning.textContent = learningCount;
+  statsRemaining.textContent = remainingCount;
+
+  // Progress Bar (Percent of current subset marked as known/mastered)
+  const percentage = totalInFilter > 0 ? Math.round((knownCount / totalInFilter) * 100) : 0;
+  scorePercentage.textContent = `${percentage}%`;
+  sessionProgress.style.width = `${percentage}%`;
+}
+
+function resetSessionStats() {
+  if (confirm('Are you sure you want to clear your learning progress? This will reset all mastery and history statistics.')) {
+    stats = {
+      known: [],
+      learning: [],
+      seen: []
+    };
+    saveStats();
+    applyFilterAndReset();
+  }
+}
+
+// --- Event Listeners Setup ---
+function setupEventListeners() {
+  // Card click flips the card
+  flashcard.addEventListener('click', toggleCardFlip);
+  
+  // Card keyboard trigger (Enter/Space on focus)
+  flashcard.addEventListener('keydown', (e) => {
+    if (e.key === ' ' || e.key === 'Enter') {
+      e.preventDefault();
+      toggleCardFlip();
+    }
+  });
+
+  // Navigation click handlers
+  nextBtn.addEventListener('click', () => loadNextCard());
+  prevBtn.addEventListener('click', loadPrevCard);
+
+  // Assessment answers
+  yesBtn.addEventListener('click', markAsKnown);
+  noBtn.addEventListener('click', markAsLearning);
+
+  // Reset
+  resetBtn.addEventListener('click', resetSessionStats);
+
+  // Filters & Settings
+  frequencyFilter.addEventListener('change', applyFilterAndReset);
+  learningMode.addEventListener('change', () => {
+    // If switching learning mode, clear history so the order refreshes
+    historyStack = [];
+    historyPointer = -1;
+    if (filteredWords.length > 0) {
+      loadNextCard(true);
+    }
+  });
+
+  // Theme Switcher
+  themeToggle.addEventListener('click', toggleTheme);
+
+  // Global Keyboard Shortcuts
+  document.addEventListener('keydown', (e) => {
+    // Ignore keyboard shortcuts if user is focusing a select dropdown
+    if (document.activeElement.tagName === 'SELECT') return;
+
+    if (e.key === ' ' && !isFlipped) {
+      e.preventDefault();
+      toggleCardFlip();
+    } else if (e.key === ' ' && isFlipped) {
+      // Space on flipped card can act as "Next"
+      e.preventDefault();
+      loadNextCard();
+    } else if (e.key === 'ArrowRight') {
+      e.preventDefault();
+      loadNextCard();
+    } else if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      loadPrevCard();
+    } else if (e.key === '1') {
+      if (isFlipped) {
+        e.preventDefault();
+        markAsLearning();
+      }
+    } else if (e.key === '2') {
+      if (isFlipped) {
+        e.preventDefault();
+        markAsKnown();
+      }
+    }
+  });
+}

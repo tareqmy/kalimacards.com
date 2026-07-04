@@ -1,0 +1,806 @@
+/* --- Design System & CSS Variables --- */
+:root {
+  /* Color Palette - Dark Theme (Default) */
+  --bg-color: #090D1A;
+  --bg-gradient: radial-gradient(circle at 50% 50%, #111827 0%, #090D1A 100%);
+  --panel-bg: rgba(17, 24, 39, 0.7);
+  --panel-border: rgba(255, 255, 255, 0.08);
+  
+  --card-bg-front: linear-gradient(135deg, rgba(23, 29, 51, 0.9) 0%, rgba(15, 20, 36, 0.95) 100%);
+  --card-bg-back: linear-gradient(135deg, rgba(21, 23, 44, 0.95) 0%, rgba(13, 15, 30, 0.98) 100%);
+  --card-border: rgba(255, 255, 255, 0.12);
+  --card-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 40px rgba(99, 102, 241, 0.1);
+
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+  
+  --accent-gold: #F59E0B;
+  --accent-gold-gradient: linear-gradient(135deg, #FCD34D 0%, #D97706 100%);
+  --accent-blue: #6366F1;
+  --accent-blue-gradient: linear-gradient(135deg, #818CF8 0%, #4F46E5 100%);
+  
+  --color-success: #10B981;
+  --color-success-bg: rgba(16, 185, 129, 0.15);
+  --color-danger: #EF4444;
+  --color-danger-bg: rgba(239, 68, 68, 0.15);
+  --color-warning: #F59E0B;
+  --color-warning-bg: rgba(245, 158, 11, 0.15);
+  
+  --btn-secondary-bg: rgba(255, 255, 255, 0.05);
+  --btn-secondary-hover: rgba(255, 255, 255, 0.1);
+  --btn-secondary-border: rgba(255, 255, 255, 0.1);
+
+  --font-arabic: 'Amiri', serif;
+  --font-sans: 'Outfit', sans-serif;
+  
+  --border-radius-lg: 24px;
+  --border-radius-md: 16px;
+  --border-radius-sm: 10px;
+  
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-card: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1.15), box-shadow 0.3s ease;
+}
+
+/* Light Theme Variables */
+body.light-theme {
+  --bg-color: #F1F5F9;
+  --bg-gradient: radial-gradient(circle at 50% 50%, #F8FAFC 0%, #E2E8F0 100%);
+  --panel-bg: rgba(255, 255, 255, 0.8);
+  --panel-border: rgba(15, 23, 42, 0.08);
+  
+  --card-bg-front: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.98) 100%);
+  --card-bg-back: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(241, 245, 249, 0.98) 100%);
+  --card-border: rgba(15, 23, 42, 0.08);
+  --card-shadow: 0 20px 40px rgba(15, 23, 42, 0.06), 0 0 20px rgba(99, 102, 241, 0.03);
+
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #94A3B8;
+  
+  --accent-gold: #D97706;
+  --accent-gold-gradient: linear-gradient(135deg, #F59E0B 0%, #B45309 100%);
+  
+  --btn-secondary-bg: rgba(15, 23, 42, 0.04);
+  --btn-secondary-hover: rgba(15, 23, 42, 0.08);
+  --btn-secondary-border: rgba(15, 23, 42, 0.08);
+}
+
+/* --- Base Resets & Layout --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg-color);
+  background-image: var(--bg-gradient);
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  position: relative;
+  transition: background 0.5s ease, color 0.3s ease;
+}
+
+/* --- Ambient Glowing Spheres (Premium Aesthetic) --- */
+.glow-sphere {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: -1;
+  opacity: 0.15;
+  pointer-events: none;
+  animation: float-glow 20s infinite alternate ease-in-out;
+}
+
+.glow-1 {
+  background: var(--accent-blue);
+  top: -100px;
+  right: -50px;
+}
+
+.glow-2 {
+  background: var(--accent-gold);
+  bottom: -150px;
+  left: -100px;
+  animation-delay: -10s;
+}
+
+@keyframes float-glow {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(50px, 50px) scale(1.2); }
+}
+
+/* --- App Container --- */
+.app-container {
+  width: 100%;
+  max-width: 1100px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-height: 95vh;
+}
+
+/* --- Header Component --- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--panel-border);
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--border-radius-sm);
+  background: var(--accent-blue-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: #FFF;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+}
+
+.logo-text h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.logo-text .tagline {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stat-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--btn-secondary-bg);
+  border: 1px solid var(--btn-secondary-border);
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: var(--transition-smooth);
+}
+
+.stat-badge i {
+  color: var(--accent-gold);
+}
+
+.icon-btn {
+  background: var(--btn-secondary-bg);
+  border: 1px solid var(--btn-secondary-border);
+  color: var(--text-primary);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: var(--transition-smooth);
+}
+
+.icon-btn:hover {
+  background: var(--btn-secondary-hover);
+  transform: translateY(-2px);
+}
+
+/* --- Main Layout Grid --- */
+.main-content {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 24px;
+  flex: 1;
+}
+
+/* --- Card Blur Effect --- */
+.card-blur {
+  background: var(--panel-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--border-radius-lg);
+  padding: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Controls Panel (Sidebar) --- */
+.controls-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.panel-section {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.panel-section h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.control-group label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+/* Custom Select Dropdown Styling */
+.select-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.select-wrapper select {
+  width: 100%;
+  background: var(--btn-secondary-bg);
+  border: 1px solid var(--btn-secondary-border);
+  border-radius: var(--border-radius-sm);
+  padding: 12px 16px;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: var(--transition-smooth);
+}
+
+.select-wrapper select:focus {
+  outline: none;
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.select-arrow {
+  position: absolute;
+  right: 16px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+/* Stats Styling */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.stat-card {
+  background: var(--btn-secondary-bg);
+  border: 1px solid var(--btn-secondary-border);
+  border-radius: var(--border-radius-sm);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.stat-val {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.text-success { color: var(--color-success); }
+.text-danger { color: var(--color-danger); }
+.text-warning { color: var(--color-warning); }
+
+/* Progress Bar */
+.progress-bar-container {
+  height: 6px;
+  width: 100%;
+  background: var(--btn-secondary-bg);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 4px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: var(--accent-blue-gradient);
+  width: 0%;
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+
+/* Buttons */
+.btn {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 12px 20px;
+  border-radius: var(--border-radius-sm);
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: var(--transition-smooth);
+}
+
+.btn-full {
+  width: 100%;
+}
+
+.btn-secondary {
+  background: var(--btn-secondary-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--btn-secondary-border);
+}
+
+.btn-secondary:hover {
+  background: var(--btn-secondary-hover);
+  transform: translateY(-1px);
+}
+
+/* --- Card Display Area (Right Side) --- */
+.card-display-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* 3D Card Flipping Container */
+.flashcard-container {
+  width: 100%;
+  max-width: 520px;
+  height: 380px;
+  perspective: 1200px;
+}
+
+.flashcard {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: var(--transition-card);
+  cursor: pointer;
+  border-radius: var(--border-radius-lg);
+}
+
+/* Active Flip State */
+.flashcard.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.flashcard:focus-visible {
+  outline: 3px solid var(--accent-blue);
+  outline-offset: 4px;
+}
+
+/* Card Faces */
+.card-face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: var(--border-radius-lg);
+  border: 1.5px solid var(--card-border);
+  box-shadow: var(--card-shadow);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.card-face::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: var(--accent-blue-gradient);
+}
+
+/* Front card specific */
+.card-front {
+  background: var(--card-bg-front);
+}
+
+/* Back card specific & rotated */
+.card-back {
+  background: var(--card-bg-back);
+  transform: rotateY(180deg);
+}
+
+.card-back::before {
+  background: var(--accent-gold-gradient);
+}
+
+/* Card Substructures */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.frequency-tag {
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--accent-blue);
+  border: 1px solid rgba(99, 102, 241, 0.15);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+}
+
+.card-back .frequency-tag {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--accent-gold);
+  border: 1px solid rgba(245, 158, 11, 0.15);
+}
+
+.card-index-indicator {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* Card Body */
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+/* Quranic Arabic typography */
+.arabic-word-wrapper {
+  margin: 10px 0;
+}
+
+.arabic-text {
+  font-family: var(--font-arabic);
+  font-size: 4.8rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--text-primary);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  direction: rtl;
+}
+
+/* Arabic text back face layout */
+.arabic-mini {
+  font-family: var(--font-arabic);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.transliteration {
+  font-size: 1.25rem;
+  color: var(--accent-blue);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.transliteration-mini {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.divider {
+  width: 60px;
+  height: 2px;
+  background: var(--card-border);
+  margin: 8px 0;
+}
+
+/* English Meaning style */
+.meaning-wrapper {
+  max-width: 90%;
+}
+
+.meaning-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.interaction-hint {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.card-face:hover .interaction-hint {
+  color: var(--text-secondary);
+}
+
+/* Pulse interaction for hint icon */
+.interaction-hint i {
+  animation: pulse-icon 2s infinite ease-in-out;
+}
+
+@keyframes pulse-icon {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15) rotate(15deg); }
+  100% { transform: scale(1); }
+}
+
+/* --- Assessment Controls Deck --- */
+.controls-deck {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 520px;
+}
+
+.btn-nav {
+  background: var(--panel-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--panel-border);
+  color: var(--text-primary);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-nav:hover {
+  background: var(--btn-secondary-hover);
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+  transform: translateY(-2px);
+}
+
+.btn-nav:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  transform: none;
+  border-color: var(--panel-border);
+  color: var(--text-muted);
+}
+
+.assessment-buttons {
+  display: flex;
+  gap: 12px;
+  flex: 1;
+}
+
+.btn-danger {
+  background: var(--color-danger-bg);
+  border: 1px solid var(--color-danger);
+  color: var(--color-danger);
+  flex: 1;
+}
+
+.btn-danger:hover:not(:disabled) {
+  background: var(--color-danger);
+  color: #FFF;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+}
+
+.btn-success {
+  background: var(--color-success-bg);
+  border: 1px solid var(--color-success);
+  color: var(--color-success);
+  flex: 1;
+}
+
+.btn-success:hover:not(:disabled) {
+  background: var(--color-success);
+  color: #FFF;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+.btn-danger:disabled, .btn-success:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* --- Keyboard Shortcuts Help Banner --- */
+.keyboard-shortcuts {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--btn-secondary-bg);
+  padding: 6px 16px;
+  border-radius: 30px;
+  border: 1px solid var(--btn-secondary-border);
+}
+
+.keyboard-shortcuts kbd {
+  background: var(--text-muted);
+  color: var(--bg-color);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.7rem;
+}
+
+/* --- Footer --- */
+footer {
+  text-align: center;
+  padding: 16px 0;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--panel-border);
+  margin-top: auto;
+}
+
+/* --- Page Transitions / Dynamic Animation Classes --- */
+.scale-down {
+  transform: scale(0.95);
+  opacity: 0.8;
+}
+
+.slide-next-out {
+  transform: translateX(-50px) rotateY(-10deg) scale(0.95);
+  opacity: 0;
+}
+
+.slide-prev-out {
+  transform: translateX(50px) rotateY(10deg) scale(0.95);
+  opacity: 0;
+}
+
+.slide-in {
+  transform: scale(1.05);
+  opacity: 0;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 860px) {
+  .main-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .controls-panel {
+    order: 2; /* Sidebar goes down on mobile */
+  }
+  
+  .card-display-area {
+    order: 1;
+    margin-top: 10px;
+  }
+  
+  .flashcard-container {
+    height: 340px;
+  }
+
+  .arabic-text {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-container {
+    padding: 12px;
+    gap: 16px;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .flashcard-container {
+    height: 300px;
+  }
+
+  .arabic-text {
+    font-size: 3.4rem;
+  }
+
+  .meaning-text {
+    font-size: 1.4rem;
+  }
+
+  .controls-deck {
+    gap: 10px;
+  }
+
+  .btn-nav {
+    width: 48px;
+    height: 48px;
+  }
+
+  .assessment-buttons {
+    gap: 6px;
+  }
+
+  .btn {
+    padding: 10px 14px;
+    font-size: 0.8rem;
+  }
+  
+  .keyboard-shortcuts {
+    display: none; /* Hide shortcuts on very small screens since they don't have keyboards */
+  }
+}

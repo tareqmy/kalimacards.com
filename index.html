@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KalimaCards - Learn Quranic Arabic Vocabulary</title>
+  <meta name="description" content="Master Quranic Arabic vocabulary through digital flashcards based on word frequency. Active recall, progress tracking, and beautiful Quranic typography.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📖</text></svg>">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Background Glow Effects -->
+  <div class="glow-sphere glow-1"></div>
+  <div class="glow-sphere glow-2"></div>
+
+  <div class="app-container">
+    <!-- Header -->
+    <header>
+      <div class="logo-area">
+        <span class="logo-icon"><i class="fa-solid fa-book-quran"></i></span>
+        <div class="logo-text">
+          <h1>KalimaCards</h1>
+          <span class="tagline">Quranic Arabic Vocabulary</span>
+        </div>
+      </div>
+      <div class="header-actions">
+        <div class="stat-badge" id="mastery-badge" title="Mastery Score: Words marked as 'Knew It'">
+          <i class="fa-solid fa-star"></i>
+          <span>Mastery: <strong id="score-percentage">0%</strong></span>
+        </div>
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme" title="Toggle Light/Dark Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content Grid -->
+    <main class="main-content">
+      <!-- Sidebar / Filters Panel -->
+      <section class="controls-panel card-blur" aria-label="Controls and Filters">
+        <div class="panel-section">
+          <h3><i class="fa-solid fa-sliders"></i> Filters</h3>
+          <div class="control-group">
+            <label for="frequency-filter">Word Frequency</label>
+            <div class="select-wrapper">
+              <select id="frequency-filter">
+                <option value="all">All Words (Show All)</option>
+                <option value="high">High Frequency (> 1000 times)</option>
+                <option value="medium">Medium Frequency (200 - 1000 times)</option>
+                <option value="low">Low Frequency (< 200 times)</option>
+              </select>
+              <i class="fa-solid fa-chevron-down select-arrow"></i>
+            </div>
+          </div>
+          <div class="control-group">
+            <label for="learning-mode">Learning Mode</label>
+            <div class="select-wrapper">
+              <select id="learning-mode">
+                <option value="random">Randomize Order</option>
+                <option value="sequential">Sequential (By Frequency)</option>
+              </select>
+              <i class="fa-solid fa-chevron-down select-arrow"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel-section">
+          <h3><i class="fa-solid fa-chart-simple"></i> Session Stats</h3>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <span class="stat-label">Seen</span>
+              <span class="stat-val" id="stats-seen">0</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Knew It</span>
+              <span class="stat-val text-success" id="stats-known">0</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Learning</span>
+              <span class="stat-val text-warning" id="stats-learning">0</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Remaining</span>
+              <span class="stat-val" id="stats-remaining">0</span>
+            </div>
+          </div>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" id="session-progress" style="width: 0%"></div>
+          </div>
+        </div>
+
+        <div class="panel-section actions-section">
+          <button id="reset-session" class="btn btn-secondary btn-full">
+            <i class="fa-solid fa-rotate-left"></i> Reset Statistics
+          </button>
+        </div>
+      </section>
+
+      <!-- Flashcard Deck Area -->
+      <section class="card-display-area">
+        <!-- 3D Flashcard Container -->
+        <div class="flashcard-container" id="flashcard-container">
+          <div class="flashcard" id="flashcard" role="button" tabindex="0" aria-label="Flashcard. Click to reveal meaning.">
+            <!-- Front of Card (Arabic & Transliteration) -->
+            <div class="card-face card-front">
+              <div class="card-header">
+                <span class="frequency-tag" id="freq-tag-front">
+                  <i class="fa-solid fa-wave-square"></i> Freq: 0
+                </span>
+                <span class="card-index-indicator" id="card-index-front">Word 0/0</span>
+              </div>
+              <div class="card-body">
+                <div class="arabic-word-wrapper">
+                  <h2 class="arabic-text" id="arabic-word">...</h2>
+                </div>
+                <p class="transliteration" id="word-transliteration">...</p>
+              </div>
+              <div class="card-footer">
+                <span class="interaction-hint">
+                  <i class="fa-solid fa-arrows-rotate"></i> Click card to reveal English meaning
+                </span>
+              </div>
+            </div>
+
+            <!-- Back of Card (English Meaning) -->
+            <div class="card-face card-back">
+              <div class="card-header">
+                <span class="frequency-tag" id="freq-tag-back">
+                  <i class="fa-solid fa-wave-square"></i> Freq: 0
+                </span>
+                <span class="card-index-indicator" id="card-index-back">Word 0/0</span>
+              </div>
+              <div class="card-body">
+                <span class="arabic-mini" id="arabic-word-mini">...</span>
+                <p class="transliteration-mini" id="word-transliteration-mini">...</p>
+                <div class="divider"></div>
+                <div class="meaning-wrapper">
+                  <h2 class="meaning-text" id="word-meaning">...</h2>
+                </div>
+              </div>
+              <div class="card-footer">
+                <span class="interaction-hint">
+                  <i class="fa-solid fa-arrows-rotate"></i> Click card to hide meaning
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation & Self-Assessment Controls -->
+        <div class="controls-deck">
+          <button id="prev-btn" class="btn btn-nav" title="Previous Card (Left Arrow)">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          
+          <div class="assessment-buttons" id="assessment-container">
+            <button id="no-btn" class="btn btn-danger" disabled title="Mark as Still Learning">
+              <i class="fa-solid fa-xmark"></i> Still Learning
+            </button>
+            <button id="yes-btn" class="btn btn-success" disabled title="Mark as Mastered">
+              <i class="fa-solid fa-check"></i> I Knew It!
+            </button>
+          </div>
+
+          <button id="next-btn" class="btn btn-nav" title="Next Card (Right Arrow or Space)">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <!-- Keyboard Shortcuts Help -->
+        <div class="keyboard-shortcuts">
+          <span>Shortcuts:</span>
+          <kbd>Space</kbd> Flip Card &bull; <kbd>&rarr;</kbd> Next &bull; <kbd>&larr;</kbd> Prev &bull; <kbd>1</kbd> Hard &bull; <kbd>2</kbd> Easy
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2026 KalimaCards. All Quranic data sourced from root-level lemma distributions. Built for learning.</p>
+    </footer>
+  </div>
+
+  <!-- Custom JS -->
+  <script src="app.js"></script>
+</body>
+</html>
