@@ -127,8 +127,6 @@ const noBtn = document.getElementById('no-btn');
 const resetBtn = document.getElementById('reset-session');
 const themeToggle = document.getElementById('theme-toggle');
 const corpusLink = document.getElementById('corpus-link');
-const contextMeaningsBox = document.getElementById('context-meanings-box');
-const contextMeaningsList = document.getElementById('context-meanings-list');
 
 // Selects / Inputs
 const frequencyFilter = document.getElementById('frequency-filter');
@@ -375,22 +373,12 @@ function displayWord(index) {
     
     arabicWordMini.textContent = currentWord.arabic;
     wordTransliterationMini.textContent = BuckwalterConverter.toPhonetic(currentWord.transliteration);
-    wordMeaning.textContent = currentWord.meaning;
     
-    // Populate Contextual Meanings
-    if (contextMeaningsBox && contextMeaningsList) {
-      if (currentWord.meanings && currentWord.meanings.length > 0) {
-        contextMeaningsList.innerHTML = '';
-        currentWord.meanings.forEach(m => {
-          const chip = document.createElement('span');
-          chip.className = 'context-chip';
-          chip.textContent = m;
-          contextMeaningsList.appendChild(chip);
-        });
-        contextMeaningsBox.style.display = 'block';
-      } else {
-        contextMeaningsBox.style.display = 'none';
-      }
+    if (currentWord.meanings && currentWord.meanings.length > 0) {
+      const combinedMeaning = currentWord.meanings.join(', ');
+      wordMeaning.textContent = combinedMeaning.charAt(0).toUpperCase() + combinedMeaning.slice(1);
+    } else {
+      wordMeaning.textContent = 'No translation available';
     }
     
     // Set Study Corpus Link
