@@ -58,7 +58,12 @@
       <aside class="controls-sidebar" aria-label="Controls and Statistics">
         <!-- Filters Card -->
         <div class="sidebar-card card-blur">
-          <h3><i class="fa-solid fa-sliders"></i> Filters & Search</h3>
+          <div class="sidebar-card-header">
+            <h3><i class="fa-solid fa-sliders"></i> Filters & Search</h3>
+            <button id="reset-filters-btn" class="reset-link-btn" title="Reset all filters to default">
+              <i class="fa-solid fa-arrow-rotate-left"></i> Reset
+            </button>
+          </div>
           <div class="control-group">
             <label for="search-input">Search Database</label>
             <div class="search-wrapper">

@@ -151,6 +151,7 @@ const sliderTrack = document.getElementById('slider-track');
 const starredOnlyToggle = document.getElementById('starred-only-toggle');
 const posFilter = document.getElementById('pos-filter');
 const learningMode = document.getElementById('learning-mode');
+const resetFiltersBtn = document.getElementById('reset-filters-btn');
 
 // Stats Counters
 const scorePercentage = document.getElementById('score-percentage');
@@ -893,6 +894,26 @@ function setupEventListeners() {
   if (posFilter) {
     posFilter.addEventListener('change', applyFilterAndReset);
   }
+
+  if (resetFiltersBtn) {
+    resetFiltersBtn.addEventListener('click', () => {
+      if (starredOnlyToggle) starredOnlyToggle.checked = false;
+      if (freqMinInput) freqMinInput.value = 0;
+      if (freqMaxInput) freqMaxInput.value = uniqueFrequencies.length - 1;
+      if (posFilter) posFilter.value = 'all';
+      if (searchInput) {
+        searchInput.value = '';
+        if (clearSearch) clearSearch.style.display = 'none';
+        if (searchResults) {
+          searchResults.style.display = 'none';
+          searchResults.innerHTML = '';
+        }
+      }
+      updateSliderUI();
+      applyFilterAndReset();
+    });
+  }
+
   learningMode.addEventListener('change', () => {
     // If switching learning mode, clear history so the order refreshes
     historyStack = [];
