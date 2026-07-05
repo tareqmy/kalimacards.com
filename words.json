@@ -73,7 +73,7 @@
     "transliteration": "{l~a*iY",
     "frequency": 1442,
     "part_of_speech": "Relative pronoun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%7Bl%7Ea*iY+pos%3Acond",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%7Bl%7Ea*iY+pos%3Arel",
     "meanings": [
       "Those who",
       "Those",
@@ -86,7 +86,7 @@
     "transliteration": "laA",
     "frequency": 1364,
     "part_of_speech": "Negative particle",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AlaA+pos%3Apro",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AlaA+pos%3Aneg",
     "meanings": [
       "Not",
       "Do not"
@@ -143,7 +143,7 @@
     "transliteration": "maA",
     "frequency": 704,
     "part_of_speech": "Negative particle",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AmaA+pos%3Asup",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AmaA+pos%3Aneg",
     "meanings": [
       "Even",
       "That",
@@ -157,7 +157,7 @@
     "transliteration": "man",
     "frequency": 606,
     "part_of_speech": "Relative pronoun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Aman+pos%3Aintg",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Aman+pos%3Arel",
     "meanings": [
       "Who"
     ]
@@ -167,7 +167,7 @@
     "transliteration": "<in",
     "frequency": 578,
     "part_of_speech": "Conditional particle",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Cin+pos%3Acert",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Cin+pos%3Acond",
     "meanings": [
       "Indeed",
       "Were"
@@ -178,7 +178,7 @@
     "transliteration": ">an",
     "frequency": 578,
     "part_of_speech": "Subordinating conjunction",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Ean+pos%3Aint",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Ean+pos%3Asub",
     "meanings": [
       "That",
       "To"
@@ -189,7 +189,7 @@
     "transliteration": "<il~aA",
     "frequency": 558,
     "part_of_speech": "Restriction particle",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Cil%7EaA+pos%3Acert",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Cil%7EaA+pos%3Ares",
     "meanings": [
       "Except",
       "Until"
@@ -259,7 +259,7 @@
     "transliteration": "<i*aA",
     "frequency": 405,
     "part_of_speech": "Time adverb",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Ci*aA+pos%3Acond",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Ci*aA+pos%3At",
     "meanings": [
       "When"
     ]
@@ -313,7 +313,7 @@
     "transliteration": "kul~",
     "frequency": 358,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Akul%7E+pos%3At",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Akul%7E+pos%3An",
     "meanings": [
       "Everytime"
     ]
@@ -380,7 +380,7 @@
     "transliteration": "yawom",
     "frequency": 325,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Ayawom+pos%3At",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Ayawom+pos%3An",
     "meanings": [
       "Day",
       "Days",
@@ -544,7 +544,7 @@
     "transliteration": "bayon",
     "frequency": 243,
     "part_of_speech": "Location adverb",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Abayon+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Abayon+pos%3Aloc",
     "meanings": [
       "Between",
       "Among",
@@ -556,7 +556,7 @@
     "transliteration": "Haq~",
     "frequency": 242,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AHaq%7E+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AHaq%7E+pos%3An",
     "meanings": [
       "True",
       "Truth",
@@ -612,7 +612,7 @@
     "transliteration": "qabol",
     "frequency": 197,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Aqabol+pos%3At",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Aqabol+pos%3An",
     "meanings": [
       "Before"
     ]
@@ -622,7 +622,7 @@
     "transliteration": "mu&omin",
     "frequency": 195,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Amu%26omin+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Amu%26omin+pos%3An",
     "meanings": [
       "Believing",
       "Believers",
@@ -634,7 +634,7 @@
     "transliteration": "law",
     "frequency": 184,
     "part_of_speech": "Conditional particle",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Alaw+pos%3Asub",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Alaw+pos%3Acond",
     "meanings": [
       "If",
       "Even though",
@@ -647,7 +647,7 @@
     "transliteration": "man",
     "frequency": 184,
     "part_of_speech": "Conditional particle",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Aman+pos%3Aintg",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Aman+pos%3Acond",
     "meanings": [
       "Who"
     ]
@@ -741,7 +741,7 @@
     "transliteration": "Eind",
     "frequency": 160,
     "part_of_speech": "Location adverb",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AEind+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AEind+pos%3Aloc",
     "meanings": [
       "From",
       "Near"
@@ -796,7 +796,7 @@
     "transliteration": "xayor",
     "frequency": 148,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Axayor+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Axayor+pos%3An",
     "meanings": [
       "Better",
       "Goodness",
@@ -829,7 +829,7 @@
     "transliteration": "gayor",
     "frequency": 144,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Agayor+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Agayor+pos%3An",
     "meanings": [
       "Other than",
       "Not",
@@ -897,7 +897,7 @@
     "transliteration": "duwn",
     "frequency": 135,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Aduwn+pos%3Aloc",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Aduwn+pos%3An",
     "meanings": [
       "Other than",
       "Without",
@@ -909,7 +909,7 @@
     "transliteration": "A^xir",
     "frequency": 133,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AA%5Exir+pos%3At",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AA%5Exir+pos%3An",
     "meanings": [
       "End"
     ]
@@ -919,7 +919,7 @@
     "transliteration": "baEod",
     "frequency": 133,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AbaEod+pos%3At",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AbaEod+pos%3An",
     "meanings": [
       "After"
     ]
@@ -1011,7 +1011,7 @@
     "transliteration": "bal",
     "frequency": 122,
     "part_of_speech": "Retraction particle",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Abal+pos%3Aconj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Abal+pos%3Aret",
     "meanings": [
       "Nay"
     ]
@@ -1044,7 +1044,7 @@
     "transliteration": "ka`firuwn",
     "frequency": 119,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Aka%60firuwn+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Aka%60firuwn+pos%3An",
     "meanings": [
       "Disbelieving",
       "Disbelievers"
@@ -1055,7 +1055,7 @@
     "transliteration": "<in",
     "frequency": 114,
     "part_of_speech": "Negative particle",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Cin+pos%3Acert",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Cin+pos%3Aneg",
     "meanings": [
       "Indeed",
       "Were"
@@ -1076,7 +1076,7 @@
     "transliteration": "r~aHiym",
     "frequency": 112,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Ar%7EaHiym+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Ar%7EaHiym+pos%3Aadj",
     "meanings": [
       "Most Merciful",
       "Ever Merciful"
@@ -1133,7 +1133,7 @@
     "transliteration": "ZaAlim",
     "frequency": 105,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AZaAlim+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AZaAlim+pos%3An",
     "meanings": [
       "Wrongdoing",
       "Wrongdoers"
@@ -1154,7 +1154,7 @@
     "transliteration": "EaZiym",
     "frequency": 104,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AEaZiym+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AEaZiym+pos%3Aadj",
     "meanings": [
       "Bones",
       "Great"
@@ -1175,7 +1175,7 @@
     "transliteration": "<il~aA",
     "frequency": 102,
     "part_of_speech": "Exceptive particle",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Cil%7EaA+pos%3Acert",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Cil%7EaA+pos%3Aexp",
     "meanings": [
       "Except",
       "Until"
@@ -1186,7 +1186,7 @@
     "transliteration": "Ealiym",
     "frequency": 101,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AEaliym+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AEaliym+pos%3Aadj",
     "meanings": [
       "All-Knowing",
       "All-Knower",
@@ -1210,7 +1210,7 @@
     "transliteration": "jan~ap",
     "frequency": 96,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Ajan%7Eap+pos%3Apn",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Ajan%7Eap+pos%3An",
     "meanings": [
       "Paradise"
     ]
@@ -1220,7 +1220,7 @@
     "transliteration": "Hat~aY`",
     "frequency": 95,
     "part_of_speech": "Preposition",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AHat%7EaY%60+pos%3Ainc",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AHat%7EaY%60+pos%3Ap",
     "meanings": [
       "Until",
       "Till"
@@ -1280,7 +1280,7 @@
     "transliteration": "maA",
     "frequency": 92,
     "part_of_speech": "Interogative particle",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AmaA+pos%3Asup",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AmaA+pos%3Aintg",
     "meanings": [
       "Even",
       "That",
@@ -1398,7 +1398,7 @@
     "transliteration": "Hakiym",
     "frequency": 84,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AHakiym+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AHakiym+pos%3Aadj",
     "meanings": [
       "All-Wise"
     ]
@@ -1488,7 +1488,7 @@
     "transliteration": "$ayoTa`n",
     "frequency": 80,
     "part_of_speech": "Proper noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%24ayoTa%60n+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%24ayoTa%60n+pos%3Apn",
     "meanings": [
       "Evil one",
       "Shaitaan",
@@ -1716,7 +1716,7 @@
     "transliteration": "d~unoyaA",
     "frequency": 74,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Ad%7EunoyaA+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Ad%7EunoyaA+pos%3Aadj",
     "meanings": [
       "World"
     ]
@@ -1771,7 +1771,7 @@
     "transliteration": "m~ubiyn",
     "frequency": 72,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Eubiyn+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Eubiyn+pos%3An",
     "meanings": [
       "Clear",
       "Open",
@@ -1951,7 +1951,7 @@
     "transliteration": "la`kin",
     "frequency": 65,
     "part_of_speech": "Amendment particle",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Ala%60kin+pos%3Aacc",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Ala%60kin+pos%3Aamd",
     "meanings": [
       "But"
     ]
@@ -2055,7 +2055,7 @@
     "transliteration": "Eaziyz",
     "frequency": 63,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AEaziyz+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AEaziyz+pos%3An",
     "meanings": [
       "All-Mighty",
       "Stern",
@@ -2113,7 +2113,7 @@
     "transliteration": "gafuwr",
     "frequency": 62,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Agafuwr+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Agafuwr+pos%3An",
     "meanings": [
       "Oft-Forgiving",
       "Most Forgiving"
@@ -2339,7 +2339,7 @@
     "transliteration": "bay~inap",
     "frequency": 55,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Abay%7Einap+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Abay%7Einap+pos%3An",
     "meanings": [
       "Clear",
       "Clear Verses",
@@ -3195,7 +3195,7 @@
     "transliteration": "$ahiyd",
     "frequency": 40,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%24ahiyd+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%24ahiyd+pos%3An",
     "meanings": [
       "Witness"
     ]
@@ -3594,7 +3594,7 @@
     "transliteration": "$adiyd",
     "frequency": 36,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%24adiyd+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%24adiyd+pos%3Aadj",
     "meanings": [
       "Severe",
       "Mighty",
@@ -6150,7 +6150,7 @@
     "transliteration": "<i*FA",
     "frequency": 18,
     "part_of_speech": "Surprise particle",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Ci*FA+pos%3Aans",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Ci*FA+pos%3Asur",
     "meanings": [
       "Then",
       "In that case"
@@ -7254,7 +7254,7 @@
     "transliteration": "qariyb",
     "frequency": 15,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Aqariyb+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Aqariyb+pos%3Aadj",
     "meanings": [
       "Near",
       "Soon after",
@@ -8999,7 +8999,7 @@
     "transliteration": "siniyn",
     "frequency": 11,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Asiniyn+pos%3At",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Asiniyn+pos%3An",
     "meanings": [
       "Years"
     ]
@@ -9527,7 +9527,7 @@
     "transliteration": "HusonaY`",
     "frequency": 10,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AHusonaY%60+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AHusonaY%60+pos%3An",
     "meanings": [
       "Best",
       "Most beautiful",
@@ -9836,7 +9836,7 @@
     "transliteration": "madiynap",
     "frequency": 10,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Amadiynap+pos%3Apn",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Amadiynap+pos%3An",
     "meanings": [
       "Madinah",
       "City",
@@ -11308,7 +11308,7 @@
     "transliteration": "Tay~ib",
     "frequency": 8,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3ATay%7Eib+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3ATay%7Eib+pos%3Aadj",
     "meanings": [
       "Good",
       "Good men"
@@ -11319,7 +11319,7 @@
     "transliteration": "Tay~ib",
     "frequency": 8,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3ATay%7Eib+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3ATay%7Eib+pos%3An",
     "meanings": [
       "Good",
       "Pure",
@@ -11379,7 +11379,7 @@
     "transliteration": "Ealiy~",
     "frequency": 8,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AEaliy%7E+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AEaliy%7E+pos%3An",
     "meanings": [
       "High",
       "Most High"
@@ -11390,7 +11390,7 @@
     "transliteration": "galiyZ",
     "frequency": 8,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AgaliyZ+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AgaliyZ+pos%3Aadj",
     "meanings": [
       "Harsh"
     ]
@@ -14015,7 +14015,6 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Amusotakobir+pos%3An",
     "meanings": [
       "Arrogant",
-      "Arrogant ones",
       "Arrogantly"
     ]
   },
@@ -14037,8 +14036,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Amaqot+pos%3An",
     "meanings": [
       "Hateful",
-      "Hatred",
-      "Allah's hatred"
+      "Hatred"
     ]
   },
   {
@@ -14048,8 +14046,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Aman%7E+pos%3An",
     "meanings": [
-      "[the] manna",
-      "Reminders of generosity",
       "Reminders",
       "Manna",
       "Favor"
@@ -14062,7 +14058,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AmuntaZiruwn+pos%3An",
     "meanings": [
-      "Those who wait",
       "Ones who wait",
       "Waiting"
     ]
@@ -14075,9 +14070,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AmunZaruwn+pos%3An",
     "meanings": [
       "Ones given respite",
-      "Given respite",
-      "Reprieved",
-      "Those given respite"
+      "Reprieved"
     ]
   },
   {
@@ -14085,9 +14078,10 @@
     "transliteration": "m~uniyb",
     "frequency": 6,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Euniyb+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Euniyb+pos%3An",
     "meanings": [
-      "Who turns"
+      "Oft-returning",
+      "Turning"
     ]
   },
   {
@@ -14095,7 +14089,7 @@
     "transliteration": "muhaAjir",
     "frequency": 6,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AmuhaAjir+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AmuhaAjir+pos%3An",
     "meanings": [
       "Emigrants"
     ]
@@ -14107,7 +14101,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Amawoj+pos%3An",
     "meanings": [
-      "Waves",
       "Wave"
     ]
   },
@@ -14129,10 +14122,8 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AnaASiH+pos%3An",
     "meanings": [
-      "Sincere advisors",
       "Adviser",
-      "Advisers",
-      "Well-wishers",
+      "Well-wisher",
       "Sincere"
     ]
   },
@@ -14141,9 +14132,9 @@
     "transliteration": "niSof",
     "frequency": 6,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AniSof+pos%3At",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AniSof+pos%3An",
     "meanings": [
-      "Half of it"
+      "Half"
     ]
   },
   {
@@ -14153,8 +14144,7 @@
     "part_of_speech": "Proper noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Aha%60ma%60n+pos%3Apn",
     "meanings": [
-      "Haman",
-      "O Haman"
+      "Haman"
     ]
   },
   {
@@ -14185,8 +14175,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AwaHoY+pos%3An",
     "meanings": [
       "Inspiration",
-      "Revelation",
-      "By the revelation"
+      "Revelation"
     ]
   },
   {
@@ -14197,7 +14186,6 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AwaEiyd+pos%3An",
     "meanings": [
       "Threat",
-      "Warnings",
       "Warning"
     ]
   },
@@ -14216,7 +14204,7 @@
     "transliteration": "yaqiyn",
     "frequency": 6,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Ayaqiyn+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Ayaqiyn+pos%3An",
     "meanings": [
       "Certain"
     ]
@@ -14658,9 +14646,8 @@
     "transliteration": ">aboyaD",
     "frequency": 5,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3EaboyaD+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3EaboyaD+pos%3An",
     "meanings": [
-      "[the] white",
       "White"
     ]
   },
@@ -14669,11 +14656,10 @@
     "transliteration": ">aHaq~",
     "frequency": 5,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3EaHaq%7E+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3EaHaq%7E+pos%3An",
     "meanings": [
-      "More right",
-      "More worthy",
-      "Has more right"
+      "More entitled",
+      "Truer"
     ]
   },
   {
@@ -14684,8 +14670,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3EaHaq%7E+pos%3Aadj",
     "meanings": [
       "More right",
-      "More worthy",
-      "Has more right"
+      "More worthy"
     ]
   },
   {
@@ -14696,7 +14681,6 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3EaraA%5E%7Dik+pos%3An",
     "meanings": [
       "Adorned couches",
-      "[the] couches",
       "Couches",
       "Thrones"
     ]
@@ -14718,7 +14702,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3EasobaAT+pos%3An",
     "meanings": [
-      "Descendants",
       "Descendents",
       "Tribes"
     ]
@@ -14771,8 +14754,7 @@
     "part_of_speech": "Particle of certainty",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Cin+pos%3Acert",
     "meanings": [
-      "Indeed",
-      "Were"
+      "Indeed"
     ]
   },
   {
@@ -14780,9 +14762,9 @@
     "transliteration": ">aw~aAb",
     "frequency": 5,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Eaw%7EaAb+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Eaw%7EaAb+pos%3An",
     "meanings": [
-      "Who turns"
+      "Repeatedly turning"
     ]
   },
   {
@@ -14790,7 +14772,7 @@
     "transliteration": ">ay~aAn",
     "frequency": 5,
     "part_of_speech": "Interogative particle",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Eay%7EaAn+pos%3At",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Eay%7EaAn+pos%3Aintg",
     "meanings": [
       "When"
     ]
@@ -14802,8 +14784,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Abaroq+pos%3An",
     "meanings": [
-      "Lightning",
-      "Lighting"
+      "Lightning"
     ]
   },
   {
@@ -14836,8 +14817,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AbagoDaA%5E%27+pos%3An",
     "meanings": [
-      "Hatred",
-      "[the] hatred"
+      "Hatred"
     ]
   },
   {
@@ -14868,8 +14848,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AtisoE+pos%3An",
     "meanings": [
-      "Nine",
-      "Ninety-nine"
+      "Nine"
     ]
   },
   {
@@ -14880,7 +14859,6 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AtafoSiyl+pos%3An",
     "meanings": [
       "Explanation",
-      "Detailed explanation",
       "Detail"
     ]
   },
@@ -14906,8 +14884,7 @@
     "meanings": [
       "Turning",
       "Movement",
-      "Going to and fro",
-      "Movements"
+      "Going to and fro"
     ]
   },
   {
@@ -14915,7 +14892,7 @@
     "transliteration": "v~uluv",
     "frequency": 5,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Av%7Euluv+pos%3At",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Av%7Euluv+pos%3An",
     "meanings": [
       "Third of it"
     ]
@@ -14927,8 +14904,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Avamar+pos%3An",
     "meanings": [
-      "Fruit",
-      "Fruits"
+      "Fruit"
     ]
   },
   {
@@ -14946,12 +14922,10 @@
     "transliteration": "jab~aAr",
     "frequency": 5,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Ajab%7EaAr+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Ajab%7EaAr+pos%3Aadj",
     "meanings": [
       "Tyrant",
-      "Insolent",
-      "Tyrants",
-      "One to compel"
+      "Irresitible"
     ]
   },
   {
@@ -14962,9 +14936,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Ajab%7EaAr+pos%3An",
     "meanings": [
       "Tyrant",
-      "Insolent",
-      "Tyrants",
-      "One to compel"
+      "Insolent"
     ]
   },
   {
@@ -14974,8 +14946,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Ajaram+pos%3An",
     "meanings": [
-      "Doubt",
-      "No doubt"
+      "Doubt"
     ]
   },
   {
@@ -14985,8 +14956,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Ajahod+pos%3An",
     "meanings": [
-      "Strongest",
-      "Strong"
+      "Strongest"
     ]
   },
   {
@@ -14996,7 +14966,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AHa%60kimiyn+pos%3An",
     "meanings": [
-      "[the] Judges",
       "Judges"
     ]
   },
@@ -15041,7 +15010,6 @@
     "part_of_speech": "Adjective",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AHaq%7E+pos%3Aadj",
     "meanings": [
-      "[the] true",
       "Truth",
       "Due"
     ]
@@ -15064,8 +15032,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AHimaAr+pos%3An",
     "meanings": [
-      "Donkey",
-      "Donkeys"
+      "Donkey"
     ]
   },
   {
@@ -15107,8 +15074,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AxaAliSap+pos%3An",
     "meanings": [
       "Exclusively",
-      "Only",
-      "Exclusive"
+      "Only"
     ]
   },
   {
@@ -15119,7 +15085,6 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Axuruwj+pos%3An",
     "meanings": [
       "Go forth",
-      "Go out",
       "Get out",
       "Coming forth"
     ]
@@ -15131,7 +15096,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AxaSiym+pos%3An",
     "meanings": [
-      "Opponents",
       "Pleader",
       "Opponent",
       "Dispute"
@@ -15147,7 +15111,6 @@
       "Affair",
       "Business",
       "Case",
-      "Matter with both of you",
       "Mission"
     ]
   },
@@ -15168,9 +15131,8 @@
     "part_of_speech": "Location adverb",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Axalof+pos%3Aloc",
     "meanings": [
-      "After them",
-      "Behind them",
-      "Behind us"
+      "After",
+      "Behind"
     ]
   },
   {
@@ -15180,8 +15142,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Axinziyr+pos%3An",
     "meanings": [
-      "Swine",
-      "[the] swines"
+      "Swine"
     ]
   },
   {
@@ -15191,7 +15152,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Axayol+pos%3An",
     "meanings": [
-      "[the] horses",
       "Horses",
       "Cavalry"
     ]
@@ -15203,7 +15163,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Adayon+pos%3An",
     "meanings": [
-      "Any debt"
+      "Debt"
     ]
   },
   {
@@ -15214,7 +15174,6 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A*aA+pos%3Adem",
     "meanings": [
       "One",
-      "It that",
       "One who"
     ]
   },
@@ -15236,7 +15195,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AruEob+pos%3An",
     "meanings": [
-      "[the] terror",
       "Terror"
     ]
   },
@@ -15259,7 +15217,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Az%7Eayotuwn+pos%3An",
     "meanings": [
-      "Olives",
       "Olive"
     ]
   },
@@ -15281,9 +15238,8 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Asalam+pos%3An",
     "meanings": [
-      "[the] peace",
-      "Submission",
-      "Exclusively"
+      "Peace",
+      "Submission"
     ]
   },
   {
@@ -15304,8 +15260,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%24%7Ea%60ribiyn+pos%3An",
     "meanings": [
       "Drinkers",
-      "Drink",
-      "Will drink"
+      "Drink"
     ]
   },
   {
@@ -15315,8 +15270,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%24aAEir+pos%3An",
     "meanings": [
-      "Poet",
-      "Poets"
+      "Poet"
     ]
   },
   {
@@ -15329,8 +15283,7 @@
       "Associating partners",
       "Partnership",
       "Association",
-      "Share",
-      "Any share"
+      "Share"
     ]
   },
   {
@@ -15341,8 +15294,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%24aTor+pos%3Aloc",
     "meanings": [
       "Towards the direction",
-      "Its direction",
-      "Direction"
+      "In the direction"
     ]
   },
   {
@@ -15355,7 +15307,6 @@
       "Disgraced ones",
       "Humiliated",
       "Subdued",
-      "Those who are disgraced",
       "Abased"
     ]
   },
@@ -15387,7 +15338,6 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3ASid%7Eiyq+pos%3An",
     "meanings": [
       "Truthful",
-      "Truthful one",
       "Man of truth"
     ]
   },
@@ -15420,7 +15370,6 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3ATa%60%5E%7Dir+pos%3An",
     "meanings": [
       "Bird",
-      "Evil omens",
       "Fate",
       "Bad omen",
       "Evil omen"
@@ -15434,7 +15383,6 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3ATaraf+pos%3An",
     "meanings": [
       "Part",
-      "Two ends",
       "Borders",
       "Ends"
     ]
@@ -15448,8 +15396,7 @@
     "meanings": [
       "Way",
       "Conduct",
-      "Paths",
-      "Ways"
+      "Paths"
     ]
   },
   {
@@ -15467,7 +15414,7 @@
     "transliteration": "Eadad",
     "frequency": 5,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AEadad+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AEadad+pos%3An",
     "meanings": [
       "Number"
     ]
@@ -15481,8 +15428,6 @@
     "meanings": [
       "Matters",
       "Determination",
-      "Matters requiring determination",
-      "Matters of determination",
       "Those of determination"
     ]
   },
@@ -15493,7 +15438,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AEusor+pos%3An",
     "meanings": [
-      "[the] hardship",
       "Difficulty",
       "Hardship"
     ]
@@ -15503,7 +15447,7 @@
     "transliteration": "Ea$or",
     "frequency": 5,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AEa%24or+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AEa%24or+pos%3An",
     "meanings": [
       "Ten"
     ]
@@ -15526,8 +15470,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AEafuw%7E+pos%3An",
     "meanings": [
-      "Oft-Pardoning",
-      "Surely, Oft-Pardoning"
+      "Oft-Pardoning"
     ]
   },
   {
@@ -15557,9 +15500,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Aguduw%7E+pos%3An",
     "meanings": [
-      "Mornings",
-      "Morning course",
-      "Morning"
+      "Mornings"
     ]
   },
   {
@@ -15607,9 +15548,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AqaA%5E%7Dil+pos%3An",
     "meanings": [
-      "Speaker",
-      "Speaks it",
-      "Those who say"
+      "Speaker"
     ]
   },
   {
@@ -15653,9 +15592,9 @@
     "transliteration": "kaAtib",
     "frequency": 5,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AkaAtib+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AkaAtib+pos%3An",
     "meanings": [
-      "Recording"
+      "Scribe"
     ]
   },
   {
@@ -15676,8 +15615,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Akalob+pos%3An",
     "meanings": [
-      "Dog",
-      "While their dog"
+      "Dog"
     ]
   },
   {
@@ -15687,8 +15625,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Akawokab+pos%3An",
     "meanings": [
-      "Star",
-      "Stars"
+      "Star"
     ]
   },
   {
@@ -15698,7 +15635,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AlawoH+pos%3An",
     "meanings": [
-      "Tablets",
       "Made of planks",
       "Tablet"
     ]
@@ -15722,8 +15658,6 @@
     "meanings": [
       "Wealthy people",
       "Affluent ones",
-      "Wealthy ones",
-      "Wealthy ones of it",
       "Indulging in affluence"
     ]
   },
@@ -15732,9 +15666,10 @@
     "transliteration": "muta$a`bih",
     "frequency": 5,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Amuta%24a%60bih+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Amuta%24a%60bih+pos%3An",
     "meanings": [
-      "Allegorical"
+      "Resembling",
+      "Similar"
     ]
   },
   {
@@ -15744,7 +15679,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7EaHiyS+pos%3An",
     "meanings": [
-      "Any escape",
       "Place of escape",
       "Place of refuge"
     ]
@@ -15756,8 +15690,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Amuxoraj+pos%3An",
     "meanings": [
-      "Will be removed",
-      "Exit",
       "Brought forth",
       "Ones driven out",
       "Be brought out"
@@ -15804,8 +15736,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Amaso_%23uwl+pos%3An",
     "meanings": [
       "Questioned",
-      "Requested",
-      "Be questioned"
+      "Requested"
     ]
   },
   {
@@ -15848,9 +15779,7 @@
     "part_of_speech": "Preposition",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AmaE2+pos%3Ap",
     "meanings": [
-      "You",
-      "With",
-      "Them"
+      "With"
     ]
   },
   {
@@ -15858,9 +15787,10 @@
     "transliteration": "m~aEoduwdap",
     "frequency": 5,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7EaEoduwdap+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7EaEoduwdap+pos%3Aadj",
     "meanings": [
-      "Determined"
+      "Numbered",
+      "Few"
     ]
   },
   {
@@ -15913,7 +15843,6 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Amunziliyn+pos%3An",
     "meanings": [
       "Hosts",
-      "Those who cause to land.'",
       "Bring down",
       "Send down",
       "Ones to send"
@@ -15924,9 +15853,10 @@
     "transliteration": "m~uniyr",
     "frequency": 5,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Euniyr+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Euniyr+pos%3An",
     "meanings": [
-      "[the] Enlightening"
+      "Enlightening",
+      "Illuminating"
     ]
   },
   {
@@ -15947,11 +15877,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Amuholik+pos%3An",
     "meanings": [
-      "One who destroys",
-      "Destroy them",
-      "Destroy it",
-      "One to destroy",
-      "Going to destroy"
+      "One who destroys"
     ]
   },
   {
@@ -15962,9 +15888,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Euwqiniyn+pos%3An",
     "meanings": [
       "Ones who are certain",
-      "Convinced",
-      "Certain",
-      "Those who are certain"
+      "Convinced"
     ]
   },
   {
@@ -15972,7 +15896,7 @@
     "transliteration": "mayotap",
     "frequency": 5,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Amayotap+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Amayotap+pos%3An",
     "meanings": [
       "Dead"
     ]
@@ -15994,7 +15918,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Ana%60Ziriyn+pos%3An",
     "meanings": [
-      "Those who see (it).'",
       "Observers",
       "Awaiting"
     ]
@@ -16036,8 +15959,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AwaAzirap+pos%3An",
     "meanings": [
-      "Any bearer of burden",
-      "Bearer of burden",
       "Bearer of burdens"
     ]
   },
@@ -16046,9 +15967,9 @@
     "transliteration": "waAqiE",
     "frequency": 5,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AwaAqiE+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AwaAqiE+pos%3An",
     "meanings": [
-      "Bound to happen"
+      "Surely to occur"
     ]
   },
   {
@@ -16068,8 +15989,7 @@
     "part_of_speech": "Proper noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AyaHoyaY%60+pos%3Apn",
     "meanings": [
-      "Yahya",
-      "O Yahya"
+      "Yahya"
     ]
   },
   {
@@ -16972,7 +16892,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Earo*al+pos%3An",
     "meanings": [
-      "Lowest of us",
       "Worst",
       "Most abject",
       "Lowest"
@@ -16998,8 +16917,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Cisotaboraq+pos%3An",
     "meanings": [
       "Heavy brocade",
-      "Heavy silk",
-      "Brocade"
+      "Heavy silk"
     ]
   },
   {
@@ -17019,7 +16937,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Easiyr+pos%3An",
     "meanings": [
-      "Captives",
       "Prisoners of war",
       "Captive"
     ]
@@ -17029,10 +16946,9 @@
     "transliteration": ">aSiyl",
     "frequency": 4,
     "part_of_speech": "Time adverb",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3EaSiyl+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3EaSiyl+pos%3At",
     "meanings": [
-      "Evenings",
-      "Afternoons"
+      "Evening"
     ]
   },
   {
@@ -17042,7 +16958,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3EaTohar+pos%3An",
     "meanings": [
-      "More purer",
       "Purer"
     ]
   },
@@ -17142,7 +17057,7 @@
     "transliteration": ">um~iY~",
     "frequency": 4,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Eum%7EiY%7E+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Eum%7EiY%7E+pos%3An",
     "meanings": [
       "Unlettered"
     ]
@@ -17154,9 +17069,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%7BntiqaAm+pos%3An",
     "meanings": [
-      "Retribution",
-      "Owner (of) Retribution",
-      "All-Able of retribution"
+      "Retribution"
     ]
   },
   {
@@ -17174,7 +17087,7 @@
     "transliteration": ">ayon",
     "frequency": 4,
     "part_of_speech": "Location adverb",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Eayon+pos%3Acond",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Eayon+pos%3Aloc",
     "meanings": [
       "Wherever"
     ]
@@ -17197,8 +17110,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Aba%3EosaA%5E%27+pos%3An",
     "meanings": [
-      "[the] suffering",
-      "[the] adversity",
+      "Suffering",
       "Adversity"
     ]
   },
@@ -17209,10 +17121,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Aba%60siT+pos%3An",
     "meanings": [
-      "Stretch",
-      "Stretching out",
-      "Like one who stretches",
-      "Stretched"
+      "Stretch"
     ]
   },
   {
@@ -17262,7 +17171,7 @@
     "transliteration": "bal",
     "frequency": 4,
     "part_of_speech": "Inceptive particle",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Abal+pos%3Aconj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Abal+pos%3Ainc",
     "meanings": [
       "Nay"
     ]
@@ -17274,7 +17183,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Ataqiy%7E+pos%3An",
     "meanings": [
-      "He (should) be feared",
       "Righteous",
       "God fearing"
     ]
@@ -17286,8 +17194,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Avubuwr+pos%3An",
     "meanings": [
-      "Destruction",
-      "Destructions"
+      "Destruction"
     ]
   },
   {
@@ -17295,9 +17202,10 @@
     "transliteration": "vaqiyl",
     "frequency": 4,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Avaqiyl+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Avaqiyl+pos%3Aadj",
     "meanings": [
-      "Heavy"
+      "Heavy",
+      "Grave"
     ]
   },
   {
@@ -17307,7 +17215,6 @@
     "part_of_speech": "Location adverb",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Avam%7E+pos%3Aloc",
     "meanings": [
-      "[so] there",
       "There",
       "Then",
       "And"
@@ -17321,7 +17228,6 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AjihaAd+pos%3An",
     "meanings": [
       "Striving",
-      "Striving due (to) Him",
       "Strive"
     ]
   },
@@ -17352,7 +17258,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AjuwE+pos%3An",
     "meanings": [
-      "[the] hunger",
       "Hunger"
     ]
   },
@@ -17372,9 +17277,10 @@
     "transliteration": "Hijor",
     "frequency": 4,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AHijor+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AHijor+pos%3An",
     "meanings": [
-      "Forbidden"
+      "Partition",
+      "Rocky tract"
     ]
   },
   {
@@ -17384,8 +17290,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AHarob+pos%3An",
     "meanings": [
-      "War",
-      "[the] war"
+      "War"
     ]
   },
   {
@@ -17395,7 +17300,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AHaSiyd+pos%3An",
     "meanings": [
-      "Harvest clean-mown",
       "Mown",
       "Reaped",
       "Harvest"
@@ -17408,9 +17312,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AHaliym+pos%3An",
     "meanings": [
-      "Forbearing",
-      "Ever-Forbearing",
-      "Most Forbearing"
+      "Forbearing"
     ]
   },
   {
@@ -17451,9 +17353,10 @@
     "transliteration": "xaAwiyap",
     "frequency": 4,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AxaAwiyap+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AxaAwiyap+pos%3An",
     "meanings": [
-      "Hollow"
+      "Collapsed",
+      "Ruined"
     ]
   },
   {
@@ -17483,7 +17386,7 @@
     "transliteration": "xuDor",
     "frequency": 4,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AxuDor+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AxuDor+pos%3An",
     "meanings": [
       "Green"
     ]
@@ -17495,8 +17398,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Axaliyl+pos%3An",
     "meanings": [
-      "Friend",
-      "Friends"
+      "Friend"
     ]
   },
   {
@@ -17506,8 +17408,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Ada%3Eob+pos%3An",
     "meanings": [
-      "Like behavior",
-      "Like (the) way",
       "Plight"
     ]
   },
@@ -17519,7 +17419,6 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AdaAbir+pos%3An",
     "meanings": [
       "Remnant",
-      "Roots",
       "Root"
     ]
   },
@@ -17532,8 +17431,7 @@
     "meanings": [
       "Humble",
       "Humbled",
-      "Humiliated",
-      "Humiliation"
+      "Humiliated"
     ]
   },
   {
@@ -17568,7 +17466,6 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A*ur%7Eiy%7Ea%60t+pos%3An",
     "meanings": [
       "Descendents",
-      "Offsprings",
       "Offspring"
     ]
   },
@@ -17579,7 +17476,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Ara%60jiEuwn+pos%3An",
     "meanings": [
-      "Will return",
       "Return"
     ]
   },
@@ -17598,9 +17494,9 @@
     "transliteration": "rajiym",
     "frequency": 4,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Arajiym+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Arajiym+pos%3Aadj",
     "meanings": [
-      "Expelled",
+      "Rejected",
       "Accursed"
     ]
   },
@@ -17622,8 +17518,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3ArisaAlap+pos%3An",
     "meanings": [
-      "Message",
-      "Messages"
+      "Message"
     ]
   },
   {
@@ -17635,8 +17530,7 @@
     "meanings": [
       "Decorative",
       "Adornment",
-      "Ornament",
-      "Ornaments of gold"
+      "Ornament"
     ]
   },
   {
@@ -17647,7 +17541,6 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AzulofaY%60%5E+pos%3An",
     "meanings": [
       "Position",
-      "Is a near access",
       "Nearness"
     ]
   },
@@ -17670,7 +17563,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AsaAq+pos%3An",
     "meanings": [
-      "Shins",
       "Shin",
       "Leg"
     ]
@@ -17690,9 +17582,10 @@
     "transliteration": "s~ujuwd",
     "frequency": 4,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3As%7Eujuwd+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3As%7Eujuwd+pos%3An",
     "meanings": [
-      "Those who prostrate"
+      "Prostrate",
+      "Prostration"
     ]
   },
   {
@@ -17702,7 +17595,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Asad%7E+pos%3An",
     "meanings": [
-      "Two mountains",
+      "Mountain",
       "Barrier"
     ]
   },
@@ -17743,9 +17636,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Asaqof+pos%3An",
     "meanings": [
-      "Roof",
-      "Roofs",
-      "By the roof"
+      "Roof"
     ]
   },
   {
@@ -17755,9 +17646,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Asam%7Ea%60Euwn+pos%3An",
     "meanings": [
-      "They (are) listeners",
-      "Listeners",
-      "Who would have listened"
+      "Listeners"
     ]
   },
   {
@@ -17767,8 +17656,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3As%7Euwq+pos%3An",
     "meanings": [
-      "Markets",
-      "Over the legs",
+      "Market",
       "Stem"
     ]
   },
@@ -17779,8 +17667,8 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%24a%3Eon+pos%3An",
     "meanings": [
-      "Any situation",
-      "Affair of theirs",
+      "Situation",
+      "Affair",
       "Matter"
     ]
   },
@@ -17844,9 +17732,10 @@
     "transliteration": "SuboH",
     "frequency": 4,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3ASuboH+pos%3At",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3ASuboH+pos%3An",
     "meanings": [
-      "Dawn"
+      "Dawn",
+      "Morning"
     ]
   },
   {
@@ -17857,8 +17746,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3ASaroH+pos%3An",
     "meanings": [
       "Palace",
-      "Lofty tower",
-      "Tower"
+      "Lofty tower"
     ]
   },
   {
@@ -17889,10 +17777,10 @@
     "transliteration": "DuHFY",
     "frequency": 4,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3ADuHFY+pos%3At",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3ADuHFY+pos%3An",
     "meanings": [
-      "Daylight",
-      "Forenoon"
+      "Brightness",
+      "Morning brightness"
     ]
   },
   {
@@ -17902,7 +17790,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3ADaEof+pos%3An",
     "meanings": [
-      "Is weakness",
       "Weakness"
     ]
   },
@@ -17914,8 +17801,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3ADiEof+pos%3Aadj",
     "meanings": [
       "Double",
-      "Two fold",
-      "Two-fold"
+      "Two fold"
     ]
   },
   {
@@ -17925,7 +17811,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3ATaA%5E%7Dif+pos%3An",
     "meanings": [
-      "Those who circumambulate",
+      "One who circumambulate",
       "Evil thought",
       "Visitation"
     ]
@@ -17935,7 +17821,7 @@
     "transliteration": "Ta`giyn",
     "frequency": 4,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3ATa%60giyn+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3ATa%60giyn+pos%3An",
     "meanings": [
       "Transgressing"
     ]
@@ -17958,9 +17844,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3ATifol+pos%3An",
     "meanings": [
-      "Child",
-      "[the] children",
-      "Children"
+      "Child"
     ]
   },
   {
@@ -18004,8 +17888,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AZaAlimap+pos%3An",
     "meanings": [
       "Doing wrong",
-      "Unjust",
-      "Was doing wrong"
+      "Unjust"
     ]
   },
   {
@@ -18013,10 +17896,10 @@
     "transliteration": "Zahiyr",
     "frequency": 4,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AZahiyr+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AZahiyr+pos%3An",
     "meanings": [
       "Assistants",
-      "Helper"
+      "Supporter"
     ]
   },
   {
@@ -18028,8 +17911,7 @@
     "meanings": [
       "Upside",
       "Highest",
-      "Arrogant",
-      "Them"
+      "Arrogant"
     ]
   },
   {
@@ -18050,8 +17932,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AEaroD+pos%3An",
     "meanings": [
       "Width",
-      "Display",
-      "Like (the) width"
+      "Display"
     ]
   },
   {
@@ -18061,10 +17942,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AEa%24ar+pos%3An",
     "meanings": [
-      "Ten",
-      "Twelve",
-      "Eleven",
-      "Teen"
+      "Ten"
     ]
   },
   {
@@ -18085,8 +17963,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AEuqodap+pos%3An",
     "meanings": [
-      "Knot",
-      "Knots"
+      "Knot"
     ]
   },
   {
@@ -18131,7 +18008,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Agama%60m+pos%3An",
     "meanings": [
-      "[the] clouds",
       "Clouds"
     ]
   },
@@ -18143,8 +18019,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AganiY%7E+pos%3Aadj",
     "meanings": [
       "Self-sufficient",
-      "Free of need",
-      "Free from need"
+      "Free of need"
     ]
   },
   {
@@ -18155,7 +18030,6 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Agay%7E+pos%3An",
     "meanings": [
       "Wrong",
-      "[the] error",
       "Error",
       "Evil"
     ]
@@ -18178,7 +18052,6 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AfaA%5E%7Dizuwn+pos%3An",
     "meanings": [
       "Successful",
-      "Successful ones",
       "Achievers"
     ]
   },
@@ -18189,7 +18062,6 @@
     "part_of_speech": "Adjective",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Afaxuwr+pos%3Aadj",
     "meanings": [
-      "[a] boastful",
       "Boastful",
       "Boaster"
     ]
@@ -18202,7 +18074,6 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AfiraAr+pos%3An",
     "meanings": [
       "Flight",
-      "Flee",
       "Fleeing"
     ]
   },
@@ -18224,7 +18095,7 @@
     "transliteration": "qaA^}imap",
     "frequency": 4,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AqaA%5E%7Dimap+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AqaA%5E%7Dimap+pos%3An",
     "meanings": [
       "Standing"
     ]
@@ -18246,8 +18117,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Aqudus+pos%3An",
     "meanings": [
-      "Holy Spirit",
-      "[the] Holy",
       "Holy"
     ]
   },
@@ -18291,8 +18160,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Aqalam+pos%3An",
     "meanings": [
-      "Pens",
-      "By the pen"
+      "Pen"
     ]
   },
   {
@@ -18334,7 +18202,7 @@
     "transliteration": "kaf~aAr",
     "frequency": 4,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Akaf%7EaAr+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Akaf%7EaAr+pos%3Aadj",
     "meanings": [
       "Ungrateful"
     ]
@@ -18356,9 +18224,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Akifol+pos%3An",
     "meanings": [
-      "Portion",
-      "Dhul-Kifl",
-      "Double portion"
+      "Portion"
     ]
   },
   {
@@ -18368,8 +18234,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Akala%60m+pos%3An",
     "meanings": [
-      "Words",
-      "Words of Allah"
+      "Words"
     ]
   },
   {
@@ -18387,7 +18252,7 @@
     "transliteration": "laTiyf",
     "frequency": 4,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AlaTiyf+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AlaTiyf+pos%3Aadj",
     "meanings": [
       "All-Subtle",
       "Subtle"
@@ -18432,8 +18297,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Amutawak%7Eiluwn+pos%3An",
     "meanings": [
-      "Ones who put trust",
-      "Ones who put (their) trust",
       "Those who trust"
     ]
   },
@@ -18444,7 +18307,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Amuja%60hidiyn+pos%3An",
     "meanings": [
-      "Ones who strive",
       "Those who strive"
     ]
   },
@@ -18466,7 +18328,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AmiHoraAb+pos%3An",
     "meanings": [
-      "[the] prayer chamber",
       "Prayer chamber",
       "Chamber"
     ]
@@ -18551,7 +18412,7 @@
     "transliteration": "m~usotaDoEafuwn",
     "frequency": 4,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7EusotaDoEafuwn+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7EusotaDoEafuwn+pos%3An",
     "meanings": [
       "Deemed weak"
     ]
@@ -18592,9 +18453,10 @@
     "transliteration": "miSor",
     "frequency": 4,
     "part_of_speech": "Proper noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AmiSor+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AmiSor+pos%3Apn",
     "meanings": [
-      "City"
+      "Egypt",
+      "Misr"
     ]
   },
   {
@@ -18604,10 +18466,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AmuEa*%7Eib+pos%3An",
     "meanings": [
-      "Punish them",
-      "One Who punishes them",
-      "Are to punish",
-      "Punish it"
+      "Punisher"
     ]
   },
   {
@@ -18629,10 +18488,8 @@
     "part_of_speech": "Adjective",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Eu%26omina%60t+pos%3Aadj",
     "meanings": [
-      "[the] believing women",
       "Believers",
-      "Believing women",
-      "Faithful"
+      "Believing women"
     ]
   },
   {
@@ -18652,9 +18509,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AmuEa*%7Eabiyn+pos%3An",
     "meanings": [
-      "Ones to be punished",
-      "Those punished",
-      "Will be punished"
+      "Those punished"
     ]
   },
   {
@@ -18675,7 +18530,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Eugoraquwn+pos%3An",
     "meanings": [
-      "Ones (to be) drowned",
       "Drowned",
       "Ones to be drowned"
     ]
@@ -18688,7 +18542,6 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Euqotadir+pos%3An",
     "meanings": [
       "All Able",
-      "Have full power",
       "Powerful One",
       "Most Powerful"
     ]
@@ -18710,7 +18563,7 @@
     "transliteration": "m~ukoramuwn",
     "frequency": 4,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Eukoramuwn+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Eukoramuwn+pos%3An",
     "meanings": [
       "Honored"
     ]
@@ -18723,9 +18576,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Eula%60quwA+pos%3An",
     "meanings": [
       "Will meet",
-      "Meet Him",
-      "Meet",
-      "Be meeting"
+      "Meeting"
     ]
   },
   {
@@ -18736,8 +18587,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Amalakuwt+pos%3An",
     "meanings": [
       "Kingdom",
-      "Dominion",
-      "Is (the) dominion"
+      "Dominion"
     ]
   },
   {
@@ -18782,9 +18632,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7EuntaSir+pos%3An",
     "meanings": [
       "Supported",
-      "Those who (could) defend themselves",
-      "Help themselves",
-      "Helping"
+      "Victor"
     ]
   },
   {
@@ -18804,9 +18652,8 @@
     "transliteration": "m~u&ominap",
     "frequency": 4,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Eu%26ominap+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Eu%26ominap+pos%3Aadj",
     "meanings": [
-      "Believing woman",
       "Believing"
     ]
   },
@@ -18815,7 +18662,7 @@
     "transliteration": "m~ayot",
     "frequency": 4,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Eayot+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Eayot+pos%3Aadj",
     "meanings": [
       "Dead"
     ]
@@ -18827,8 +18674,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AnaSab+pos%3An",
     "meanings": [
-      "Fatigue",
-      "Any fatigue"
+      "Fatigue"
     ]
   },
   {
@@ -18838,8 +18684,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AnaEojap+pos%3An",
     "meanings": [
-      "Ewe",
-      "Ewes"
+      "Ewe"
     ]
   },
   {
@@ -18870,8 +18715,7 @@
     "part_of_speech": "Demonstrative pronoun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AhunaA+pos%3Adem",
     "meanings": [
-      "Here",
-      "Are [here]"
+      "Here"
     ]
   },
   {
@@ -18892,9 +18736,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Awaquwd+pos%3An",
     "meanings": [
-      "[its] fuel",
-      "Fuel",
-      "Whose fuel"
+      "Fuel"
     ]
   },
   {
@@ -18912,7 +18754,7 @@
     "transliteration": "'aAmin",
     "frequency": 4,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%27aAmin+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%27aAmin+pos%3An",
     "meanings": [
       "Secure"
     ]
@@ -19944,7 +19786,6 @@
     "part_of_speech": "Adjective",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3EaboyaD+pos%3Aadj",
     "meanings": [
-      "[the] white",
       "White"
     ]
   },
@@ -19953,7 +19794,7 @@
     "transliteration": "<i*aA",
     "frequency": 3,
     "part_of_speech": "Surprise particle",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Ci*aA+pos%3Acond",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Ci*aA+pos%3Asur",
     "meanings": [
       "When"
     ]
@@ -20048,9 +19889,9 @@
     "transliteration": "Hawol",
     "frequency": 3,
     "part_of_speech": "Location adverb",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AHawol+pos%3At",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AHawol+pos%3Aloc",
     "meanings": [
-      "Two years"
+      "Around"
     ]
   },
   {
@@ -20094,8 +19935,7 @@
     "part_of_speech": "Negative particle",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AkaY+pos%3Aneg",
     "meanings": [
-      "That not",
-      "That you may not"
+      "So that"
     ]
   },
   {
@@ -20138,8 +19978,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AA%5Evim+pos%3An",
     "meanings": [
       "Sinful",
-      "Sinners",
-      "Any sinner"
+      "Sinners"
     ]
   },
   {
@@ -20149,9 +19988,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AA%5Exi*+pos%3An",
     "meanings": [
-      "Take it",
-      "Has grasp",
-      "Taking"
+      "Taker"
     ]
   },
   {
@@ -20193,7 +20030,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Ea*oqaAn+pos%3An",
     "meanings": [
-      "On their faces",
+      "Faces",
       "Chins"
     ]
   },
@@ -20202,7 +20039,7 @@
     "transliteration": ">asofal",
     "frequency": 3,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Easofal+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Easofal+pos%3An",
     "meanings": [
       "Lowest"
     ]
@@ -20226,7 +20063,6 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Ea%24oqaY+pos%3An",
     "meanings": [
       "Wretched one",
-      "Most wicked of them",
       "Most wretched"
     ]
   },
@@ -20249,8 +20085,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3EaSol+pos%3An",
     "meanings": [
       "Root",
-      "Bottom",
-      "Roots"
+      "Bottom"
     ]
   },
   {
@@ -20293,7 +20128,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Eufuq+pos%3An",
     "meanings": [
-      "Horizons",
       "Horizon"
     ]
   },
@@ -20419,7 +20253,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Abaqar+pos%3An",
     "meanings": [
-      "[the] cows",
       "Cows"
     ]
   },
@@ -20431,8 +20264,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Abaqiy%7Eat+pos%3An",
     "meanings": [
       "Remnant",
-      "Remains",
-      "Those possessing a remnant"
+      "Remains"
     ]
   },
   {
@@ -20454,7 +20286,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AbayaAn+pos%3An",
     "meanings": [
       "Declaration",
-      "[the] speech",
+      "Speech",
       "Explanation"
     ]
   },
@@ -20466,7 +20298,6 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AtaAbiE+pos%3An",
     "meanings": [
       "Follower",
-      "Followers",
       "Attendants"
     ]
   },
@@ -20489,7 +20320,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AtaHowiyl+pos%3An",
     "meanings": [
       "Transfer",
-      "Any alteration"
+      "Alteration"
     ]
   },
   {
@@ -20528,7 +20359,7 @@
     "transliteration": "vama`niyap",
     "frequency": 3,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Avama%60niyap+pos%3At",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Avama%60niyap+pos%3An",
     "meanings": [
       "Eight"
     ]
@@ -20550,7 +20381,6 @@
     "part_of_speech": "Proper noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AjaAluwt+pos%3Apn",
     "meanings": [
-      "Against Jalut",
       "Jalut"
     ]
   },
@@ -20592,8 +20422,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Aji*oE+pos%3An",
     "meanings": [
-      "Trunk",
-      "Trunks"
+      "Trunk"
     ]
   },
   {
@@ -20611,7 +20440,7 @@
     "transliteration": "jasad",
     "frequency": 3,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Ajasad+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Ajasad+pos%3An",
     "meanings": [
       "Body"
     ]
@@ -20621,9 +20450,10 @@
     "transliteration": "junub",
     "frequency": 3,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Ajunub+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Ajunub+pos%3An",
     "meanings": [
-      "Farther away"
+      "Distance",
+      "Impure"
     ]
   },
   {
@@ -20644,7 +20474,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Ajayob+pos%3An",
     "meanings": [
-      "Bosoms",
       "Bosom"
     ]
   },
@@ -20666,7 +20495,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AHaAjap+pos%3An",
     "meanings": [
       "Need",
-      "Any want"
+      "Want"
     ]
   },
   {
@@ -20738,8 +20567,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AHusobaAn+pos%3An",
     "meanings": [
       "Reckoning",
-      "Calamity",
-      "By (precise) calculation"
+      "Calamity"
     ]
   },
   {
@@ -20759,7 +20587,7 @@
     "transliteration": "Hasiyb",
     "frequency": 3,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AHasiyb+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AHasiyb+pos%3An",
     "meanings": [
       "Reckoner"
     ]
@@ -20781,7 +20609,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AHifoZ+pos%3An",
     "meanings": [
-      "Guarding of both of them",
       "Guard"
     ]
   },
@@ -20823,7 +20650,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AxaA%5E%7Dif+pos%3An",
     "meanings": [
-      "Those in fear",
       "Fearful",
       "Fearing"
     ]
@@ -20847,8 +20673,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AxaArij+pos%3An",
     "meanings": [
-      "Will come out",
-      "He comes out"
+      "Come out"
     ]
   },
   {
@@ -20890,8 +20715,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AxaSom+pos%3An",
     "meanings": [
       "Opponents",
-      "Litigants",
-      "Two litigants"
+      "Litigants"
     ]
   },
   {
@@ -20902,7 +20726,6 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AxiTaAb+pos%3An",
     "meanings": [
       "Speech",
-      "[the] speech",
       "Address"
     ]
   },
@@ -21001,8 +20824,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AraA%5Ed%7E+pos%3An",
     "meanings": [
       "Repeller",
-      "Restore him",
-      "Take you back"
+      "Restore"
     ]
   },
   {
@@ -21013,7 +20835,6 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AraAgib+pos%3An",
     "meanings": [
       "Turn our hopes",
-      "Do you hate",
       "Turn devoutly"
     ]
   },
@@ -21035,9 +20856,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3ArajoE+pos%3An",
     "meanings": [
-      "Return",
-      "Return him",
-      "Returns"
+      "Return"
     ]
   },
   {
@@ -21078,9 +20897,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3ArahoT+pos%3An",
     "meanings": [
-      "Family",
-      "Is my family",
-      "Family heads"
+      "Family"
     ]
   },
   {
@@ -21090,7 +20907,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Ar%7EawoH+pos%3An",
     "meanings": [
-      "Mercy of Allah",
+      "Mercy",
       "Rest"
     ]
   },
@@ -21197,8 +21014,7 @@
     "part_of_speech": "Proper noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3As%7EaAmiriY%7E+pos%3Apn",
     "meanings": [
-      "Samiri",
-      "O Samiri"
+      "Samiri"
     ]
   },
   {
@@ -21228,7 +21044,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AsaHar+pos%3An",
     "meanings": [
-      "[in the] before dawn",
       "Hours before dawn",
       "By dawn"
     ]
@@ -21282,7 +21097,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Asilosilap+pos%3An",
     "meanings": [
-      "Chains",
       "Chain"
     ]
   },
@@ -21293,7 +21107,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3As%7EalowaY%60+pos%3An",
     "meanings": [
-      "[the] quails",
       "Quails"
     ]
   },
@@ -21333,7 +21146,7 @@
     "transliteration": "sawiy~",
     "frequency": 3,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Asawiy%7E+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Asawiy%7E+pos%3Aadj",
     "meanings": [
       "Sound",
       "Upright"
@@ -21347,7 +21160,6 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Asay%7EaArap+pos%3An",
     "meanings": [
       "Travelers",
-      "[the] caravan",
       "Caravan"
     ]
   },
@@ -21368,9 +21180,9 @@
     "transliteration": "say~i}",
     "frequency": 3,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Asay%7Ei%7D+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Asay%7Ei%7D+pos%3Aadj",
     "meanings": [
-      "[its] evil"
+      "Evil"
     ]
   },
   {
@@ -21378,7 +21190,7 @@
     "transliteration": "$uH~",
     "frequency": 3,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%24uH%7E+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%24uH%7E+pos%3An",
     "meanings": [
       "Miserly"
     ]
@@ -21420,7 +21232,7 @@
     "transliteration": "$ayox",
     "frequency": 3,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%24ayox+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%24ayox+pos%3Aadj",
     "meanings": [
       "Old"
     ]
@@ -21433,7 +21245,6 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3ASa%60%5Ef%7Ea%60t+pos%3An",
     "meanings": [
       "Wings outspread",
-      "By those lined",
       "Spreading"
     ]
   },
@@ -21475,7 +21286,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3ASuwrap+pos%3An",
     "meanings": [
-      "Forms",
       "Form"
     ]
   },
@@ -21532,8 +21342,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3ATawol+pos%3An",
     "meanings": [
       "Afford",
-      "Wealth",
-      "Owner (of) the abundance"
+      "Wealth"
     ]
   },
   {
@@ -21564,7 +21373,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AEaAqir+pos%3An",
     "meanings": [
-      "[a] barren",
       "Barren"
     ]
   },
@@ -21573,7 +21381,7 @@
     "transliteration": "Eajab",
     "frequency": 3,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AEajab+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AEajab+pos%3Aadj",
     "meanings": [
       "Wonder",
       "Astonishing"
@@ -21586,8 +21394,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AEa%24orap+pos%3An",
     "meanings": [
-      "Twelve",
-      "Ten [i.e. twelve]"
+      "Twelve"
     ]
   },
   {
@@ -21606,7 +21413,7 @@
     "transliteration": "Eaqiym",
     "frequency": 3,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AEaqiym+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AEaqiym+pos%3Aadj",
     "meanings": [
       "Barren"
     ]
@@ -21648,7 +21455,7 @@
     "transliteration": "Eaniyd",
     "frequency": 3,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AEaniyd+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AEaniyd+pos%3Aadj",
     "meanings": [
       "Stubborn"
     ]
@@ -21668,7 +21475,7 @@
     "transliteration": "Eiyn",
     "frequency": 3,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AEiyn+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AEiyn+pos%3An",
     "meanings": [
       "Large eyes"
     ]
@@ -21709,7 +21516,7 @@
     "transliteration": "gaf~aAr",
     "frequency": 3,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Agaf%7EaAr+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Agaf%7EaAr+pos%3Aadj",
     "meanings": [
       "Perpetual Forgiver",
       "Oft-Forgiving"
@@ -21754,7 +21561,6 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Afa%60kihiyn+pos%3An",
     "meanings": [
       "Amusement",
-      "Take delight",
       "Enjoying"
     ]
   },
@@ -21776,8 +21582,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Afatiyl+pos%3An",
     "meanings": [
-      "Hair on a date-seed",
-      "Hair on a date seed"
+      "Hair on a date-seed"
     ]
   },
   {
@@ -21796,7 +21601,7 @@
     "transliteration": "fuj~aAr",
     "frequency": 3,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Afuj%7EaAr+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Afuj%7EaAr+pos%3An",
     "meanings": [
       "Wicked ones"
     ]
@@ -21808,8 +21613,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Afidoyap+pos%3An",
     "meanings": [
-      "Ransom",
-      "Any ransom"
+      "Ransom"
     ]
   },
   {
@@ -21850,7 +21654,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Afisoq+pos%3An",
     "meanings": [
-      "Grave disobedience",
       "Disobedience"
     ]
   },
@@ -21861,8 +21664,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AfiSaAl+pos%3An",
     "meanings": [
-      "Weaning",
-      "Weaning of him"
+      "Weaning"
     ]
   },
   {
@@ -21903,8 +21705,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AqaAhir+pos%3An",
     "meanings": [
-      "Subjugator",
-      "Subjugators"
+      "Subjugator"
     ]
   },
   {
@@ -21914,7 +21715,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Aqubul+pos%3An",
     "meanings": [
-      "Face to face",
       "Front",
       "Before"
     ]
@@ -21937,8 +21737,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AqurobaAn+pos%3An",
     "meanings": [
-      "Sacrifice",
-      "Gods as a way of approach"
+      "Sacrifice"
     ]
   },
   {
@@ -21959,8 +21758,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Aqiradap+pos%3An",
     "meanings": [
-      "Apes",
-      "[the] apes"
+      "Apes"
     ]
   },
   {
@@ -21980,8 +21778,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Aqisomap+pos%3An",
     "meanings": [
-      "Division",
-      "Be shared"
+      "Division"
     ]
   },
   {
@@ -21991,7 +21788,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AqinTaAr+pos%3An",
     "meanings": [
-      "[the] heaps",
       "Great amount of wealth",
       "Heap"
     ]
@@ -22049,8 +21845,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AkaA%24if+pos%3An",
     "meanings": [
-      "Remover",
-      "Remove"
+      "Remover"
     ]
   },
   {
@@ -22058,7 +21853,7 @@
     "transliteration": "ka*~aAb",
     "frequency": 3,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Aka*%7EaAb+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Aka*%7EaAb+pos%3Aadj",
     "meanings": [
       "Liar"
     ]
@@ -22104,8 +21899,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Ala%60Eibiyn+pos%3An",
     "meanings": [
       "Playing",
-      "Those who play",
-      "Play"
+      "Those who play"
     ]
   },
   {
@@ -22128,8 +21922,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Ama%60lik+pos%3An",
     "meanings": [
       "Master",
-      "Owner",
-      "Owners"
+      "Owner"
     ]
   },
   {
@@ -22137,7 +21930,7 @@
     "transliteration": "m~uba`rakap",
     "frequency": 3,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Euba%60rakap+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Euba%60rakap+pos%3An",
     "meanings": [
       "Blessed"
     ]
@@ -22149,9 +21942,8 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Amubad%7Eil+pos%3An",
     "meanings": [
-      "One (can) alter",
-      "One can change",
-      "Can change"
+      "One can alter",
+      "One can change"
     ]
   },
   {
@@ -22173,7 +21965,6 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Amut%7Eaxi*+pos%3An",
     "meanings": [
       "Those who take",
-      "Ones (who are) taking",
       "One to take"
     ]
   },
@@ -22207,8 +21998,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AmaHil%7E+pos%3An",
     "meanings": [
       "Destination",
-      "Place of sacrifice",
-      "Place"
+      "Place of sacrifice"
     ]
   },
   {
@@ -22218,7 +22008,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AmaHiyD+pos%3An",
     "meanings": [
-      "[the] menstruation",
       "Menstruation"
     ]
   },
@@ -22229,9 +22018,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Amuxorij+pos%3An",
     "meanings": [
-      "One Who brought forth",
-      "Brings forth",
-      "Bring forth"
+      "One Who brought forth"
     ]
   },
   {
@@ -22273,7 +22060,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7EidoraAr+pos%3An",
     "meanings": [
-      "Showering abundantly",
       "Abundance"
     ]
   },
@@ -22392,7 +22178,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Amu%24orika%60t+pos%3An",
     "meanings": [
-      "[the] polytheistic women",
       "Polytheist women"
     ]
   },
@@ -22403,9 +22188,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Ama%24ohuwd+pos%3An",
     "meanings": [
-      "Witnessed",
-      "Ever witnessed",
-      "What is witnessed"
+      "Witnessed"
     ]
   },
   {
@@ -22425,8 +22208,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AmuSofar%7E+pos%3An",
     "meanings": [
-      "Turn yellow",
-      "Turning yellow"
+      "Turn yellow"
     ]
   },
   {
@@ -22436,8 +22218,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AmuSal%7Eiyn+pos%3An",
     "meanings": [
-      "Those who pray",
-      "Those who prayed"
+      "Those who pray"
     ]
   },
   {
@@ -22448,8 +22229,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AmaDaAjiE+pos%3An",
     "meanings": [
       "Places of death",
-      "Bed",
-      "Beds"
+      "Bed"
     ]
   },
   {
@@ -22469,8 +22249,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7EuDil%7E+pos%3An",
     "meanings": [
-      "Misleaders",
-      "One who misleads",
       "Misleader"
     ]
   },
@@ -22492,7 +22270,6 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AmaEo*irap+pos%3An",
     "meanings": [
       "Be absolved",
-      "Excuses",
       "Excuse"
     ]
   },
@@ -22503,8 +22280,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AmaEo%24ar+pos%3An",
     "meanings": [
-      ", \"O assembly",
-      "O assembly"
+      "Assembly"
     ]
   },
   {
@@ -22524,7 +22300,7 @@
     "transliteration": "m~aEiyn",
     "frequency": 3,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7EaEiyn+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7EaEiyn+pos%3An",
     "meanings": [
       "Flowing"
     ]
@@ -22547,8 +22323,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AmafaAtiH+pos%3An",
     "meanings": [
-      "Keys",
-      "Keys of it"
+      "Keys"
     ]
   },
   {
@@ -22570,7 +22345,6 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AmiqodaAr+pos%3An",
     "meanings": [
       "Due proportion",
-      "Measure of which is",
       "Measure"
     ]
   },
@@ -22581,8 +22355,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AmuqosiTiyn+pos%3An",
     "meanings": [
-      "Ones who are just",
-      "Those who act justly"
+      "Ones who are just"
     ]
   },
   {
@@ -22590,7 +22363,7 @@
     "transliteration": "m~akonuwn",
     "frequency": 3,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Eakonuwn+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Eakonuwn+pos%3An",
     "meanings": [
       "Well-protected"
     ]
@@ -22600,7 +22373,7 @@
     "transliteration": "m~akiyn",
     "frequency": 3,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Eakiyn+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Eakiyn+pos%3Aadj",
     "meanings": [
       "Firmly established"
     ]
@@ -22622,9 +22395,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Euloquwn+pos%3An",
     "meanings": [
-      "Ones to throw",
-      "Throw",
-      "Going to throw"
+      "Ones to throw"
     ]
   },
   {
@@ -22667,8 +22438,8 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Amunqalibuwn+pos%3An",
     "meanings": [
-      "Return",
-      "Will surely return"
+      "Turned back",
+      "Overthrown"
     ]
   },
   {
@@ -22678,9 +22449,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Amunkiruwn+pos%3An",
     "meanings": [
-      "Knew him not",
-      "Rejecters",
-      "Rejecting him"
+      "Rejecters"
     ]
   },
   {
@@ -22721,7 +22490,7 @@
     "transliteration": "m~ahiyn",
     "frequency": 3,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Eahiyn+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Eahiyn+pos%3Aadj",
     "meanings": [
       "Insignificant"
     ]
@@ -22786,7 +22555,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Amayosir+pos%3An",
     "meanings": [
-      "[the] games of chance",
       "Gambling"
     ]
   },
@@ -22807,8 +22575,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AnaASiyap+pos%3An",
     "meanings": [
-      "Forelock",
-      "By the forelock"
+      "Forelock"
     ]
   },
   {
@@ -22818,7 +22585,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Anasab+pos%3An",
     "meanings": [
-      "Will be relationship",
       "Blood relationship",
       "Relationship"
     ]
@@ -22876,7 +22642,6 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Anaka%60l+pos%3An",
     "meanings": [
       "Deterrent punishment",
-      "Exemplary",
       "Exemplary punishment"
     ]
   },
@@ -22908,7 +22673,6 @@
     "part_of_speech": "Proper noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Ahuwd2+pos%3Apn",
     "meanings": [
-      "Jew[s]",
       "Jews"
     ]
   },
@@ -22917,7 +22681,7 @@
     "transliteration": "huwn",
     "frequency": 3,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Ahuwn+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Ahuwn+pos%3An",
     "meanings": [
       "Humiliating"
     ]
@@ -22929,7 +22693,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Ahay%7Ein+pos%3An",
     "meanings": [
-      "Easy for Me",
       "Easy",
       "Insignificant"
     ]
@@ -22951,9 +22714,8 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AwaArid+pos%3An",
     "meanings": [
-      "Water drawer",
-      "Passing over it",
-      "Will come"
+      "Incoming",
+      "Passing over"
     ]
   },
   {
@@ -22961,7 +22723,7 @@
     "transliteration": "wa`siEap",
     "frequency": 3,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Awa%60siEap+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Awa%60siEap+pos%3An",
     "meanings": [
       "Vast"
     ]
@@ -22985,7 +22747,6 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Awazon+pos%3An",
     "meanings": [
       "Weighing",
-      "Any weight",
       "Weight"
     ]
   },
@@ -22996,7 +22757,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AwiEaA%5E%27+pos%3An",
     "meanings": [
-      "Bags",
       "Bag"
     ]
   },
@@ -23018,8 +22778,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Aya_%23uws+pos%3An",
     "meanings": [
       "Despairing",
-      "Despair",
-      "He gives up hope"
+      "Despair"
     ]
   },
   {
@@ -23029,9 +22788,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%27aAkiluwn+pos%3An",
     "meanings": [
-      "Those who eat",
-      "Eat",
-      "Will surely eat"
+      "Those who eat"
     ]
   },
   {
@@ -24661,7 +24418,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Cisola%60m+pos%3An",
     "meanings": [
-      "(pretense of) Islam",
       "Islam"
     ]
   },
@@ -24672,8 +24428,7 @@
     "part_of_speech": "Adjective",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Eaqorab+pos%3Aadj",
     "meanings": [
-      "Closer",
-      "[the] closest"
+      "Closer"
     ]
   },
   {
@@ -24732,9 +24487,9 @@
     "transliteration": "*uw",
     "frequency": 2,
     "part_of_speech": "Location adverb",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3A*uw+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3A*uw+pos%3Aloc",
     "meanings": [
-      "Full (of) reminder"
+      "To"
     ]
   },
   {
@@ -24930,8 +24685,7 @@
     "part_of_speech": "Adjective",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Ayatiym+pos%3Aadj",
     "meanings": [
-      "Orphan",
-      "Two orphan boys"
+      "Orphan"
     ]
   },
   {
@@ -24981,7 +24735,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%7Bbonat+pos%3An",
     "meanings": [
-      "Daughters",
       "Daughter"
     ]
   },
@@ -25001,7 +24754,7 @@
     "transliteration": ">atoraAb",
     "frequency": 2,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3EatoraAb+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3EatoraAb+pos%3An",
     "meanings": [
       "Well-matched"
     ]
@@ -25013,7 +24766,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3EatoqaY+pos%3An",
     "meanings": [
-      "Most righteous of you",
       "Righteous"
     ]
   },
@@ -25033,7 +24785,7 @@
     "transliteration": ">aHab~",
     "frequency": 2,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3EaHab%7E+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3EaHab%7E+pos%3Aadj",
     "meanings": [
       "More beloved"
     ]
@@ -25084,10 +24836,10 @@
     "transliteration": ">a*il~ap",
     "frequency": 2,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Ea*il%7Eap+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Ea*il%7Eap+pos%3An",
     "meanings": [
-      "Humble",
-      "Lowest"
+      "Weak",
+      "Humiliation"
     ]
   },
   {
@@ -25108,7 +24860,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Eazola%60m+pos%3An",
     "meanings": [
-      "By divining arrows",
       "Divining arrows"
     ]
   },
@@ -25130,8 +24881,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3CisoraAr+pos%3An",
     "meanings": [
-      "Secrets",
-      "Secretly"
+      "Secrets"
     ]
   },
   {
@@ -25152,8 +24902,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3EasoraE+pos%3An",
     "meanings": [
-      "Swiftest",
-      "More swift"
+      "Swiftest"
     ]
   },
   {
@@ -25174,7 +24923,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Easaf+pos%3An",
     "meanings": [
-      "Alas, my grief",
       "Grief"
     ]
   },
@@ -25194,7 +24942,7 @@
     "transliteration": ">asofal",
     "frequency": 2,
     "part_of_speech": "Location adverb",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Easofal+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Easofal+pos%3Aloc",
     "meanings": [
       "Lowest"
     ]
@@ -25227,8 +24975,7 @@
     "part_of_speech": "Adjective",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Ea%24ir+pos%3Aadj",
     "meanings": [
-      "Insolent",
-      "Insolent one"
+      "Insolent"
     ]
   },
   {
@@ -25307,7 +25054,7 @@
     "transliteration": ">aEojamiY~",
     "frequency": 2,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3EaEojamiY%7E+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3EaEojamiY%7E+pos%3An",
     "meanings": [
       "Foreign"
     ]
@@ -25348,7 +25095,7 @@
     "transliteration": ">aEoZam",
     "frequency": 2,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3EaEoZam+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3EaEoZam+pos%3An",
     "meanings": [
       "Greater"
     ]
@@ -25360,8 +25107,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3EaEola%60m+pos%3An",
     "meanings": [
-      "Like [the] mountains",
-      "Like mountains"
+      "Mountains"
     ]
   },
   {
@@ -25371,7 +25117,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3EaEolawon+pos%3An",
     "meanings": [
-      "[the] superior",
       "Superior"
     ]
   },
@@ -25422,7 +25167,7 @@
     "transliteration": ">aqoSaA",
     "frequency": 2,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3EaqoSaA+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3EaqoSaA+pos%3An",
     "meanings": [
       "Al-Masjid Al-Aqsa"
     ]
@@ -25434,7 +25179,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3EaqoTaAr+pos%3An",
     "meanings": [
-      "All its sides",
+      "Sides",
       "Regions"
     ]
   },
@@ -25621,7 +25366,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3EawosaT+pos%3An",
     "meanings": [
       "Average",
-      "Most moderate of them"
+      "Most moderate"
     ]
   },
   {
@@ -25629,7 +25374,7 @@
     "transliteration": ">uwlaA^'",
     "frequency": 2,
     "part_of_speech": "Relative pronoun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3EuwlaA%5E%27+pos%3Adem",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3EuwlaA%5E%27+pos%3Arel",
     "meanings": [
       "Those"
     ]
@@ -25651,7 +25396,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Eay%7EatuhaA+pos%3An",
     "meanings": [
-      "O you",
       "O"
     ]
   },
@@ -25662,7 +25406,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Eayoyd+pos%3An",
     "meanings": [
-      "Possessor of strength",
       "Strength"
     ]
   },
@@ -25692,7 +25435,7 @@
     "transliteration": "baAri}",
     "frequency": 2,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AbaAri%7D+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AbaAri%7D+pos%3An",
     "meanings": [
       "Inventor"
     ]
@@ -25735,7 +25478,7 @@
     "transliteration": "ba`ligap",
     "frequency": 2,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Aba%60ligap+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Aba%60ligap+pos%3Aadj",
     "meanings": [
       "Perfect"
     ]
@@ -25747,7 +25490,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Abuxol+pos%3An",
     "meanings": [
-      "[of] stinginess",
       "Stinginess"
     ]
   },
@@ -25779,7 +25521,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Abarod+pos%3An",
     "meanings": [
-      "Cool[ness]",
       "Coolness"
     ]
   },
@@ -25843,7 +25584,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AbaEiyr+pos%3An",
     "meanings": [
-      "Camel's",
       "Camel"
     ]
   },
@@ -25872,7 +25612,7 @@
     "transliteration": "bikor",
     "frequency": 2,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Abikor+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Abikor+pos%3Aadj",
     "meanings": [
       "Virgins"
     ]
@@ -25894,7 +25634,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AbanaAn+pos%3An",
     "meanings": [
-      "Fingertip[s]",
       "Fingertips"
     ]
   },
@@ -25923,7 +25662,7 @@
     "transliteration": "baya`t",
     "frequency": 2,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Abaya%60t+pos%3At",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Abaya%60t+pos%3An",
     "meanings": [
       "Night"
     ]
@@ -25957,7 +25696,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AtaArap+pos%3An",
     "meanings": [
-      "Another time",
       "Time"
     ]
   },
@@ -26029,8 +25767,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Atarotiyl+pos%3An",
     "meanings": [
-      "Recitation",
-      "Measured rhythmic recitation"
+      "Recitation"
     ]
   },
   {
@@ -26110,7 +25847,7 @@
     "transliteration": "tiloqaA^'",
     "frequency": 2,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AtiloqaA%5E%27+pos%3Aloc",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AtiloqaA%5E%27+pos%3An",
     "meanings": [
       "Towards"
     ]
@@ -26132,7 +25869,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3At%7EamaAviyl+pos%3An",
     "meanings": [
-      "[the] statues",
       "Statues"
     ]
   },
@@ -26164,8 +25900,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AvaAbit+pos%3An",
     "meanings": [
-      "Firm",
-      "Firm word"
+      "Firm"
     ]
   },
   {
@@ -26289,8 +26024,7 @@
     "part_of_speech": "Adjective",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Ajuruz+pos%3Aadj",
     "meanings": [
-      "Barren",
-      "[the] barren"
+      "Barren"
     ]
   },
   {
@@ -26300,7 +26034,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Ajisom+pos%3An",
     "meanings": [
-      "[the] physique",
       "Bodies"
     ]
   },
@@ -26321,8 +26054,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Ajalodap+pos%3An",
     "meanings": [
-      "Lash",
-      "Lashe"
+      "Lash"
     ]
   },
   {
@@ -26350,7 +26082,7 @@
     "transliteration": "jawaAr",
     "frequency": 2,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AjawaAr+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AjawaAr+pos%3Aadj",
     "meanings": [
       "Ships"
     ]
@@ -26372,8 +26104,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AHa%60%24+pos%3An",
     "meanings": [
-      "Forbid",
-      "Allah forbid"
+      "Forbid"
     ]
   },
   {
@@ -26434,7 +26165,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AHuruma%60t+pos%3An",
     "meanings": [
-      "All the violations",
+      "Sanctities",
       "Sacred rites"
     ]
   },
@@ -26545,7 +26276,7 @@
     "transliteration": "xaAsi}",
     "frequency": 2,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AxaAsi%7D+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AxaAsi%7D+pos%3Aadj",
     "meanings": [
       "Humbled"
     ]
@@ -26776,8 +26507,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AxiyaAnap+pos%3An",
     "meanings": [
-      "Betrayal",
-      "Betray you"
+      "Betrayal"
     ]
   },
   {
@@ -26818,7 +26548,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Ada%60xiluwn+pos%3An",
     "meanings": [
-      "Enter",
       "Those who enter"
     ]
   },
@@ -26829,8 +26558,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AdaAfiE+pos%3An",
     "meanings": [
-      "Preventer",
-      "Any preventer"
+      "Preventer"
     ]
   },
   {
@@ -26838,7 +26566,7 @@
     "transliteration": "daAniyap",
     "frequency": 2,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AdaAniyap+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AdaAniyap+pos%3An",
     "meanings": [
       "Hanging low"
     ]
@@ -26870,8 +26598,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AdafoE+pos%3An",
     "meanings": [
-      "Repelling",
-      "Allah checks"
+      "Repelling"
     ]
   },
   {
@@ -26921,8 +26648,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A*%7Ea%60kiriyn+pos%3An",
     "meanings": [
-      "Those who remember",
-      "Men who remember"
+      "Those who remember"
     ]
   },
   {
@@ -26942,7 +26668,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A*iraAE+pos%3An",
     "meanings": [
-      "Two forelegs",
       "Cubits"
     ]
   },
@@ -26973,8 +26698,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AraAbiE+pos%3An",
     "meanings": [
-      "Forth of them",
-      "Fourth of them"
+      "Fourth"
     ]
   },
   {
@@ -26984,7 +26708,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Ar%7Ea%60sixuwn+pos%3An",
     "meanings": [
-      "Those firm",
       "Ones who are firm"
     ]
   },
@@ -26993,10 +26716,9 @@
     "transliteration": "raADiyap",
     "frequency": 2,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AraADiyap+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AraADiyap+pos%3Aadj",
     "meanings": [
-      "Satisfied",
-      "Well pleased"
+      "Pleasant"
     ]
   },
   {
@@ -27027,7 +26749,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Ara%3Eofap+pos%3An",
     "meanings": [
-      "Pity for them",
       "Compassion"
     ]
   },
@@ -27038,8 +26759,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Ara%3EoY+pos%3An",
     "meanings": [
-      "Sight",
-      "Immature in opinion"
+      "Opinion"
     ]
   },
   {
@@ -27091,7 +26811,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Ar%7Eas%7E+pos%3An",
     "meanings": [
-      "Ar-rass",
       "Ar-Raas"
     ]
   },
@@ -27110,9 +26829,9 @@
     "transliteration": "r~a$iyd",
     "frequency": 2,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Ar%7Ea%24iyd+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Ar%7Ea%24iyd+pos%3Aadj",
     "meanings": [
-      "Was right"
+      "Right-minded"
     ]
   },
   {
@@ -27141,7 +26860,7 @@
     "transliteration": "ragad",
     "frequency": 2,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Aragad+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Aragad+pos%3Aadj",
     "meanings": [
       "Abundance"
     ]
@@ -27174,8 +26893,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Arukon+pos%3An",
     "meanings": [
-      "Support",
-      "Supporters"
+      "Support"
     ]
   },
   {
@@ -27186,7 +26904,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Aramiym+pos%3An",
     "meanings": [
       "Decomposed",
-      "Like disintegrated ruins"
+      "Disintegrated ruins"
     ]
   },
   {
@@ -27196,8 +26914,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Arahaq+pos%3An",
     "meanings": [
-      "Burden",
-      "Any burden"
+      "Burden"
     ]
   },
   {
@@ -27270,7 +26987,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Azulofap+pos%3An",
     "meanings": [
-      "Approach",
       "Approaching"
     ]
   },
@@ -27417,7 +27133,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3As%7Ear%7EaA%5E%27+pos%3An",
     "meanings": [
-      "[the] ease",
       "Ease"
     ]
   },
@@ -27428,7 +27143,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AsaraAb+pos%3An",
     "meanings": [
-      "Like a mirage",
       "Mirage"
     ]
   },
@@ -27490,7 +27204,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AsiqaAyap+pos%3An",
     "meanings": [
-      "Providing of water",
       "Drinking cup"
     ]
   },
@@ -27596,7 +27309,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Asunbulap+pos%3An",
     "meanings": [
-      "Ears",
       "Ear"
     ]
   },
@@ -27658,7 +27370,7 @@
     "transliteration": "$at~aY`",
     "frequency": 2,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%24at%7EaY%60+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%24at%7EaY%60+pos%3An",
     "meanings": [
       "Diverse"
     ]
@@ -27692,7 +27404,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%24%7EiEor+pos%3An",
     "meanings": [
       "Hair",
-      "[the] poetry"
+      "Poetry"
     ]
   },
   {
@@ -27711,7 +27423,7 @@
     "transliteration": "$aqiy~",
     "frequency": 2,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%24aqiy%7E+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%24aqiy%7E+pos%3An",
     "meanings": [
       "Unblessed"
     ]
@@ -27786,8 +27498,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3ASaAluwA+pos%3An",
     "meanings": [
-      "Burn",
-      "Will burn"
+      "Burn"
     ]
   },
   {
@@ -27797,8 +27508,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3ASibogap+pos%3An",
     "meanings": [
-      "Color",
-      "At coloring"
+      "Color"
     ]
   },
   {
@@ -27870,8 +27580,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3ASuloH+pos%3An",
     "meanings": [
-      "Reconciliation",
-      "[the] reconciliation"
+      "Reconciliation"
     ]
   },
   {
@@ -27901,7 +27610,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3ASaY%60Hib+pos%3An",
     "meanings": [
-      "O my two companions"
+      "Companions"
     ]
   },
   {
@@ -27911,8 +27620,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3ADaA%5Er%7E+pos%3An",
     "meanings": [
-      "At all [be those who] harm",
-      "He (can) harm them"
+      "Detrimental"
     ]
   },
   {
@@ -27943,7 +27651,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3ATaArid+pos%3An",
     "meanings": [
-      "Going to drive away",
       "One to drive away"
     ]
   },
@@ -27982,7 +27689,7 @@
     "transliteration": "Tabaq",
     "frequency": 2,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3ATabaq+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3ATabaq+pos%3Aadj",
     "meanings": [
       "Stage"
     ]
@@ -28014,7 +27721,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AT%7Eala%60q+pos%3An",
     "meanings": [
-      "[the] divorce",
       "Divorce"
     ]
   },
@@ -28076,7 +27782,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AZaAlimiY%5E+pos%3An",
     "meanings": [
-      "They (were) wronging",
       "Wronging"
     ]
   },
@@ -28161,7 +27866,6 @@
     "part_of_speech": "Adjective",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AEatiyq+pos%3Aadj",
     "meanings": [
-      "[the] Ancient",
       "Ancient"
     ]
   },
@@ -28224,8 +27928,8 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AEudowap+pos%3An",
     "meanings": [
-      "On side of the valley",
-      "On the side"
+      "Side",
+      "Slope"
     ]
   },
   {
@@ -28257,8 +27961,8 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AEaraA%5E%27+pos%3An",
     "meanings": [
-      "Onto the open shore",
-      "Onto (the) naked shore"
+      "Open shore",
+      "Naked shore"
     ]
   },
   {
@@ -28268,8 +27972,8 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AEurof+pos%3An",
     "meanings": [
-      "Good",
-      "One after another"
+      "Good custom",
+      "Convention"
     ]
   },
   {
@@ -28331,7 +28035,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AEaSof+pos%3An",
     "meanings": [
       "Husk",
-      "Like straw"
+      "Straw"
     ]
   },
   {
@@ -28362,8 +28066,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AEaZom+pos%3An",
     "meanings": [
-      "Bone",
-      "Bones"
+      "Bone"
     ]
   },
   {
@@ -28392,7 +28095,7 @@
     "transliteration": "Eal~a`m",
     "frequency": 2,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AEal%7Ea%60m+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AEal%7Ea%60m+pos%3An",
     "meanings": [
       "All-Knower"
     ]
@@ -28412,7 +28115,7 @@
     "transliteration": "EuloyaA",
     "frequency": 2,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AEuloyaA+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AEuloyaA+pos%3Aadj",
     "meanings": [
       "Highest"
     ]
@@ -28424,8 +28127,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AEil%7Eiy%7Eiyn+pos%3An",
     "meanings": [
-      "Illiyin",
-      "Illiyun"
+      "Illiyin"
     ]
   },
   {
@@ -28455,7 +28157,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AEamFY+pos%3An",
     "meanings": [
-      "[the] blindness",
       "Blindness"
     ]
   },
@@ -28476,7 +28177,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AEihon+pos%3An",
     "meanings": [
-      "Like wool"
+      "Wool"
     ]
   },
   {
@@ -28506,7 +28207,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AgaAfir+pos%3An",
     "meanings": [
-      "Forgivers",
       "Forgiver"
     ]
   },
@@ -28538,8 +28238,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AguraAb+pos%3An",
     "meanings": [
-      "Crow",
-      "[the] crow"
+      "Crow"
     ]
   },
   {
@@ -28658,7 +28357,7 @@
     "transliteration": "faj~",
     "frequency": 2,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Afaj%7E+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Afaj%7E+pos%3An",
     "meanings": [
       "Wide"
     ]
@@ -28740,7 +28439,7 @@
     "transliteration": "qa`nita`t",
     "frequency": 2,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Aqa%60nita%60t+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Aqa%60nita%60t+pos%3An",
     "meanings": [
       "Obedient"
     ]
@@ -28752,7 +28451,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Aqabas+pos%3An",
     "meanings": [
-      "Burning brand",
       "Burning"
     ]
   },
@@ -28772,10 +28470,10 @@
     "transliteration": "qibal",
     "frequency": 2,
     "part_of_speech": "Location adverb",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Aqibal+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Aqibal+pos%3Aloc",
     "meanings": [
-      "Resistance",
-      "Facing towards [it]"
+      "Towards",
+      "Before"
     ]
   },
   {
@@ -28786,7 +28484,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Aqibal+pos%3An",
     "meanings": [
       "Resistance",
-      "Facing towards [it]"
+      "Facing towards"
     ]
   },
   {
@@ -28818,8 +28516,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AqiroTaAs+pos%3An",
     "meanings": [
-      "Parchment",
-      "Parchments"
+      "Parchment"
     ]
   },
   {
@@ -28860,7 +28557,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AqiTaE+pos%3An",
     "meanings": [
       "Pieces",
-      "Are tracks"
+      "Fragments"
     ]
   },
   {
@@ -28881,7 +28578,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AquTuwf+pos%3An",
     "meanings": [
-      "Clusters of fruits",
       "Cluster of fruits"
     ]
   },
@@ -28892,7 +28588,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Aqala%60%5E%7Did+pos%3An",
     "meanings": [
-      "Garlanded",
       "Garlands"
     ]
   },
@@ -28924,7 +28619,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Akibor+pos%3An",
     "meanings": [
-      "Took upon himself a greater share of it",
+      "Arrogance",
       "Greatness"
     ]
   },
@@ -28957,7 +28652,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Aki*%7EaAb+pos%3An",
     "meanings": [
       "Denial",
-      "Any falsehood"
+      "Falsehood"
     ]
   },
   {
@@ -28998,8 +28693,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Akisowat+pos%3An",
     "meanings": [
-      "Clothing",
-      "Clothing them"
+      "Clothing"
     ]
   },
   {
@@ -29110,9 +28804,9 @@
     "transliteration": "l~am~aA",
     "frequency": 2,
     "part_of_speech": "Exceptive particle",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Al%7Eam%7EaA+pos%3Aneg",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Al%7Eam%7EaA+pos%3Aexp",
     "meanings": [
-      "While not"
+      "But"
     ]
   },
   {
@@ -29122,8 +28816,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AlamoH+pos%3An",
     "meanings": [
-      "Twinkling",
-      "Like the twinkling"
+      "Twinkling"
     ]
   },
   {
@@ -29174,8 +28867,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AmaAli_%23uwn+pos%3An",
     "meanings": [
-      "Fill",
-      "Will fill"
+      "Fill"
     ]
   },
   {
@@ -29185,7 +28877,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Amubotaliy+pos%3An",
     "meanings": [
-      "Will test you",
       "Testing"
     ]
   },
@@ -29194,7 +28885,7 @@
     "transliteration": "m~ubay~ina`t",
     "frequency": 2,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Eubay%7Eina%60t+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Eubay%7Eina%60t+pos%3Aadj",
     "meanings": [
       "Clear"
     ]
@@ -29204,7 +28895,7 @@
     "transliteration": "m~ubay~inap",
     "frequency": 2,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Eubay%7Einap+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Eubay%7Einap+pos%3Aadj",
     "meanings": [
       "Clear"
     ]
@@ -29266,7 +28957,7 @@
     "transliteration": "matiyn",
     "frequency": 2,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Amatiyn+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Amatiyn+pos%3An",
     "meanings": [
       "Strong"
     ]
@@ -29320,8 +29011,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7EajomuwE+pos%3An",
     "meanings": [
-      "Be gathered",
-      "Surely, will be gathered"
+      "Be gathered"
     ]
   },
   {
@@ -29374,7 +29064,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AmuHoY+pos%3An",
     "meanings": [
-      "He (will) give life",
       "Giver of life"
     ]
   },
@@ -29397,7 +29086,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AmuHiyTap+pos%3An",
     "meanings": [
       "Surround",
-      "Will surely, encompass"
+      "Encompass"
     ]
   },
   {
@@ -29405,9 +29094,9 @@
     "transliteration": "muxotaAl",
     "frequency": 2,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AmuxotaAl+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AmuxotaAl+pos%3Aadj",
     "meanings": [
-      "[a] proud"
+      "Self-deluded"
     ]
   },
   {
@@ -29417,8 +29106,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Amuxal%7Eaqap+pos%3An",
     "meanings": [
-      "Formed",
-      "Unformed"
+      "Formed"
     ]
   },
   {
@@ -29502,7 +29190,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Amaroduwd+pos%3An",
     "meanings": [
       "Repelled",
-      "Be returned"
+      "Returned"
     ]
   },
   {
@@ -29531,7 +29219,7 @@
     "transliteration": "m~arofuwEap",
     "frequency": 2,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7EarofuwEap+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7EarofuwEap+pos%3Aadj",
     "meanings": [
       "Raised"
     ]
@@ -29605,8 +29293,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Amasobuwqiyn+pos%3An",
     "meanings": [
-      "Outrun",
-      "Be outrun"
+      "Outrun"
     ]
   },
   {
@@ -29616,8 +29303,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AmusotaEaAn+pos%3An",
     "meanings": [
-      "One sought for help",
-      "One Whose help is sought"
+      "One sought for help"
     ]
   },
   {
@@ -29710,9 +29396,9 @@
     "transliteration": "m~usaw~amap",
     "frequency": 2,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Eusaw%7Eamap+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Eusaw%7Eamap+pos%3An",
     "meanings": [
-      "[the] branded"
+      "Branded"
     ]
   },
   {
@@ -29733,7 +29419,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Eu%24oriqiyn+pos%3An",
     "meanings": [
-      "At sunrise",
       "Sunrise"
     ]
   },
@@ -29744,7 +29429,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Amu%24orikap+pos%3An",
     "meanings": [
-      "Polytheistic woman",
       "Polytheist woman"
     ]
   },
@@ -29786,7 +29470,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AmuTal%7Eaqa%60t+pos%3An",
     "meanings": [
-      "Women who are divorced",
       "Divorced women"
     ]
   },
@@ -29809,7 +29492,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AmuZolim+pos%3An",
     "meanings": [
       "Darkness (of) night",
-      "Those in darkness"
+      "One in darkness"
     ]
   },
   {
@@ -29819,8 +29502,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AmaEaA*+pos%3An",
     "meanings": [
-      "I seek refuge in Allah",
-      "Allah forbid"
+      "Refuge"
     ]
   },
   {
@@ -29850,7 +29532,7 @@
     "transliteration": "muEotad",
     "frequency": 2,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AmuEotad+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AmuEotad+pos%3An",
     "meanings": [
       "Transgressor"
     ]
@@ -29975,7 +29657,7 @@
     "transliteration": "m~uqar~aniyn",
     "frequency": 2,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Euqar%7Eaniyn+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Euqar%7Eaniyn+pos%3An",
     "meanings": [
       "Bound"
     ]
@@ -29987,7 +29669,6 @@
     "part_of_speech": "Adjective",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7EaqoDiy%7E+pos%3Aadj",
     "meanings": [
-      "Decreed.'",
       "Decreed"
     ]
   },
@@ -30008,8 +29689,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Amula%60qiy+pos%3An",
     "meanings": [
-      "Meet you",
-      "You (will) meet Him"
+      "Meeting"
     ]
   },
   {
@@ -30019,8 +29699,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AmulotaHad+pos%3An",
     "meanings": [
-      "Refuge",
-      "Any refuge"
+      "Refuge"
     ]
   },
   {
@@ -30093,8 +29772,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Amunaj%7Euw+pos%3An",
     "meanings": [
-      "Will save them",
-      "Save you"
+      "Savior"
     ]
   },
   {
@@ -30104,7 +29782,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Amunzal+pos%3An",
     "meanings": [
-      "[the ones] sent down",
+      "Sent down",
       "Landing place"
     ]
   },
@@ -30232,8 +29910,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AnaA%5E%7Dimuwn+pos%3An",
     "meanings": [
-      "Asleep",
-      "Were asleep"
+      "Asleep"
     ]
   },
   {
@@ -30318,8 +29995,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3An%7Ea*or+pos%3An",
     "meanings": [
-      "Vow",
-      "Vows"
+      "Vow"
     ]
   },
   {
@@ -30329,7 +30005,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Anazog+pos%3An",
     "meanings": [
-      "An evil suggestion",
       "Evil suggestion"
     ]
   },
@@ -30391,8 +30066,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3An%7EuEaAs+pos%3An",
     "meanings": [
-      "Slumber",
-      "[the] slumber"
+      "Slumber"
     ]
   },
   {
@@ -30413,8 +30087,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Anafaqap+pos%3An",
     "meanings": [
-      "Expenditures",
-      "Any spending"
+      "Expenditures"
     ]
   },
   {
@@ -30445,8 +30118,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Anaqiyr+pos%3An",
     "meanings": [
-      "Speck on a date seed",
-      "Speck on a date-seed"
+      "Speck on a date seed"
     ]
   },
   {
@@ -30529,7 +30201,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Aha%24iym+pos%3An",
     "meanings": [
       "Dry stalks",
-      "Like dry twig fragments"
+      "Dry twig fragments"
     ]
   },
   {
@@ -30537,7 +30209,7 @@
     "transliteration": "haniy^_#",
     "frequency": 2,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Ahaniy%5E_%23+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Ahaniy%5E_%23+pos%3Aadj",
     "meanings": [
       "Satisfaction"
     ]
@@ -30559,7 +30231,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AhayohaAt+pos%3An",
     "meanings": [
-      "Far-"
+      "Far-(fetched)"
     ]
   },
   {
@@ -30569,8 +30241,8 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Ahayo_%23ap+pos%3An",
     "meanings": [
-      "Like the form",
-      "Like the shape"
+      "Form",
+      "Shape"
     ]
   },
   {
@@ -30623,7 +30295,7 @@
     "part_of_speech": "Adjective",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AwuvoqaY%60+pos%3Aadj",
     "meanings": [
-      "[the] firm",
+      "Firm",
       "Most trustworthy"
     ]
   },
@@ -30716,7 +30388,7 @@
     "transliteration": "wah~aAb",
     "frequency": 2,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Awah%7EaAb+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Awah%7EaAb+pos%3An",
     "meanings": [
       "Bestower"
     ]
@@ -30768,8 +30440,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AyusoraY%60+pos%3An",
     "meanings": [
-      "Ease",
-      "Towards [the] ease"
+      "Ease"
     ]
   },
   {
@@ -30779,8 +30450,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AyanbuwE+pos%3An",
     "meanings": [
-      "Spring",
-      "Springs"
+      "Spring"
     ]
   },
   {
@@ -30809,7 +30479,7 @@
     "transliteration": "'aAnaA^'",
     "frequency": 2,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%27aAnaA%5E%27+pos%3At",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%27aAnaA%5E%27+pos%3An",
     "meanings": [
       "Hours"
     ]
@@ -33293,7 +32963,7 @@
     "part_of_speech": "Time adverb",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AA%5Exir+pos%3At",
     "meanings": [
-      "Its end"
+      "Finally"
     ]
   },
   {
@@ -33311,9 +32981,9 @@
     "transliteration": ">adonaY`",
     "frequency": 1,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3EadonaY%60+pos%3At",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3EadonaY%60+pos%3Aadj",
     "meanings": [
-      "Less"
+      "Nearer"
     ]
   },
   {
@@ -33483,7 +33153,7 @@
     "part_of_speech": "Time adverb",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Av%7Euluv+pos%3At",
     "meanings": [
-      "Third of it"
+      "Third"
     ]
   },
   {
@@ -33603,7 +33273,7 @@
     "part_of_speech": "Adjective",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A*uw+pos%3Aadj",
     "meanings": [
-      "Full (of) reminder"
+      "Full (of)"
     ]
   },
   {
@@ -33791,7 +33461,7 @@
     "transliteration": "Ea$or",
     "frequency": 1,
     "part_of_speech": "Time adverb",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AEa%24or+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AEa%24or+pos%3At",
     "meanings": [
       "Ten"
     ]
@@ -33953,7 +33623,7 @@
     "part_of_speech": "Adjective",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Amaval+pos%3Aadj",
     "meanings": [
-      "Like you"
+      "Like"
     ]
   },
   {
@@ -34053,7 +33723,7 @@
     "part_of_speech": "Adjective",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Euniyr+pos%3Aadj",
     "meanings": [
-      "[the] Enlightening"
+      "Enlightening"
     ]
   },
   {
@@ -34107,8 +33777,8 @@
     ]
   },
   {
-    "arabic": "هَٰذَا",
-    "transliteration": "ha`*aA",
+    "arabic": "هَٰؤُلَاءِ",
+    "transliteration": "hāulāi",
     "frequency": 1,
     "part_of_speech": "Relative pronoun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Aha%60*aA+pos%3Arel",
@@ -34423,7 +34093,7 @@
     "part_of_speech": "Adjective",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3EaxoDar+pos%3Aadj",
     "meanings": [
-      "[the] green"
+      "Green"
     ]
   },
   {
@@ -34453,7 +34123,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3EadaA%5E%27+pos%3An",
     "meanings": [
-      "[and] payment"
+      "Payment"
     ]
   },
   {
@@ -34573,7 +34243,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%7BsotiEojaAl+pos%3An",
     "meanings": [
-      "He hastens for them"
+      "Seeking to Haste"
     ]
   },
   {
@@ -34613,7 +34283,7 @@
     "part_of_speech": "Adjective",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Easowad+pos%3Aadj",
     "meanings": [
-      "[the] black"
+      "Black"
     ]
   },
   {
@@ -34633,7 +34303,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Ci%24oraAq+pos%3An",
     "meanings": [
-      "[the] sunrise"
+      "Sunrise"
     ]
   },
   {
@@ -34831,7 +34501,7 @@
     "transliteration": ">akoram",
     "frequency": 1,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Eakoram+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Eakoram+pos%3An",
     "meanings": [
       "Most Generous"
     ]
@@ -34913,7 +34583,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Ealoqa%60b+pos%3An",
     "meanings": [
-      "By nicknames"
+      "Nicknames"
     ]
   },
   {
@@ -34953,7 +34623,7 @@
     "part_of_speech": "Time adverb",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3EamaAm+pos%3At",
     "meanings": [
-      "What is before him"
+      "Before"
     ]
   },
   {
@@ -34963,7 +34633,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Eamot+pos%3An",
     "meanings": [
-      "Any curve"
+      "Curve"
     ]
   },
   {
@@ -34973,7 +34643,8 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Eamoval+pos%3An",
     "meanings": [
-      "Best of them"
+      "Best",
+      "Most suitable"
     ]
   },
   {
@@ -35191,7 +34862,7 @@
     "transliteration": ">awofaY`2",
     "frequency": 1,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3EawofaY%602+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3EawofaY%602+pos%3An",
     "meanings": [
       "Fullest"
     ]
@@ -35413,7 +35084,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AbaAq+pos%3An",
     "meanings": [
-      "Be remaining"
+      "Remaining"
     ]
   },
   {
@@ -35451,9 +35122,9 @@
     "transliteration": "baxos",
     "frequency": 1,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Abaxos+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Abaxos+pos%3Aadj",
     "meanings": [
-      "Any loss"
+      "Very low"
     ]
   },
   {
@@ -35463,7 +35134,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Abaxos+pos%3An",
     "meanings": [
-      "Any loss"
+      "Loss"
     ]
   },
   {
@@ -35633,7 +35304,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AbigaA%5E%27+pos%3An",
     "meanings": [
-      "[the] prostitution"
+      "Prostitution"
     ]
   },
   {
@@ -35653,7 +35324,8 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AbuqoEap+pos%3An",
     "meanings": [
-      "Place even"
+      "Spot",
+      "Patch"
     ]
   },
   {
@@ -35693,7 +35365,7 @@
     "part_of_speech": "Proper noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Abak%7Eap+pos%3Apn",
     "meanings": [
-      "At Bakkah"
+      "Bakkah"
     ]
   },
   {
@@ -35943,7 +35615,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AtaHaAwur+pos%3An",
     "meanings": [
-      "Dialogue of both of you"
+      "Dialogue"
     ]
   },
   {
@@ -36393,7 +36065,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3At%7Eaholukap+pos%3An",
     "meanings": [
-      "[the] destruction"
+      "Destruction"
     ]
   },
   {
@@ -36403,7 +36075,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3At%7Eawob+pos%3An",
     "meanings": [
-      "[the] repentance"
+      "Repentance"
     ]
   },
   {
@@ -36413,7 +36085,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AtawoSiyap+pos%3An",
     "meanings": [
-      "Make a will"
+      "Recommendation"
     ]
   },
   {
@@ -36433,7 +36105,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3At%7Eiyn+pos%3An",
     "meanings": [
-      "By the fig"
+      "Fig"
     ]
   },
   {
@@ -36441,7 +36113,7 @@
     "transliteration": "vaAqib",
     "frequency": 1,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AvaAqib+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AvaAqib+pos%3An",
     "meanings": [
       "Piercing"
     ]
@@ -36473,7 +36145,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AvaAmin+pos%3An",
     "meanings": [
-      "Eight of them"
+      "Eighth"
     ]
   },
   {
@@ -36503,7 +36175,8 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Avubuwt+pos%3An",
     "meanings": [
-      "It is firmly planted"
+      "Firmly planted",
+      "Proof"
     ]
   },
   {
@@ -36621,7 +36294,7 @@
     "transliteration": "jaAriyap",
     "frequency": 1,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AjaAriyap+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AjaAriyap+pos%3An",
     "meanings": [
       "Flowing"
     ]
@@ -36663,7 +36336,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Aja%60hiliy%7Eap+pos%3An",
     "meanings": [
-      "[the] ignorance"
+      "Ignorance"
     ]
   },
   {
@@ -37131,9 +36804,9 @@
     "transliteration": "HaADirap",
     "frequency": 1,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AHaADirap+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AHaADirap+pos%3Aadj",
     "meanings": [
-      "Situated"
+      "Present"
     ]
   },
   {
@@ -37363,7 +37036,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AHasorat+pos%3An",
     "meanings": [
-      "Oh! Our regret"
+      "Regret"
     ]
   },
   {
@@ -37373,7 +37046,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AHasorataY%60+pos%3An",
     "meanings": [
-      "Oh! My regret"
+      "My regret"
     ]
   },
   {
@@ -37673,7 +37346,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AHiwal+pos%3An",
     "meanings": [
-      "Any transfer"
+      "Transfer"
     ]
   },
   {
@@ -37763,7 +37436,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Axa%60diE+pos%3An",
     "meanings": [
-      "Who deceives them"
+      "Deceptive"
     ]
   },
   {
@@ -37811,7 +37484,7 @@
     "transliteration": "xaATi}ap",
     "frequency": 1,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AxaATi%7Dap+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AxaATi%7Dap+pos%3An",
     "meanings": [
       "Sinful"
     ]
@@ -37843,7 +37516,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AxaAfiyap+pos%3An",
     "meanings": [
-      "Any secret"
+      "Secret"
     ]
   },
   {
@@ -38051,7 +37724,7 @@
     "transliteration": "xafiyf",
     "frequency": 1,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Axafiyf+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Axafiyf+pos%3Aadj",
     "meanings": [
       "Light"
     ]
@@ -38123,7 +37796,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Axumus+pos%3An",
     "meanings": [
-      "One fifth of it"
+      "One fifth"
     ]
   },
   {
@@ -38153,7 +37826,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Axun%7Eas+pos%3An",
     "meanings": [
-      "By the retreating planets"
+      "Retreating planets"
     ]
   },
   {
@@ -38161,7 +37834,7 @@
     "transliteration": "xaw~aAn",
     "frequency": 1,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Axaw%7EaAn+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Axaw%7EaAn+pos%3An",
     "meanings": [
       "Treacherous"
     ]
@@ -38383,7 +38056,8 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Aduluwk+pos%3An",
     "meanings": [
-      "At the decline"
+      "Decline",
+      "Tilting"
     ]
   },
   {
@@ -38413,7 +38087,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Ad%7EihaAn+pos%3An",
     "meanings": [
-      "Like murky oil"
+      "Murky oil"
     ]
   },
   {
@@ -38473,7 +38147,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A*%7Ea%60riya%60t+pos%3An",
     "meanings": [
-      "By those scattering"
+      "Those scattering"
     ]
   },
   {
@@ -38541,7 +38215,7 @@
     "transliteration": "*aluwl",
     "frequency": 1,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3A*aluwl+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3A*aluwl+pos%3Aadj",
     "meanings": [
       "Subservient"
     ]
@@ -38853,7 +38527,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Ar%7Ea%24iyd+pos%3An",
     "meanings": [
-      "Was right"
+      "Rightly guided"
     ]
   },
   {
@@ -38861,9 +38535,9 @@
     "transliteration": "raSad",
     "frequency": 1,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AraSad+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AraSad+pos%3Aadj",
     "meanings": [
-      "Guard"
+      "Waiting"
     ]
   },
   {
@@ -39083,7 +38757,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Arakuwb+pos%3An",
     "meanings": [
-      "They ride them"
+      "Ride"
     ]
   },
   {
@@ -39103,7 +38777,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AramaAd+pos%3An",
     "meanings": [
-      "Like ashes"
+      "Ashes"
     ]
   },
   {
@@ -39673,7 +39347,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3As%7EaAHil+pos%3An",
     "meanings": [
-      "On the bank"
+      "Coast"
     ]
   },
   {
@@ -39793,7 +39467,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Asitor+pos%3An",
     "meanings": [
-      "Any shelter"
+      "Shelter"
     ]
   },
   {
@@ -39833,7 +39507,8 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AsuHoq+pos%3An",
     "meanings": [
-      "Away with"
+      "Away with",
+      "Crushing into dust"
     ]
   },
   {
@@ -39863,7 +39538,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AsaxaT+pos%3An",
     "meanings": [
-      "On (himself) wrath"
+      "Wrath"
     ]
   },
   {
@@ -40113,7 +39788,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Asu%26aAl+pos%3An",
     "meanings": [
-      "By demanding"
+      "Demanding"
     ]
   },
   {
@@ -40213,7 +39888,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Asay%7Ei%7D+pos%3An",
     "meanings": [
-      "[its] evil"
+      "Evil"
     ]
   },
   {
@@ -40423,7 +40098,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%24ugul+pos%3An",
     "meanings": [
-      "Will be occupied"
+      "Occupied"
     ]
   },
   {
@@ -40453,7 +40128,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%24%7Eafaq+pos%3An",
     "meanings": [
-      "By the twilight glow"
+      "The twilight glow"
     ]
   },
   {
@@ -40703,7 +40378,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3ASa%60rimiyn+pos%3An",
     "meanings": [
-      "Pluck (the) fruit"
+      "Those who cut/harvest"
     ]
   },
   {
@@ -40893,7 +40568,8 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AS%7Eariym+pos%3An",
     "meanings": [
-      "If reaped"
+      "Reaped",
+      "Harvested land"
     ]
   },
   {
@@ -40951,7 +40627,7 @@
     "transliteration": "Sagiyrap",
     "frequency": 1,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3ASagiyrap+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3ASagiyrap+pos%3Aadj",
     "meanings": [
       "Small"
     ]
@@ -41301,7 +40977,7 @@
     "transliteration": "Day~iq",
     "frequency": 1,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3ADay%7Eiq+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3ADay%7Eiq+pos%3An",
     "meanings": [
       "Narrow"
     ]
@@ -41353,7 +41029,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AT%7EaAgiyap+pos%3An",
     "meanings": [
-      "By the overpowering"
+      "The overpowering"
     ]
   },
   {
@@ -41413,7 +41089,8 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3ATalab+pos%3An",
     "meanings": [
-      "Find it"
+      "Request",
+      "Demand"
     ]
   },
   {
@@ -41453,7 +41130,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AT%7Eawod+pos%3An",
     "meanings": [
-      "Like the mountain"
+      "Mountain"
     ]
   },
   {
@@ -41473,7 +41150,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3ATaY%7E+pos%3An",
     "meanings": [
-      "Like (the) folding"
+      "Folding"
     ]
   },
   {
@@ -41613,7 +41290,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AEa%60diya%60t+pos%3An",
     "meanings": [
-      "By the racers"
+      "Racers"
     ]
   },
   {
@@ -41621,7 +41298,7 @@
     "transliteration": "EaASif",
     "frequency": 1,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AEaASif+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AEaASif+pos%3Aadj",
     "meanings": [
       "Stormy"
     ]
@@ -41681,7 +41358,7 @@
     "transliteration": "EaAliyn",
     "frequency": 1,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AEaAliyn+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AEaAliyn+pos%3Aadj",
     "meanings": [
       "Exalted ones"
     ]
@@ -41751,7 +41428,7 @@
     "transliteration": "Eatiyd",
     "frequency": 1,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AEatiyd+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AEatiyd+pos%3Aadj",
     "meanings": [
       "Ready"
     ]
@@ -41833,7 +41510,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AEurojuwn+pos%3An",
     "meanings": [
-      "Like the date stalk"
+      "Date stalk"
     ]
   },
   {
@@ -41923,7 +41600,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AEusoraY%60+pos%3An",
     "meanings": [
-      "Towards [the] difficulty"
+      "Path of difficulty"
     ]
   },
   {
@@ -41983,7 +41660,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AEaSor+pos%3An",
     "meanings": [
-      "By the time"
+      "Time"
     ]
   },
   {
@@ -42011,7 +41688,7 @@
     "transliteration": "EaSiy~",
     "frequency": 1,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AEaSiy%7E+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AEaSiy%7E+pos%3Aadj",
     "meanings": [
       "Disobedient"
     ]
@@ -42171,7 +41848,7 @@
     "transliteration": "Eamuwn",
     "frequency": 1,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AEamuwn+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AEamuwn+pos%3Aadj",
     "meanings": [
       "Blind"
     ]
@@ -42483,7 +42160,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AguforaAn+pos%3An",
     "meanings": [
-      "Us Your forgiveness"
+      "Forgiveness"
     ]
   },
   {
@@ -42523,7 +42200,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AgaloY+pos%3An",
     "meanings": [
-      "Like boiling"
+      "Boiling"
     ]
   },
   {
@@ -42543,7 +42220,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Agum%7Eap+pos%3An",
     "meanings": [
-      "Any doubt"
+      "Doubt"
     ]
   },
   {
@@ -42793,7 +42470,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Afax%7EaAr+pos%3An",
     "meanings": [
-      "Like the pottery"
+      "Pottery"
     ]
   },
   {
@@ -42813,7 +42490,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AfaraA%24+pos%3An",
     "meanings": [
-      "Like moths"
+      "Moths"
     ]
   },
   {
@@ -42963,7 +42640,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Afaqor+pos%3An",
     "meanings": [
-      "[the] poverty"
+      "Poverty"
     ]
   },
   {
@@ -43073,7 +42750,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AqaA%5E%7Diluwn+pos%3An",
     "meanings": [
-      "Were sleeping at noon"
+      "Those sleeping at noon"
     ]
   },
   {
@@ -43523,7 +43200,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Aqawosayon+pos%3An",
     "meanings": [
-      "Two bow-"
+      "Two bows"
     ]
   },
   {
@@ -43551,7 +43228,7 @@
     "transliteration": "qay~imap",
     "frequency": 1,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Aqay%7Eimap+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Aqay%7Eimap+pos%3Aadj",
     "meanings": [
       "Correct"
     ]
@@ -43593,7 +43270,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AkaA%24ifap+pos%3An",
     "meanings": [
-      "Any remover"
+      "Remover"
     ]
   },
   {
@@ -43651,7 +43328,7 @@
     "transliteration": "kaAmilap",
     "frequency": 1,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AkaAmilap+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AkaAmilap+pos%3Aadj",
     "meanings": [
       "Full"
     ]
@@ -43733,7 +43410,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AkasaAd+pos%3An",
     "meanings": [
-      "Decline (in) it"
+      "Recession"
     ]
   },
   {
@@ -43823,7 +43500,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AkilaA+pos%3An",
     "meanings": [
-      "Both of them"
+      "Both"
     ]
   },
   {
@@ -43943,7 +43620,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Ala%60qiy+pos%3An",
     "meanings": [
-      "Meet it"
+      "One who meets"
     ]
   },
   {
@@ -44243,7 +43920,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AmaAEuwn+pos%3An",
     "meanings": [
-      "[the] small kindnesses"
+      "Small kindnesses"
     ]
   },
   {
@@ -44263,7 +43940,7 @@
     "part_of_speech": "Proper noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Ama%60lik2+pos%3Apn",
     "meanings": [
-      "O Malik"
+      "Malik"
     ]
   },
   {
@@ -44743,7 +44420,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Amavula%60t+pos%3An",
     "meanings": [
-      "[the] similar punishments"
+      "Similar punishments"
     ]
   },
   {
@@ -44951,7 +44628,7 @@
     "transliteration": "m~aHofuwZ",
     "frequency": 1,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7EaHofuwZ+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7EaHofuwZ+pos%3An",
     "meanings": [
       "Guarded"
     ]
@@ -45043,7 +44720,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AmuxotaAl+pos%3An",
     "meanings": [
-      "[a] proud"
+      "Pproud"
     ]
   },
   {
@@ -45121,7 +44798,7 @@
     "transliteration": "m~uxal~aduwn",
     "frequency": 1,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Euxal%7Eaduwn+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Euxal%7Eaduwn+pos%3An",
     "meanings": [
       "Made eternal"
     ]
@@ -45903,7 +45580,7 @@
     "part_of_speech": "Adjective",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Amusax%7Ear+pos%3Aadj",
     "meanings": [
-      "[the] controlled"
+      "Controlled"
     ]
   },
   {
@@ -45981,9 +45658,9 @@
     "transliteration": "musolima`t",
     "frequency": 1,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Amusolima%60t+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Amusolima%60t+pos%3An",
     "meanings": [
-      "Submissive"
+      "Muslim women"
     ]
   },
   {
@@ -46053,7 +45730,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Amusaw%7Eimiyn+pos%3An",
     "meanings": [
-      "[the ones] having marks"
+      "Having marks"
     ]
   },
   {
@@ -46063,7 +45740,7 @@
     "part_of_speech": "Adjective",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Eusaw%7Eamap+pos%3Aadj",
     "meanings": [
-      "[the] branded"
+      "Branded"
     ]
   },
   {
@@ -46221,7 +45898,7 @@
     "transliteration": "maSofuwfap",
     "frequency": 1,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3AmaSofuwfap+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3AmaSofuwfap+pos%3An",
     "meanings": [
       "Lined up"
     ]
@@ -46391,7 +46068,7 @@
     "transliteration": "m~uToma}in~ap",
     "frequency": 1,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7EuToma%7Din%7Eap+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7EuToma%7Din%7Eap+pos%3An",
     "meanings": [
       "Who is satisfied"
     ]
@@ -46551,7 +46228,7 @@
     "transliteration": "m~aEoruw$a`t",
     "frequency": 1,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7EaEoruw%24a%60t+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7EaEoruw%24a%60t+pos%3Aadj",
     "meanings": [
       "Trellised"
     ]
@@ -46583,7 +46260,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7EaEar%7Eap+pos%3An",
     "meanings": [
-      "Any harm"
+      "Harm"
     ]
   },
   {
@@ -46683,7 +46360,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AmuEal%7Eaqap+pos%3An",
     "meanings": [
-      "Like the suspended one"
+      "The suspended one"
     ]
   },
   {
@@ -47403,7 +47080,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Amalok+pos%3An",
     "meanings": [
-      "Will"
+      "Possession"
     ]
   },
   {
@@ -47493,7 +47170,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7EumoTir+pos%3An",
     "meanings": [
-      "Bringing us rain"
+      "Bringing rain"
     ]
   },
   {
@@ -47591,9 +47268,9 @@
     "transliteration": "m~anvuwr",
     "frequency": 1,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Eanvuwr+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Eanvuwr+pos%3An",
     "meanings": [
-      "Scattered"
+      "Dispersed"
     ]
   },
   {
@@ -47701,9 +47378,9 @@
     "transliteration": "m~anDuwd",
     "frequency": 1,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7EanDuwd+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7EanDuwd+pos%3An",
     "meanings": [
-      "Layered"
+      "Layers"
     ]
   },
   {
@@ -47951,7 +47628,7 @@
     "transliteration": "muhayomin",
     "frequency": 1,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Amuhayomin+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Amuhayomin+pos%3An",
     "meanings": [
       "Guardian"
     ]
@@ -47993,7 +47670,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Amawa%60qiE+pos%3An",
     "meanings": [
-      "By setting"
+      "Setting"
     ]
   },
   {
@@ -48003,7 +47680,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7EuwaAqiEuw+pos%3An",
     "meanings": [
-      "Are to fall in it"
+      "Are to fall in"
     ]
   },
   {
@@ -48063,7 +47740,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Amaworuwd+pos%3An",
     "meanings": [
-      "Which (they are) led"
+      "Approached"
     ]
   },
   {
@@ -48101,9 +47778,9 @@
     "transliteration": "m~u&oSadap",
     "frequency": 1,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Eu%26oSadap+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Eu%26oSadap+pos%3Aadj",
     "meanings": [
-      "Closed over"
+      "Closed in"
     ]
   },
   {
@@ -48143,7 +47820,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AmawoTi%7D+pos%3An",
     "meanings": [
-      "Any step"
+      "Step"
     ]
   },
   {
@@ -48173,7 +47850,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Amuwaf%7Euw+pos%3An",
     "meanings": [
-      "Will surely pay them in full"
+      "Those who fulfill completely"
     ]
   },
   {
@@ -48373,7 +48050,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AnaAsikuw+pos%3An",
     "meanings": [
-      "Perform it"
+      "Worshipers"
     ]
   },
   {
@@ -49063,7 +48740,7 @@
     "part_of_speech": "Demonstrative pronoun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Aha%60ka*aA+pos%3Adem",
     "meanings": [
-      "Is like this"
+      "Thus"
     ]
   },
   {
@@ -49243,7 +48920,7 @@
     "part_of_speech": "Adjective",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AwaAjifap+pos%3Aadj",
     "meanings": [
-      "Will palpitate"
+      "Trembling"
     ]
   },
   {
@@ -49431,7 +49108,7 @@
     "transliteration": "waduwd",
     "frequency": 1,
     "part_of_speech": "Adjective",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3Awaduwd+pos%3An",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3Awaduwd+pos%3Aadj",
     "meanings": [
       "Most Loving"
     ]
@@ -49463,7 +49140,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Awariq+pos%3An",
     "meanings": [
-      "This silver coin of yours"
+      "Silver coins"
     ]
   },
   {
@@ -49473,7 +49150,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Awaraqap+pos%3An",
     "meanings": [
-      "Any leaf"
+      "Leaf"
     ]
   },
   {
@@ -49513,7 +49190,7 @@
     "part_of_speech": "Adjective",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AwusoTaY%60+pos%3Aadj",
     "meanings": [
-      "[the] middle"
+      "Middle"
     ]
   },
   {
@@ -49543,7 +49220,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AwaSiyd+pos%3An",
     "meanings": [
-      "At the entrance"
+      "Entrance"
     ]
   },
   {
@@ -49613,7 +49290,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AwaqoEat+pos%3An",
     "meanings": [
-      "At its occurrence"
+      "Occurrence"
     ]
   },
   {
@@ -49811,9 +49488,9 @@
     "transliteration": "'aAniyap",
     "frequency": 1,
     "part_of_speech": "Noun",
-    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%27aAniyap+pos%3Aadj",
+    "url": "https://corpus.quran.com/search.jsp?q=lem%3A%27aAniyap+pos%3An",
     "meanings": [
-      "Boiling"
+      "Vessels"
     ]
   },
   {
