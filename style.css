@@ -850,7 +850,7 @@ body.desktop-device .speak-btn-mini:hover {
 /* Arabic text back face layout */
 .arabic-mini {
   font-family: var(--font-arabic);
-  font-size: 3.3rem; /* Scaled up for extremely high readability */
+  font-size: 2.2rem; /* Decreased for a cleaner layout on the meaning side */
   font-weight: 700;
   color: var(--text-secondary);
 }
@@ -863,8 +863,7 @@ body.desktop-device .speak-btn-mini:hover {
 }
 
 .transliteration-mini {
-  font-size: 1.35rem; /* Scaled up further */
-  color: var(--text-muted);
+  display: none; /* Removed from the back of the card per user request */
 }
 
 .divider {
@@ -1195,7 +1194,7 @@ body.desktop-device .study-link:hover {
 
 @media (max-width: 480px) {
   .app-container {
-    padding: 12px;
+    padding: 12px 8px;
     gap: 16px;
   }
 
@@ -1211,6 +1210,8 @@ body.desktop-device .study-link:hover {
   }
 
   .flashcard-container {
+    width: 100%;
+    max-width: 100%;
     height: 390px; /* Increased to support scaled fonts on mobile */
   }
 
@@ -1223,7 +1224,11 @@ body.desktop-device .study-link:hover {
   }
 
   .controls-deck {
-    gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    width: 100%;
+    max-width: 100%;
   }
 
   .btn-nav {
@@ -1232,7 +1237,32 @@ body.desktop-device .study-link:hover {
   }
 
   .assessment-buttons {
-    gap: 6px;
+    grid-column: span 2;
+    display: flex;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .assessment-buttons .btn {
+    flex: 1;
+    justify-content: center;
+    padding: 10px 8px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+
+  #prev-btn {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: end;
+    margin-right: 12px;
+  }
+
+  #next-btn {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: start;
+    margin-left: 12px;
   }
 
   .btn {
