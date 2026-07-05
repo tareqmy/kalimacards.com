@@ -151,6 +151,7 @@ const freqMaxVal = document.getElementById('freq-max-val');
 const sliderTrack = document.getElementById('slider-track');
 const starredOnlyToggle = document.getElementById('starred-only-toggle');
 const posFilter = document.getElementById('pos-filter');
+const coverageFilter = document.getElementById('coverage-filter');
 const learningMode = document.getElementById('learning-mode');
 const resetFiltersBtn = document.getElementById('reset-filters-btn');
 
@@ -289,6 +290,16 @@ async function fetchWords() {
     }
     allWords = await response.json();
     
+    // Sort allWords descending by frequency to calculate cumulative percentiles
+    allWords.sort((a, b) => (b.frequency || 0) - (a.frequency || 0));
+    
+    const totalFrequency = allWords.reduce((sum, w) => sum + (w.frequency || 0), 0);
+    let runningCumulative = 0;
+    allWords.forEach(w => {
+      w.cumulativePercent = (runningCumulative / totalFrequency) * 100;
+      runningCumulative += (w.frequency || 0);
+    });
+    
     // Extract and sort unique frequencies
     uniqueFrequencies = Array.from(new Set(allWords.map(w => w.frequency || 0))).sort((a, b) => a - b);
     
@@ -334,6 +345,7 @@ function updateSliderUI() {
 
 function applyFilterAndReset() {
   const posVal = posFilter ? posFilter.value : 'all';
+  const coverageVal = coverageFilter ? coverageFilter.value : 'all';
   
   // 1. Apply frequency and starred filtering
   let tempWords = [...allWords];
@@ -344,6 +356,12 @@ function applyFilterAndReset() {
       const key = `${w.arabic}_${w.transliteration}`;
       return starredWords.has(key);
     });
+  }
+
+  // Apply cumulative coverage filter
+  if (coverageVal !== 'all') {
+    const threshold = parseFloat(coverageVal);
+    tempWords = tempWords.filter(w => w.cumulativePercent < threshold);
   }
   
   // Apply frequency range filter
@@ -925,12 +943,43 @@ function setupEventListeners() {
     posFilter.addEventListener('change', applyFilterAndReset);
   }
 
+  if (coverageFilter) {
+    coverageFilter.addEventListener('change', () => {
+      const val = coverageFilter.value;
+      if (val === 'all') {
+        if (freqMinInput) freqMinInput.value = 0;
+        if (freqMaxInput) freqMaxInput.value = uniqueFrequencies.length - 1;
+      } else {
+        const threshold = parseFloat(val);
+        const subset = allWords.filter(w => w.cumulativePercent < threshold);
+        if (subset.length > 0) {
+          let minFreq = Infinity;
+          let maxFreq = -Infinity;
+          for (let i = 0; i < subset.length; i++) {
+            const f = subset[i].frequency || 0;
+            if (f < minFreq) minFreq = f;
+            if (f > maxFreq) maxFreq = f;
+          }
+          if (uniqueFrequencies.length > 0) {
+            const minIdx = uniqueFrequencies.indexOf(minFreq);
+            const maxIdx = uniqueFrequencies.indexOf(maxFreq);
+            if (freqMinInput && minIdx !== -1) freqMinInput.value = minIdx;
+            if (freqMaxInput && maxIdx !== -1) freqMaxInput.value = maxIdx;
+          }
+        }
+      }
+      updateSliderUI();
+      applyFilterAndReset();
+    });
+  }
+
   if (resetFiltersBtn) {
     resetFiltersBtn.addEventListener('click', () => {
       if (starredOnlyToggle) starredOnlyToggle.checked = false;
       if (freqMinInput) freqMinInput.value = 0;
       if (freqMaxInput) freqMaxInput.value = uniqueFrequencies.length - 1;
       if (posFilter) posFilter.value = 'all';
+      if (coverageFilter) coverageFilter.value = 'all';
       if (searchInput) {
         searchInput.value = '';
         if (clearSearch) clearSearch.style.display = 'none';
@@ -1066,6 +1115,7 @@ function setupEventListeners() {
         if (freqMaxInput) freqMaxInput.value = uniqueFrequencies.length - 1;
         updateSliderUI();
         if (posFilter) posFilter.value = 'all';
+        if (coverageFilter) coverageFilter.value = 'all';
         applyFilterAndReset();
         filteredIdx = filteredWords.findIndex(w => w.arabic === targetWord.arabic && w.transliteration === targetWord.transliteration);
       }
