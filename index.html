@@ -71,16 +71,22 @@
             <div id="search-results" class="search-results-box" style="display: none;"></div>
           </div>
           <div class="control-group">
-            <label for="frequency-filter">Word Frequency</label>
-            <div class="select-wrapper">
-              <select id="frequency-filter">
-                <option value="all">All Words (Show All)</option>
-                <option value="starred">⭐ Starred Words Only</option>
-                <option value="high">High Frequency (> 1000 times)</option>
-                <option value="medium">Medium Frequency (200 - 1000 times)</option>
-                <option value="low">Low Frequency (< 200 times)</option>
-              </select>
-              <i class="fa-solid fa-chevron-down select-arrow"></i>
+            <div class="starred-toggle-wrapper">
+              <input type="checkbox" id="starred-only-toggle" class="custom-checkbox">
+              <label for="starred-only-toggle" class="custom-checkbox-label">
+                <i class="fa-solid fa-star star-icon"></i> Starred Words Only
+              </label>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="slider-header">
+              <label for="freq-min">Word Frequency</label>
+              <span class="slider-value-display"><span id="freq-min-val">1</span> - <span id="freq-max-val">3,226</span></span>
+            </div>
+            <div class="range-slider-wrapper">
+              <div class="slider-track" id="slider-track"></div>
+              <input type="range" id="freq-min" min="0" max="180" value="0" aria-label="Minimum word frequency">
+              <input type="range" id="freq-max" min="0" max="180" value="180" aria-label="Maximum word frequency">
             </div>
           </div>
           <div class="control-group">

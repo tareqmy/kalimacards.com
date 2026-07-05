@@ -143,7 +143,12 @@ const importStats = document.getElementById('import-stats');
 const importFileInput = document.getElementById('import-file-input');
 
 // Selects / Inputs
-const frequencyFilter = document.getElementById('frequency-filter');
+const freqMinInput = document.getElementById('freq-min');
+const freqMaxInput = document.getElementById('freq-max');
+const freqMinVal = document.getElementById('freq-min-val');
+const freqMaxVal = document.getElementById('freq-max-val');
+const sliderTrack = document.getElementById('slider-track');
+const starredOnlyToggle = document.getElementById('starred-only-toggle');
 const posFilter = document.getElementById('pos-filter');
 const learningMode = document.getElementById('learning-mode');
 
@@ -158,6 +163,7 @@ const sessionProgress = document.getElementById('session-progress');
 // --- State Variables ---
 let allWords = [];         // Loaded from JSON
 let filteredWords = [];    // Filtered by frequency
+let uniqueFrequencies = []; // Unique frequency values sorted ascending
 let historyStack = [];     // Array of indices visited in filteredWords
 let historyPointer = -1;   // Current pointer in historyStack
 let isFlipped = false;     // Is the card currently flipped?
@@ -251,6 +257,19 @@ async function fetchWords() {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     allWords = await response.json();
+    
+    // Extract and sort unique frequencies
+    uniqueFrequencies = Array.from(new Set(allWords.map(w => w.frequency || 0))).sort((a, b) => a - b);
+    
+    // Initialize slider ranges
+    if (freqMinInput && freqMaxInput) {
+      freqMinInput.max = uniqueFrequencies.length - 1;
+      freqMaxInput.max = uniqueFrequencies.length - 1;
+      freqMinInput.value = 0;
+      freqMaxInput.value = uniqueFrequencies.length - 1;
+      updateSliderUI();
+    }
+    
     applyFilterAndReset();
   } catch (error) {
     console.error('Error fetching words:', error);
@@ -262,25 +281,48 @@ async function fetchWords() {
 }
 
 // --- Filter & Order Controls ---
+// --- Slider UI update ---
+function updateSliderUI() {
+  if (!freqMinInput || !freqMaxInput || !freqMinVal || !freqMaxVal || !sliderTrack || uniqueFrequencies.length === 0) return;
+  
+  const minIdx = parseInt(freqMinInput.value);
+  const maxIdx = parseInt(freqMaxInput.value);
+  const minFreq = uniqueFrequencies[minIdx];
+  const maxFreq = uniqueFrequencies[maxIdx];
+  
+  freqMinVal.textContent = minFreq.toLocaleString();
+  freqMaxVal.textContent = maxFreq.toLocaleString();
+  
+  const totalSteps = uniqueFrequencies.length - 1;
+  const percentMin = (minIdx / totalSteps) * 100;
+  const percentMax = (maxIdx / totalSteps) * 100;
+  
+  sliderTrack.style.left = percentMin + '%';
+  sliderTrack.style.right = (100 - percentMax) + '%';
+}
+
 function applyFilterAndReset() {
-  const filterVal = frequencyFilter.value;
   const posVal = posFilter ? posFilter.value : 'all';
   
-  // 1. Apply frequency filtering
-  let tempWords = [];
-  if (filterVal === 'all') {
-    tempWords = [...allWords];
-  } else if (filterVal === 'starred') {
-    tempWords = allWords.filter(w => {
+  // 1. Apply frequency and starred filtering
+  let tempWords = [...allWords];
+  
+  // Apply Starred filter if toggle is active
+  if (starredOnlyToggle && starredOnlyToggle.checked) {
+    tempWords = tempWords.filter(w => {
       const key = `${w.arabic}_${w.transliteration}`;
       return starredWords.has(key);
     });
-  } else if (filterVal === 'high') {
-    tempWords = allWords.filter(w => w.frequency >= 1000);
-  } else if (filterVal === 'medium') {
-    tempWords = allWords.filter(w => w.frequency >= 200 && w.frequency < 1000);
-  } else if (filterVal === 'low') {
-    tempWords = allWords.filter(w => w.frequency < 200);
+  }
+  
+  // Apply frequency range filter
+  if (uniqueFrequencies.length > 0 && freqMinInput && freqMaxInput) {
+    const minIdx = parseInt(freqMinInput.value);
+    const maxIdx = parseInt(freqMaxInput.value);
+    const minFreq = uniqueFrequencies[minIdx];
+    const maxFreq = uniqueFrequencies[maxIdx];
+    
+    tempWords = tempWords.filter(w => w.frequency >= minFreq && w.frequency <= maxFreq);
   }
 
   // 2. Apply part-of-speech filtering
@@ -670,7 +712,7 @@ function toggleStarCurrentWord(e) {
   updateStarUI();
   
   // Re-filter and reload deck if in "starred words only" filter mode
-  if (frequencyFilter.value === 'starred') {
+  if (starredOnlyToggle && starredOnlyToggle.checked) {
     applyFilterAndReset();
   }
 }
@@ -804,7 +846,36 @@ function setupEventListeners() {
   }
 
   // Filters & Settings
-  frequencyFilter.addEventListener('change', applyFilterAndReset);
+  if (starredOnlyToggle) {
+    starredOnlyToggle.addEventListener('change', applyFilterAndReset);
+  }
+
+  const minGap = 0;
+  function handleMinSliderInput() {
+    let minVal = parseInt(freqMinInput.value);
+    let maxVal = parseInt(freqMaxInput.value);
+    if (minVal > maxVal - minGap) {
+      freqMinInput.value = maxVal - minGap;
+    }
+    updateSliderUI();
+    applyFilterAndReset();
+  }
+
+  function handleMaxSliderInput() {
+    let minVal = parseInt(freqMinInput.value);
+    let maxVal = parseInt(freqMaxInput.value);
+    if (maxVal < minVal + minGap) {
+      freqMaxInput.value = minVal + minGap;
+    }
+    updateSliderUI();
+    applyFilterAndReset();
+  }
+
+  if (freqMinInput && freqMaxInput) {
+    freqMinInput.addEventListener('input', handleMinSliderInput);
+    freqMaxInput.addEventListener('input', handleMaxSliderInput);
+  }
+
   if (posFilter) {
     posFilter.addEventListener('change', applyFilterAndReset);
   }
@@ -920,7 +991,10 @@ function setupEventListeners() {
       let filteredIdx = filteredWords.findIndex(w => w.arabic === targetWord.arabic && w.transliteration === targetWord.transliteration);
       
       if (filteredIdx === -1) {
-        frequencyFilter.value = 'all';
+        if (starredOnlyToggle) starredOnlyToggle.checked = false;
+        if (freqMinInput) freqMinInput.value = 0;
+        if (freqMaxInput) freqMaxInput.value = uniqueFrequencies.length - 1;
+        updateSliderUI();
         if (posFilter) posFilter.value = 'all';
         applyFilterAndReset();
         filteredIdx = filteredWords.findIndex(w => w.arabic === targetWord.arabic && w.transliteration === targetWord.transliteration);

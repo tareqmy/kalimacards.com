@@ -309,6 +309,177 @@ body.desktop-device .icon-btn:hover {
   pointer-events: none;
 }
 
+/* Starred Only Toggle Custom Checkbox */
+.starred-toggle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 0;
+}
+
+.custom-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--btn-secondary-border);
+  border-radius: 6px;
+  background: var(--btn-secondary-bg);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: var(--transition-smooth);
+}
+
+.custom-checkbox:hover {
+  border-color: var(--accent-gold);
+  background: rgba(245, 158, 11, 0.05);
+}
+
+.custom-checkbox:checked {
+  background: var(--accent-gold);
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.3);
+}
+
+.custom-checkbox:checked::after {
+  content: '\f00c'; /* FontAwesome check mark */
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  font-size: 0.75rem;
+  color: #090D1A;
+}
+
+body.light-theme .custom-checkbox:checked::after {
+  color: #ffffff;
+}
+
+.custom-checkbox:focus-visible {
+  outline: none;
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.25);
+}
+
+.custom-checkbox-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.custom-checkbox-label .star-icon {
+  color: var(--accent-gold);
+  transition: var(--transition-smooth);
+}
+
+.custom-checkbox:checked + .custom-checkbox-label .star-icon {
+  transform: scale(1.1) rotate(360deg);
+}
+
+/* Double Range Slider Styling */
+.slider-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.slider-value-display {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent-blue);
+  background: rgba(99, 102, 241, 0.1);
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+
+.range-slider-wrapper {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  margin: 15px 0 10px 0;
+  background: var(--btn-secondary-border);
+  border-radius: 4px;
+}
+
+.slider-track {
+  position: absolute;
+  height: 100%;
+  background: var(--accent-blue-gradient);
+  border-radius: 4px;
+  left: 0%;
+  right: 0%;
+}
+
+.range-slider-wrapper input[type="range"] {
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  top: 0;
+  left: 0;
+  background: none;
+  pointer-events: none;
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.range-slider-wrapper input[type="range"]::-webkit-slider-thumb {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background: var(--text-primary);
+  border: 2.5px solid var(--accent-blue);
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  pointer-events: auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.15s ease, background-color 0.15s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.range-slider-wrapper input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  background: var(--accent-blue);
+}
+
+.range-slider-wrapper input[type="range"]::-webkit-slider-thumb:active {
+  transform: scale(1.3);
+  box-shadow: 0 0 0 8px rgba(99, 102, 241, 0.15);
+}
+
+.range-slider-wrapper input[type="range"]::-moz-range-thumb {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background: var(--text-primary);
+  border: 2.5px solid var(--accent-blue);
+  cursor: pointer;
+  pointer-events: auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.15s ease, background-color 0.15s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.range-slider-wrapper input[type="range"]::-moz-range-thumb:hover {
+  transform: scale(1.2);
+  background: var(--accent-blue);
+}
+
+.range-slider-wrapper input[type="range"]::-moz-range-thumb:active {
+  transform: scale(1.3);
+  box-shadow: 0 0 0 8px rgba(99, 102, 241, 0.15);
+}
+
 /* Stats Styling */
 .stats-grid {
   display: grid;
