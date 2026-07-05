@@ -31,7 +31,7 @@
   --btn-secondary-hover: rgba(255, 255, 255, 0.1);
   --btn-secondary-border: rgba(255, 255, 255, 0.1);
 
-  --font-arabic: 'Amiri', serif;
+  --font-arabic: "Noto Naskh Arabic", "Noto Sans Arabic", "Noto", "Scheherazade New", "Scheherazade", "Amiri", serif;
   --font-sans: 'Outfit', sans-serif;
   
   --border-radius-lg: 24px;
