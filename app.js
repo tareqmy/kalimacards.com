@@ -132,6 +132,8 @@ const speakBtnBack = document.getElementById('speak-btn-back');
 const searchInput = document.getElementById('search-input');
 const clearSearch = document.getElementById('clear-search');
 const searchResults = document.getElementById('search-results');
+const starBtnFront = document.getElementById('star-btn-front');
+const starBtnBack = document.getElementById('star-btn-back');
 
 // Selects / Inputs
 const frequencyFilter = document.getElementById('frequency-filter');
@@ -258,6 +260,11 @@ function applyFilterAndReset() {
   // Apply frequency filtering
   if (filterVal === 'all') {
     filteredWords = [...allWords];
+  } else if (filterVal === 'starred') {
+    filteredWords = allWords.filter(w => {
+      const key = `${w.arabic}_${w.transliteration}`;
+      return starredWords.has(key);
+    });
   } else if (filterVal === 'high') {
     filteredWords = allWords.filter(w => w.frequency >= 1000);
   } else if (filterVal === 'medium') {
@@ -367,6 +374,7 @@ function getRandomIndex() {
 // Display the selected word index
 function displayWord(index) {
   currentWord = filteredWords[index];
+  updateStarUI();
   
   // Apply a smooth card enter animation
   flashcard.classList.add('scale-down');
@@ -409,6 +417,9 @@ function displayWord(index) {
     
     // Add to seen stats if not already added
     markAsSeen(currentWord.transliteration);
+    
+    // Sync star icons state
+    updateStarUI();
 
     // Update navigation button states
     prevBtn.disabled = (historyPointer <= 0);
@@ -567,6 +578,53 @@ if ('speechSynthesis' in window) {
   window.speechSynthesis.getVoices();
 }
 
+// --- Star / Bookmark Management ---
+let starredWords = new Set(JSON.parse(localStorage.getItem('starredWords')) || []);
+
+function updateStarUI() {
+  if (!currentWord || !starBtnFront || !starBtnBack) return;
+  const wordKey = `${currentWord.arabic}_${currentWord.transliteration}`;
+  const isStarred = starredWords.has(wordKey);
+  
+  if (isStarred) {
+    starBtnFront.classList.add('starred');
+    starBtnFront.querySelector('i').className = 'fa-solid fa-star';
+    starBtnBack.classList.add('starred');
+    starBtnBack.querySelector('i').className = 'fa-solid fa-star';
+    starBtnFront.title = 'Unstar this word';
+    starBtnBack.title = 'Unstar this word';
+  } else {
+    starBtnFront.classList.remove('starred');
+    starBtnFront.querySelector('i').className = 'fa-regular fa-star';
+    starBtnBack.classList.remove('starred');
+    starBtnBack.querySelector('i').className = 'fa-regular fa-star';
+    starBtnFront.title = 'Star this word';
+    starBtnBack.title = 'Star this word';
+  }
+}
+
+function toggleStarCurrentWord(e) {
+  if (e) {
+    e.stopPropagation(); // Avoid triggering card flip
+  }
+  if (!currentWord) return;
+  const wordKey = `${currentWord.arabic}_${currentWord.transliteration}`;
+  
+  if (starredWords.has(wordKey)) {
+    starredWords.delete(wordKey);
+  } else {
+    starredWords.add(wordKey);
+  }
+  
+  localStorage.setItem('starredWords', JSON.stringify(Array.from(starredWords)));
+  updateStarUI();
+  
+  // Re-filter and reload deck if in "starred words only" filter mode
+  if (frequencyFilter.value === 'starred') {
+    applyFilterAndReset();
+  }
+}
+
 // --- Event Listeners Setup ---
 function setupEventListeners() {
   // Card click flips the card
@@ -597,6 +655,15 @@ function setupEventListeners() {
       e.stopPropagation(); // Avoid triggering card flip
       if (currentWord) speakArabic(currentWord.arabic);
     });
+  }
+  
+  // Star button click listeners
+  if (starBtnFront) {
+    starBtnFront.addEventListener('click', toggleStarCurrentWord);
+  }
+  
+  if (starBtnBack) {
+    starBtnBack.addEventListener('click', toggleStarCurrentWord);
   }
   
   // Card keyboard trigger (Enter/Space on focus)
@@ -816,6 +883,9 @@ function setupEventListeners() {
     } else if (e.key === 'a' || e.key === 'A') {
       e.preventDefault();
       if (currentWord) speakArabic(currentWord.arabic);
+    } else if (e.key === 's' || e.key === 'S') {
+      e.preventDefault();
+      toggleStarCurrentWord();
     }
   });
 }

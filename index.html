@@ -70,6 +70,7 @@
             <div class="select-wrapper">
               <select id="frequency-filter">
                 <option value="all">All Words (Show All)</option>
+                <option value="starred">⭐ Starred Words Only</option>
                 <option value="high">High Frequency (> 1000 times)</option>
                 <option value="medium">Medium Frequency (200 - 1000 times)</option>
                 <option value="low">Low Frequency (< 200 times)</option>
@@ -132,7 +133,12 @@
                 <span class="frequency-tag" id="freq-tag-front">
                   <i class="fa-solid fa-wave-square"></i> Freq: 0
                 </span>
-                <span class="card-index-indicator" id="card-index-front">Word 0/0</span>
+                <div class="card-header-right">
+                  <button id="star-btn-front" class="star-btn" aria-label="Star word" title="Star word">
+                    <i class="fa-regular fa-star"></i>
+                  </button>
+                  <span class="card-index-indicator" id="card-index-front">Word 0/0</span>
+                </div>
               </div>
               <div class="card-body">
                 <div class="arabic-word-wrapper">
@@ -156,7 +162,12 @@
                 <span class="frequency-tag" id="freq-tag-back">
                   <i class="fa-solid fa-wave-square"></i> Freq: 0
                 </span>
-                <span class="card-index-indicator" id="card-index-back">Word 0/0</span>
+                <div class="card-header-right">
+                  <button id="star-btn-back" class="star-btn" aria-label="Star word" title="Star word">
+                    <i class="fa-regular fa-star"></i>
+                  </button>
+                  <span class="card-index-indicator" id="card-index-back">Word 0/0</span>
+                </div>
               </div>
               <div class="card-body">
                 <div class="arabic-mini-wrapper">

@@ -1300,4 +1300,42 @@ body.desktop-device .connect-item:hover {
   font-size: 0.85rem;
 }
 
+/* --- Star Bookmark Styling --- */
+.card-header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.star-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+}
+
+body.desktop-device .star-btn:hover {
+  color: var(--accent-gold);
+  transform: scale(1.15);
+}
+
+.star-btn:active {
+  transform: scale(0.9);
+}
+
+.star-btn.starred {
+  color: var(--accent-gold);
+}
+
+.star-btn.starred i {
+  font-weight: 900; /* Force solid FontAwesome star */
+}
+
+
 
