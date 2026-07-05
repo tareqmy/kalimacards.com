@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="512" height="512" rx="128" fill="#0d0e15" />
+  <rect width="472" height="472" x="20" y="20" rx="108" fill="none" stroke="url(#grad)" stroke-width="8" opacity="0.3" />
+  
+  <!-- Stylized Book (Arabic Style layout) -->
+  <path d="M140 130c0-20 16-36 36-36h206v270H176c-20 0-36 16-36 36V130z" fill="url(#grad)" />
+  <path d="M152 350h230v40H176c-12 0-22-10-22-22s10-22 22-22z" fill="#ffffff" opacity="0.9" />
+  
+  <!-- Stylized calligraphy pen lines -->
+  <path d="M220 180h100" stroke="#0d0e15" stroke-width="12" stroke-linecap="round" />
+  <path d="M220 230h80" stroke="#0d0e15" stroke-width="12" stroke-linecap="round" />
+  <path d="M220 280h60" stroke="#0d0e15" stroke-width="12" stroke-linecap="round" />
+  
+  <!-- Tiny Gold Star in corner -->
+  <path d="M340 280l5 10 11 1.5-8 7.5 2 11-10-5.5-10 5.5 2-11-8-7.5 11-1.5z" fill="#f59e0b" />
+</svg>
