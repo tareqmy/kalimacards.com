@@ -6,20 +6,21 @@ Built with modern web technologies, it features an interactive, responsive user 
 
 ---
 
-## Key Features
+## 🚀 Key Features
 
-- 🗂️ **Active Recall Interface**: Flip cards to reveal classical meanings and transliterations. Rate your recollection with "Knew It" (green) or "Still Learning" (red).
-- 📈 **Mastery & Session Stats**: Tracks your progress in real-time, showcasing review count, success rate, and overall mastery percentage.
-- 🔍 **Instant Search Database**: Live search through the vocabulary library by Arabic word, transliteration, or English meaning.
-- 🎛️ **Granular Filtering**: Filter card lists by frequency levels (High, Medium, Low) or limit the session to your Starred Words (⭐).
-- 🔄 **Learning Modes**: Choose between *Randomized Order* for unpredictable recall, or *Sequential Order* to learn based on frequency.
-- 🌓 **Elegant Dark/Light Theme**: Seamless theme toggling with persistent user preference storage.
-- 📱 **Progressive Web App (PWA)**: Works offline and installs directly on your home screen or desktop via service worker and manifest configuration.
-- 🧹 **Buckwalter Transliteration Engine**: Auto-converts ASCII-based Buckwalter transliterations into elegant, readable phonetic text on the fly.
+*   🗂️ **Active Recall Interface**: Flip cards to reveal classical meanings and transliterations. Rate your recollection with "Knew It" (green) or "Still Learning" (red).
+*   📈 **Mastery & Session Stats**: Tracks your progress in real-time, showcasing review count, success rate, and overall mastery percentage.
+*   🔍 **Instant Search Database**: Live search through the vocabulary library by Arabic word, transliteration, or English meaning.
+*   🎛️ **Granular Filtering**: Filter card lists by frequency levels (High, Medium, Low) or limit the session to your Starred Words (⭐).
+*   🔄 **Learning Modes**: Choose between *Randomized Order* for unpredictable recall, or *Sequential Order* to learn based on frequency.
+*   🌓 **Elegant Dark/Light Theme**: Seamless theme toggling with persistent user preference storage.
+*   📱 **Progressive Web App (PWA)**: Works offline and installs directly on your home screen or desktop via service worker and manifest configuration.
+*   🧹 **Buckwalter Transliteration Engine**: Auto-converts ASCII-based Buckwalter transliterations into elegant, readable phonetic text on the fly.
+*   🗣️ **Text-to-Speech (TTS)**: Clean, high-quality audio pronunciation for Arabic words using native browser speech synthesis.
 
 ---
 
-## File Structure
+## 🗄️ File Structure
 
 ```
 kalimacards/
@@ -31,25 +32,50 @@ kalimacards/
 ├── sw.js                 # PWA Service Worker for offline file caching
 ├── words.json            # Compiled dataset of Quranic words (vocabulary database)
 ├── scraped_lemmas.json   # Scraped lemma raw data from corpus.quran.com
+├── scraped_verbs.json    # Scraped verb raw data from corpus.quran.com
 ├── Makefile              # Local helper commands for serving and parsing
+├── docs/                 # Detailed system & developer documentation
+│   └── developer_guide.md# Guide explaining the data pipeline and schemas
 └── scripts/              # Python scripts for data processing and translation pipeline
-    ├── parse_corpus.py   # Converts CSV source files to words.json
     ├── scrape_lemmas.py  # Scrapes raw lemmas and metadata from the Quranic Corpus
-    ├── scrape_meanings.py# Fetches vocabulary translations from web resources
+    ├── scrape_verbs.py   # Scrapes raw verbs and verbal root occurrences
     ├── translate_lemmas.py# Runs translation on scraped raw data
+    ├── merge_verbs.py    # Integrates scraped verbs and root metadata into words.json
+    ├── scrape_meanings.py# Fetches vocabulary translations from web resources
     ├── detect_lazy.py    # Identifies unmapped or translation-needed words
     ├── patch_words.py    # Overwrites modern translations with accurate classical meanings
-    └── patch_lazy_words.py# Advanced/fallback patches for specific word groups
+    ├── patch_lazy_words.py# Advanced/fallback patches for specific word groups
+    └── parse_corpus.py   # Converts CSV source files to words.json
 ```
 
 ---
 
-## Getting Started
+## 🛠️ Data Ingestion & Build Pipeline
+
+The vocabulary dataset is prepared through a multi-stage Python ingestion pipeline that fetches data from the Quranic Corpus, translates it, merges roots/verb occurrences, and cleanses the translations using classical dictionaries.
+
+```mermaid
+flowchart TD
+    A[corpus.quran.com/lemmas.jsp] -->|scrape_lemmas.py| B[scraped_lemmas.json]
+    C[corpus.quran.com/verbs.jsp] -->|scrape_verbs.py| D[scraped_verbs.json]
+    B -->|translate_lemmas.py| E[words.json]
+    D -->|merge_verbs.py| E
+    A -->|scrape_meanings.py| E
+    E -->|detect_lazy.py| F[lazy_detected.json]
+    E -->|patch_words.py| E
+    E -->|patch_lazy_words.py| E
+```
+
+For in-depth explanations of the scripts, data schemas, and pipeline usage, please refer to the **[Developer & Data Pipeline Guide](file:///Users/tareqmy/development/javascriptprojects/kalimacards/docs/developer_guide.md)**.
+
+---
+
+## 🏃 Getting Started
 
 ### Prerequisites
 To run the local server or parse data, you need:
-- Python 3.x
-- Make (optional, but recommended)
+*   Python 3.x
+*   Make (optional, but recommended)
 
 ### Running Locally
 You can start the development server using the provided `Makefile`:
@@ -70,46 +96,25 @@ Open your browser and navigate to `http://localhost:8000`.
 
 ---
 
-## Data Pipeline & Scripts
+## 🧱 Technologies Used
 
-The project includes a robust pipeline to scrape, translate, patch, and compile Quranic Arabic vocabulary.
-
-### 1. Compiling Vocabulary (`parse_corpus.py`)
-Compile a custom CSV file into the structured `words.json` expected by the frontend. The CSV must contain the columns: `Arabic`, `Transliteration`, `Meaning`, `Frequency`.
-
-```bash
-make parse CSV=path/to/file.csv
-```
-Or run directly:
-```bash
-python3 scripts/parse_corpus.py path/to/file.csv words.json
-```
-
-### 2. Scraping and Patching (Advanced)
-- **`scrape_lemmas.py`**: Scrapes the lemma list from [Quranic Corpus lemmas](https://corpus.quran.com/lemmas.jsp) and generates `scraped_lemmas.json`.
-- **`patch_words.py`**: A critical script that overrides generic/modern machine translations (like Google Translate outputs) with precise, contextually accurate **Classical Quranic translations** for the most common roots.
+*   **Frontend**: HTML5, Vanilla JavaScript (ES6+), CSS3 (Variables, Grids, Flexbox, Keyframes)
+*   **Icons**: FontAwesome 6.4.0 (CDN)
+*   **Data Format**: JSON (pre-compiled from CSV/scraped sources)
+*   **PWA**: Service Workers & Cache Storage API
 
 ---
 
-## Technologies Used
-
-- **Frontend**: HTML5, Vanilla JavaScript (ES6+), CSS3 (Variables, Grids, Flexbox, Keyframes)
-- **Icons**: FontAwesome 6.4.0 (CDN)
-- **Data Format**: JSON (pre-compiled from CSV)
-- **PWA**: Service Workers & Cache Storage API
-
----
-
-## Author & Contact
+## 👤 Author & Contact
 
 **Tareq Mohammad Yousuf**  
 *Software Architect & Team Lead*
-- Email: [tareq.y@gmail.com](mailto:tareq.y@gmail.com)
-- GitHub: [@tareqmy](https://github.com/tareqmy)
-- Website: [tareqmy.com](https://tareqmy.com)
+*   Email: [tareq.y@gmail.com](mailto:tareq.y@gmail.com)
+*   GitHub: [@tareqmy](https://github.com/tareqmy)
+*   Website: [tareqmy.com](https://tareqmy.com)
 
 ---
 
-## License
+## 📄 License
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
