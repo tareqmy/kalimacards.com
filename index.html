@@ -53,7 +53,18 @@
       <aside class="controls-sidebar" aria-label="Controls and Statistics">
         <!-- Filters Card -->
         <div class="sidebar-card card-blur">
-          <h3><i class="fa-solid fa-sliders"></i> Filters</h3>
+          <h3><i class="fa-solid fa-sliders"></i> Filters & Search</h3>
+          <div class="control-group">
+            <label for="search-input">Search Database</label>
+            <div class="search-wrapper">
+              <i class="fa-solid fa-magnifying-glass search-icon"></i>
+              <input type="text" id="search-input" placeholder="Search Arabic or English..." autocomplete="off">
+              <button id="clear-search" class="clear-search-btn" style="display: none;" title="Clear search">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <div id="search-results" class="search-results-box" style="display: none;"></div>
+          </div>
           <div class="control-group">
             <label for="frequency-filter">Word Frequency</label>
             <div class="select-wrapper">

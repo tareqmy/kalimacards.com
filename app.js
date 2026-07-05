@@ -129,6 +129,9 @@ const themeToggle = document.getElementById('theme-toggle');
 const corpusLink = document.getElementById('corpus-link');
 const speakBtnFront = document.getElementById('speak-btn-front');
 const speakBtnBack = document.getElementById('speak-btn-back');
+const searchInput = document.getElementById('search-input');
+const clearSearch = document.getElementById('clear-search');
+const searchResults = document.getElementById('search-results');
 
 // Selects / Inputs
 const frequencyFilter = document.getElementById('frequency-filter');
@@ -629,10 +632,163 @@ function setupEventListeners() {
   // Theme Switcher
   themeToggle.addEventListener('click', toggleTheme);
 
+  // --- Search / Dictionary Event Listeners ---
+  if (searchInput && searchResults && clearSearch) {
+    let selectedSearchIndex = -1;
+    let currentSearchResults = [];
+
+    const performSearch = () => {
+      const query = searchInput.value.trim().toLowerCase();
+      if (!query) {
+        clearSearch.style.display = 'none';
+        searchResults.style.display = 'none';
+        searchResults.innerHTML = '';
+        currentSearchResults = [];
+        selectedSearchIndex = -1;
+        return;
+      }
+      
+      clearSearch.style.display = 'flex';
+      
+      currentSearchResults = words.map((w, globalIndex) => ({ ...w, globalIndex }))
+        .filter(w => {
+          const arabicMatch = w.arabic.includes(query);
+          const translitMatch = w.transliteration.toLowerCase().includes(query);
+          const meaningsMatch = w.meanings && w.meanings.some(m => m.toLowerCase().includes(query));
+          return arabicMatch || translitMatch || meaningsMatch;
+        })
+        .slice(0, 10); // Limit to top 10 results for performance
+        
+      renderSearchResults();
+    };
+
+    const renderSearchResults = () => {
+      searchResults.innerHTML = '';
+      if (currentSearchResults.length === 0) {
+        searchResults.innerHTML = '<div class="search-result-no-match">No matching words found</div>';
+        searchResults.style.display = 'block';
+        selectedSearchIndex = -1;
+        return;
+      }
+      
+      currentSearchResults.forEach((result, idx) => {
+        const item = document.createElement('div');
+        item.className = 'search-result-item';
+        if (idx === selectedSearchIndex) {
+          item.classList.add('selected');
+        }
+        
+        const leftCol = document.createElement('div');
+        leftCol.className = 'search-result-left';
+        
+        const translit = document.createElement('span');
+        translit.className = 'search-result-translit';
+        translit.textContent = BuckwalterConverter.toPhonetic(result.transliteration);
+        
+        const meaningsText = document.createElement('span');
+        meaningsText.className = 'search-result-meaning';
+        meaningsText.textContent = result.meanings.join(', ');
+        
+        leftCol.appendChild(translit);
+        leftCol.appendChild(meaningsText);
+        
+        const rightCol = document.createElement('div');
+        rightCol.className = 'search-result-arabic';
+        rightCol.textContent = result.arabic;
+        
+        item.appendChild(leftCol);
+        item.appendChild(rightCol);
+        
+        item.addEventListener('click', () => {
+          jumpToWord(result.globalIndex);
+        });
+        
+        searchResults.appendChild(item);
+      });
+      
+      searchResults.style.display = 'block';
+    };
+
+    const jumpToWord = (globalIndex) => {
+      const targetWord = words[globalIndex];
+      let filteredIdx = filteredWords.findIndex(w => w.arabic === targetWord.arabic && w.transliteration === targetWord.transliteration);
+      
+      if (filteredIdx === -1) {
+        frequencyFilter.value = 'all';
+        applyFilterAndReset();
+        filteredIdx = filteredWords.findIndex(w => w.arabic === targetWord.arabic && w.transliteration === targetWord.transliteration);
+      }
+      
+      if (filteredIdx !== -1) {
+        currentIndex = filteredIdx;
+        isFlipped = false;
+        flashcard.classList.remove('flipped');
+        
+        historyStack.push(currentIndex);
+        historyPointer = historyStack.length - 1;
+        
+        displayWord(currentIndex);
+      }
+      
+      searchInput.value = '';
+      clearSearch.style.display = 'none';
+      searchResults.style.display = 'none';
+      searchResults.innerHTML = '';
+      currentSearchResults = [];
+      selectedSearchIndex = -1;
+    };
+
+    searchInput.addEventListener('input', performSearch);
+    
+    searchInput.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        if (currentSearchResults.length > 0) {
+          selectedSearchIndex = (selectedSearchIndex + 1) % currentSearchResults.length;
+          renderSearchResults();
+          const activeItem = searchResults.children[selectedSearchIndex];
+          if (activeItem) activeItem.scrollIntoView({ block: 'nearest' });
+        }
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        if (currentSearchResults.length > 0) {
+          selectedSearchIndex = (selectedSearchIndex - 1 + currentSearchResults.length) % currentSearchResults.length;
+          renderSearchResults();
+          const activeItem = searchResults.children[selectedSearchIndex];
+          if (activeItem) activeItem.scrollIntoView({ block: 'nearest' });
+        }
+      } else if (e.key === 'Enter') {
+        e.preventDefault();
+        if (selectedSearchIndex >= 0 && selectedSearchIndex < currentSearchResults.length) {
+          jumpToWord(currentSearchResults[selectedSearchIndex].globalIndex);
+        } else if (currentSearchResults.length > 0) {
+          jumpToWord(currentSearchResults[0].globalIndex);
+        }
+      } else if (e.key === 'Escape') {
+        searchResults.style.display = 'none';
+      }
+    });
+
+    clearSearch.addEventListener('click', () => {
+      searchInput.value = '';
+      clearSearch.style.display = 'none';
+      searchResults.style.display = 'none';
+      searchResults.innerHTML = '';
+      currentSearchResults = [];
+      selectedSearchIndex = -1;
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!searchInput.contains(e.target) && !searchResults.contains(e.target) && !clearSearch.contains(e.target)) {
+        searchResults.style.display = 'none';
+      }
+    });
+  }
+
   // Global Keyboard Shortcuts
   document.addEventListener('keydown', (e) => {
-    // Ignore keyboard shortcuts if user is focusing a select dropdown
-    if (document.activeElement.tagName === 'SELECT') return;
+    // Ignore keyboard shortcuts if user is focusing a select dropdown or input field
+    if (document.activeElement.tagName === 'SELECT' || document.activeElement.tagName === 'INPUT') return;
 
     if (e.key === ' ' && !isFlipped) {
       e.preventDefault();
