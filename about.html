@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About & Credentials - KalimaCards</title>
+  <meta name="description" content="Learn about Tareq Mohammad Yousuf, the creator of KalimaCards, and his professional software architecture and engineering credentials.">
+  
+  <!-- Local Web Fonts -->
+  <link rel="stylesheet" href="fonts/fonts.css">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  
+  <script>
+    // Synchronously load user theme preference to avoid color flashing
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+</head>
+<body class="desktop-device">
+  <!-- Background Glow Effects -->
+  <div class="glow-sphere glow-1"></div>
+  <div class="glow-sphere glow-2"></div>
+
+  <div class="app-container">
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <h1>KalimaCards</h1>
+        <span class="subtitle">About the Creator</span>
+      </div>
+      <div class="header-actions">
+        <a href="index.html" class="btn btn-secondary">
+          <i class="fa-solid fa-house"></i> Home
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content single-column">
+      <section class="about-card card-blur">
+        <div class="profile-header">
+          <div class="profile-avatar">
+            <i class="fa-solid fa-user-tie"></i>
+          </div>
+          <div class="profile-title">
+            <h2>Tareq Mohammad Yousuf</h2>
+            <p class="profile-subtitle">Software Architect & Team Lead</p>
+          </div>
+        </div>
+
+        <div class="profile-bio">
+          <p>
+            Tareq Mohammad Yousuf is a veteran Software Architect, Developer, and Team Lead with over 20 years of experience building high-scale, reliable enterprise systems. As a specialist in Java, cloud infrastructure, and DevOps, he designs robust backend architectures and automated pipelines that power modern digital solutions.
+          </p>
+          <p>
+            With a passion for engineering excellence, Tareq is an active contributor to open-source systems, notably in telephony integrations (Asterisk-Java, ari4java), and is the creator of KalimaCards—an active recall tool designed to simplify Quranic vocabulary study.
+          </p>
+        </div>
+
+
+        <h3 class="section-title"><i class="fa-solid fa-envelope"></i> Connect & Collab</h3>
+        <div class="connect-links">
+          <a href="mailto:tareq.y@gmail.com" class="connect-item">
+            <i class="fa-solid fa-envelope"></i> tareq.y@gmail.com
+          </a>
+          <a href="https://github.com/tareqmy" target="_blank" class="connect-item">
+            <i class="fa-brands fa-github"></i> github.com/tareqmy
+          </a>
+          <a href="https://tareqmy.com" target="_blank" class="connect-item">
+            <i class="fa-solid fa-globe"></i> tareqmy.com
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2026 KalimaCards. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
