@@ -788,7 +788,7 @@ function setupEventListeners() {
       
       clearSearch.style.display = 'flex';
       
-      currentSearchResults = words.map((w, globalIndex) => ({ ...w, globalIndex }))
+      currentSearchResults = allWords.map((w, globalIndex) => ({ ...w, globalIndex }))
         .filter(w => {
           const arabicMatch = w.arabic.includes(query);
           const translitMatch = w.transliteration.toLowerCase().includes(query);
@@ -848,7 +848,7 @@ function setupEventListeners() {
     };
 
     const jumpToWord = (globalIndex) => {
-      const targetWord = words[globalIndex];
+      const targetWord = allWords[globalIndex];
       let filteredIdx = filteredWords.findIndex(w => w.arabic === targetWord.arabic && w.transliteration === targetWord.transliteration);
       
       if (filteredIdx === -1) {
@@ -859,8 +859,7 @@ function setupEventListeners() {
       
       if (filteredIdx !== -1) {
         currentIndex = filteredIdx;
-        isFlipped = false;
-        flashcard.classList.remove('flipped');
+        closeCardFlip();
         
         historyStack.push(currentIndex);
         historyPointer = historyStack.length - 1;
