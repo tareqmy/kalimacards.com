@@ -142,6 +142,7 @@ const importFileInput = document.getElementById('import-file-input');
 
 // Selects / Inputs
 const frequencyFilter = document.getElementById('frequency-filter');
+const posFilter = document.getElementById('pos-filter');
 const learningMode = document.getElementById('learning-mode');
 
 // Stats Counters
@@ -261,21 +262,39 @@ async function fetchWords() {
 // --- Filter & Order Controls ---
 function applyFilterAndReset() {
   const filterVal = frequencyFilter.value;
+  const posVal = posFilter ? posFilter.value : 'all';
   
-  // Apply frequency filtering
+  // 1. Apply frequency filtering
+  let tempWords = [];
   if (filterVal === 'all') {
-    filteredWords = [...allWords];
+    tempWords = [...allWords];
   } else if (filterVal === 'starred') {
-    filteredWords = allWords.filter(w => {
+    tempWords = allWords.filter(w => {
       const key = `${w.arabic}_${w.transliteration}`;
       return starredWords.has(key);
     });
   } else if (filterVal === 'high') {
-    filteredWords = allWords.filter(w => w.frequency >= 1000);
+    tempWords = allWords.filter(w => w.frequency >= 1000);
   } else if (filterVal === 'medium') {
-    filteredWords = allWords.filter(w => w.frequency >= 200 && w.frequency < 1000);
+    tempWords = allWords.filter(w => w.frequency >= 200 && w.frequency < 1000);
   } else if (filterVal === 'low') {
-    filteredWords = allWords.filter(w => w.frequency < 200);
+    tempWords = allWords.filter(w => w.frequency < 200);
+  }
+
+  // 2. Apply part-of-speech filtering
+  if (posVal === 'verbs') {
+    filteredWords = tempWords.filter(w => w.part_of_speech && w.part_of_speech.toLowerCase().startsWith('verb'));
+  } else if (posVal === 'nouns') {
+    filteredWords = tempWords.filter(w => w.part_of_speech && (w.part_of_speech.toLowerCase().includes('noun') || w.part_of_speech.toLowerCase() === 'noun'));
+  } else if (posVal === 'particles') {
+    filteredWords = tempWords.filter(w => w.part_of_speech && (
+      w.part_of_speech.toLowerCase().includes('particle') || 
+      w.part_of_speech.toLowerCase().includes('preposition') || 
+      w.part_of_speech.toLowerCase().includes('conjunction') ||
+      w.part_of_speech.toLowerCase().includes('pronoun')
+    ));
+  } else {
+    filteredWords = tempWords;
   }
 
   // Sort initially by frequency descending (default)
@@ -774,6 +793,9 @@ function setupEventListeners() {
 
   // Filters & Settings
   frequencyFilter.addEventListener('change', applyFilterAndReset);
+  if (posFilter) {
+    posFilter.addEventListener('change', applyFilterAndReset);
+  }
   learningMode.addEventListener('change', () => {
     // If switching learning mode, clear history so the order refreshes
     historyStack = [];
@@ -887,6 +909,7 @@ function setupEventListeners() {
       
       if (filteredIdx === -1) {
         frequencyFilter.value = 'all';
+        if (posFilter) posFilter.value = 'all';
         applyFilterAndReset();
         filteredIdx = filteredWords.findIndex(w => w.arabic === targetWord.arabic && w.transliteration === targetWord.transliteration);
       }
