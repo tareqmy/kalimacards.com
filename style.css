@@ -542,7 +542,67 @@ body.desktop-device .btn-secondary:hover {
 /* Quranic Arabic typography */
 .arabic-word-wrapper {
   margin: 10px 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  position: relative;
 }
+
+.speak-btn {
+  background: var(--btn-secondary-bg);
+  border: 1px solid var(--btn-secondary-border);
+  color: var(--accent-blue);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: var(--transition-smooth);
+}
+
+body.desktop-device .speak-btn:hover {
+  background: var(--btn-secondary-hover);
+  border-color: var(--accent-blue);
+  transform: scale(1.1) translateY(-1px);
+}
+
+.speak-btn:active {
+  transform: scale(0.95);
+}
+
+.arabic-mini-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.speak-btn-mini {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 4px;
+  display: inline-flex;
+  align-items: center;
+  transition: var(--transition-smooth);
+}
+
+body.desktop-device .speak-btn-mini:hover {
+  color: var(--accent-blue);
+  transform: scale(1.15);
+}
+
+.speak-btn-mini:active {
+  transform: scale(0.95);
+}
+
 
 .arabic-text {
   font-family: var(--font-arabic);

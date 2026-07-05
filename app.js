@@ -127,6 +127,8 @@ const noBtn = document.getElementById('no-btn');
 const resetBtn = document.getElementById('reset-session');
 const themeToggle = document.getElementById('theme-toggle');
 const corpusLink = document.getElementById('corpus-link');
+const speakBtnFront = document.getElementById('speak-btn-front');
+const speakBtnBack = document.getElementById('speak-btn-back');
 
 // Selects / Inputs
 const frequencyFilter = document.getElementById('frequency-filter');
@@ -184,7 +186,7 @@ function detectDevice() {
     if (isMobile) {
       shortcutsEl.innerHTML = '<span class="mobile-tip"><i class="fa-solid fa-fingerprint"></i> Tap card to flip. Rate recall with buttons below.</span>';
     } else {
-      shortcutsEl.innerHTML = '<span>Shortcuts:</span> <kbd>Space</kbd> Flip &bull; <kbd>&rarr;</kbd> Next &bull; <kbd>&larr;</kbd> Prev &bull; <kbd>1</kbd> Hard &bull; <kbd>2</kbd> Easy';
+      shortcutsEl.innerHTML = '<span>Shortcuts:</span> <kbd>Space</kbd> Flip &bull; <kbd>&rarr;</kbd> Next &bull; <kbd>&larr;</kbd> Prev &bull; <kbd>1</kbd> Hard &bull; <kbd>2</kbd> Easy &bull; <kbd>A</kbd> Audio';
     }
   }
 }
@@ -531,6 +533,37 @@ function resetSessionStats() {
   }
 }
 
+// --- Text to Speech (Arabic Pronunciation) ---
+function speakArabic(text) {
+  if (!text) return;
+  if ('speechSynthesis' in window) {
+    // Cancel any active speech first
+    window.speechSynthesis.cancel();
+    
+    // Clean text: strip out non-Arabic characters for clean TTS engine reading
+    const cleanText = text.replace(/[^\u0600-\u06FF\s]/g, '').trim();
+    const utterance = new SpeechSynthesisUtterance(cleanText);
+    utterance.lang = 'ar-SA';
+    
+    // Find a native Arabic voice if available
+    const voices = window.speechSynthesis.getVoices();
+    const arVoice = voices.find(v => v.lang.startsWith('ar'));
+    if (arVoice) {
+      utterance.voice = arVoice;
+    }
+    
+    utterance.rate = 0.75; // Slower speed for clear educational guidance
+    window.speechSynthesis.speak(utterance);
+  } else {
+    console.warn('Text-to-speech is not supported in this browser.');
+  }
+}
+
+// Trigger browser voice listing load asynchronously
+if ('speechSynthesis' in window) {
+  window.speechSynthesis.getVoices();
+}
+
 // --- Event Listeners Setup ---
 function setupEventListeners() {
   // Card click flips the card
@@ -545,6 +578,21 @@ function setupEventListeners() {
       if (url && url !== '#' && !url.endsWith('#')) {
         window.open(url, '_blank', 'noopener,noreferrer');
       }
+    });
+  }
+  
+  // Audio speaker buttons click listeners
+  if (speakBtnFront) {
+    speakBtnFront.addEventListener('click', (e) => {
+      e.stopPropagation(); // Avoid triggering card flip
+      if (currentWord) speakArabic(currentWord.arabic);
+    });
+  }
+  
+  if (speakBtnBack) {
+    speakBtnBack.addEventListener('click', (e) => {
+      e.stopPropagation(); // Avoid triggering card flip
+      if (currentWord) speakArabic(currentWord.arabic);
     });
   }
   
@@ -609,6 +657,9 @@ function setupEventListeners() {
         e.preventDefault();
         markAsKnown();
       }
+    } else if (e.key === 'a' || e.key === 'A') {
+      e.preventDefault();
+      if (currentWord) speakArabic(currentWord.arabic);
     }
   });
 }

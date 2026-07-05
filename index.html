@@ -126,6 +126,9 @@
               <div class="card-body">
                 <div class="arabic-word-wrapper">
                   <h2 class="arabic-text" id="arabic-word">...</h2>
+                  <button id="speak-btn-front" class="speak-btn" title="Listen Pronunciation" aria-label="Listen Pronunciation">
+                    <i class="fa-solid fa-volume-high"></i>
+                  </button>
                 </div>
                 <p class="transliteration" id="word-transliteration">...</p>
               </div>
@@ -145,7 +148,12 @@
                 <span class="card-index-indicator" id="card-index-back">Word 0/0</span>
               </div>
               <div class="card-body">
-                <span class="arabic-mini" id="arabic-word-mini">...</span>
+                <div class="arabic-mini-wrapper">
+                  <span class="arabic-mini" id="arabic-word-mini">...</span>
+                  <button id="speak-btn-back" class="speak-btn-mini" title="Listen Pronunciation" aria-label="Listen Pronunciation">
+                    <i class="fa-solid fa-volume-high"></i>
+                  </button>
+                </div>
                 <p class="transliteration-mini" id="word-transliteration-mini">...</p>
                 <div class="divider"></div>
                 <div class="meaning-wrapper">
@@ -189,7 +197,7 @@
         <!-- Keyboard Shortcuts Help -->
         <div class="keyboard-shortcuts">
           <span>Shortcuts:</span>
-          <kbd>Space</kbd> Flip Card &bull; <kbd>&rarr;</kbd> Next &bull; <kbd>&larr;</kbd> Prev &bull; <kbd>1</kbd> Hard &bull; <kbd>2</kbd> Easy
+          <kbd>Space</kbd> Flip Card &bull; <kbd>&rarr;</kbd> Next &bull; <kbd>&larr;</kbd> Prev &bull; <kbd>1</kbd> Hard &bull; <kbd>2</kbd> Easy &bull; <kbd>A</kbd> Audio
         </div>
 
         <!-- Transliteration Rules Reference -->
