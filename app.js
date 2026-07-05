@@ -857,6 +857,10 @@ function setupEventListeners() {
     if (minVal > maxVal - minGap) {
       freqMinInput.value = maxVal - minGap;
     }
+    if (freqMinInput && freqMaxInput) {
+      freqMinInput.style.zIndex = "10";
+      freqMaxInput.style.zIndex = "9";
+    }
     updateSliderUI();
     applyFilterAndReset();
   }
@@ -866,6 +870,10 @@ function setupEventListeners() {
     let maxVal = parseInt(freqMaxInput.value);
     if (maxVal < minVal + minGap) {
       freqMaxInput.value = minVal + minGap;
+    }
+    if (freqMinInput && freqMaxInput) {
+      freqMaxInput.style.zIndex = "10";
+      freqMinInput.style.zIndex = "9";
     }
     updateSliderUI();
     applyFilterAndReset();
