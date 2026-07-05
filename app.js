@@ -120,6 +120,8 @@ const posTagFront = document.getElementById('pos-tag-front');
 const posTagBack = document.getElementById('pos-tag-back');
 const cardIndexFront = document.getElementById('card-index-front');
 const cardIndexBack = document.getElementById('card-index-back');
+const rootWrapper = document.getElementById('root-wrapper');
+const wordRoot = document.getElementById('word-root');
 
 // Buttons
 const prevBtn = document.getElementById('prev-btn');
@@ -320,6 +322,7 @@ function showEmptyState() {
   freqTagBack.innerHTML = '<i class="fa-solid fa-wave-square"></i> Freq: 0';
   posTagFront.style.display = 'none';
   posTagBack.style.display = 'none';
+  if (rootWrapper) rootWrapper.style.display = 'none';
   cardIndexFront.textContent = 'Word 0/0';
   cardIndexBack.textContent = 'Word 0/0';
   currentWord = null;
@@ -445,6 +448,15 @@ function displayWord(index) {
     } else {
       posTagFront.style.display = 'none';
       posTagBack.style.display = 'none';
+    }
+
+    // Root
+    const wordRootVal = currentWord.root || '';
+    if (wordRootVal && rootWrapper && wordRoot) {
+      wordRoot.textContent = wordRootVal;
+      rootWrapper.style.display = 'block';
+    } else if (rootWrapper) {
+      rootWrapper.style.display = 'none';
     }
     
     // Index indicator

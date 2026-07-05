@@ -24,14 +24,19 @@ def merge_data(words_filepath, verbs_filepath):
     with open(verbs_filepath, 'r', encoding='utf-8') as f:
         verbs = json.load(f)
 
-    # Build a set of existing word keys to prevent duplicate insertion
-    # Key is combinations of (arabic, transliteration)
-    existing_keys = {f"{w['arabic']}_{w['transliteration']}" for w in words}
+    # Build a lookup of existing words by key
+    words_lookup = {f"{w['arabic']}_{w['transliteration']}": w for w in words}
 
     added_count = 0
+    updated_count = 0
     for verb in verbs:
         key = f"{verb['arabic']}_{verb['transliteration']}"
-        if key not in existing_keys:
+        if key in words_lookup:
+            # Update root if present in verb
+            if "root" in verb:
+                words_lookup[key]["root"] = verb["root"]
+                updated_count += 1
+        else:
             # Ensure meanings is a list
             if "meanings" not in verb or not verb["meanings"]:
                 verb["meanings"] = []
@@ -47,10 +52,11 @@ def merge_data(words_filepath, verbs_filepath):
             verb["meanings"] = list(dict.fromkeys(cleaned_meanings)) # deduplicate
             
             words.append(verb)
-            existing_keys.add(key)
+            words_lookup[key] = verb
             added_count += 1
 
     print(f"Added {added_count} new verbs to the dataset.")
+    print(f"Updated {updated_count} existing verbs with root information.")
     
     # Sort all by frequency descending
     words.sort(key=lambda x: x.get("frequency", 0), reverse=True)

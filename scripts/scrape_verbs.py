@@ -115,6 +115,7 @@ def scrape_quranic_verbs(output_file='scraped_verbs.json'):
             all_verbs.append({
                 "arabic": arabic_verb,
                 "transliteration": buckwalter,
+                "root": root,
                 "frequency": frequency,
                 "part_of_speech": pos,
                 "url": word_url,
