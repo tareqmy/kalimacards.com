@@ -1,0 +1,5 @@
+# robots.txt for https://kalimacards.com
+User-agent: *
+Allow: /
+
+Sitemap: https://kalimacards.com/sitemap.xml
