@@ -506,6 +506,27 @@ body.desktop-device .btn-secondary:hover {
   width: 100%;
 }
 
+.card-header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pos-tag {
+  background: var(--color-success-bg);
+  color: var(--color-success);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
 .frequency-tag {
   background: rgba(99, 102, 241, 0.1);
   color: var(--accent-blue);

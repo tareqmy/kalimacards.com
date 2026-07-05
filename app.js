@@ -116,6 +116,8 @@ const wordTransliterationMini = document.getElementById('word-transliteration-mi
 const wordMeaning = document.getElementById('word-meaning');
 const freqTagFront = document.getElementById('freq-tag-front');
 const freqTagBack = document.getElementById('freq-tag-back');
+const posTagFront = document.getElementById('pos-tag-front');
+const posTagBack = document.getElementById('pos-tag-back');
 const cardIndexFront = document.getElementById('card-index-front');
 const cardIndexBack = document.getElementById('card-index-back');
 
@@ -297,6 +299,8 @@ function showEmptyState() {
   wordMeaning.textContent = 'Try choosing a different category.';
   freqTagFront.innerHTML = '<i class="fa-solid fa-wave-square"></i> Freq: 0';
   freqTagBack.innerHTML = '<i class="fa-solid fa-wave-square"></i> Freq: 0';
+  posTagFront.style.display = 'none';
+  posTagBack.style.display = 'none';
   cardIndexFront.textContent = 'Word 0/0';
   cardIndexBack.textContent = 'Word 0/0';
   currentWord = null;
@@ -411,6 +415,18 @@ function displayWord(index) {
     const formattedFreq = Number(currentWord.frequency).toLocaleString();
     freqTagFront.innerHTML = `<i class="fa-solid fa-wave-square"></i> Freq: ${formattedFreq}`;
     freqTagBack.innerHTML = `<i class="fa-solid fa-wave-square"></i> Freq: ${formattedFreq}`;
+    
+    // Part of speech
+    const partOfSpeech = currentWord.part_of_speech || '';
+    if (partOfSpeech) {
+      posTagFront.textContent = partOfSpeech;
+      posTagFront.style.display = 'inline-flex';
+      posTagBack.textContent = partOfSpeech;
+      posTagBack.style.display = 'inline-flex';
+    } else {
+      posTagFront.style.display = 'none';
+      posTagBack.style.display = 'none';
+    }
     
     // Index indicator
     const currentNum = index + 1;
@@ -819,15 +835,33 @@ function setupEventListeners() {
         const leftCol = document.createElement('div');
         leftCol.className = 'search-result-left';
         
+        const translitHeader = document.createElement('div');
+        translitHeader.style.display = 'flex';
+        translitHeader.style.alignItems = 'center';
+        translitHeader.style.gap = '8px';
+        
         const translit = document.createElement('span');
         translit.className = 'search-result-translit';
         translit.textContent = BuckwalterConverter.toPhonetic(result.transliteration);
+        translitHeader.appendChild(translit);
+        
+        if (result.part_of_speech) {
+          const posBadge = document.createElement('span');
+          posBadge.style.fontSize = '0.65rem';
+          posBadge.style.background = 'var(--color-success-bg)';
+          posBadge.style.color = 'var(--color-success)';
+          posBadge.style.padding = '1px 6px';
+          posBadge.style.borderRadius = '10px';
+          posBadge.style.fontWeight = '600';
+          posBadge.textContent = result.part_of_speech;
+          translitHeader.appendChild(posBadge);
+        }
         
         const meaningsText = document.createElement('span');
         meaningsText.className = 'search-result-meaning';
         meaningsText.textContent = result.meanings.join(', ');
         
-        leftCol.appendChild(translit);
+        leftCol.appendChild(translitHeader);
         leftCol.appendChild(meaningsText);
         
         const rightCol = document.createElement('div');
