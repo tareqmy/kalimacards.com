@@ -134,6 +134,9 @@ const clearSearch = document.getElementById('clear-search');
 const searchResults = document.getElementById('search-results');
 const starBtnFront = document.getElementById('star-btn-front');
 const starBtnBack = document.getElementById('star-btn-back');
+const exportStats = document.getElementById('export-stats');
+const importStats = document.getElementById('import-stats');
+const importFileInput = document.getElementById('import-file-input');
 
 // Selects / Inputs
 const frequencyFilter = document.getElementById('frequency-filter');
@@ -684,6 +687,74 @@ function setupEventListeners() {
 
   // Reset
   resetBtn.addEventListener('click', resetSessionStats);
+
+  // Export Stats
+  if (exportStats) {
+    exportStats.addEventListener('click', () => {
+      const backupData = {
+        app: 'KalimaCards',
+        version: '1.0',
+        timestamp: new Date().toISOString(),
+        stats: stats,
+        starredWords: Array.from(starredWords)
+      };
+      
+      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(backupData, null, 2));
+      const downloadAnchor = document.createElement('a');
+      downloadAnchor.setAttribute("href", dataStr);
+      downloadAnchor.setAttribute("download", `kalimacards-backup-${new Date().toISOString().split('T')[0]}.json`);
+      document.body.appendChild(downloadAnchor);
+      downloadAnchor.click();
+      downloadAnchor.remove();
+    });
+  }
+
+  // Import Stats triggers hidden input click
+  if (importStats && importFileInput) {
+    importStats.addEventListener('click', () => {
+      importFileInput.click();
+    });
+
+    importFileInput.addEventListener('change', (e) => {
+      const file = e.target.value ? importFileInput.files[0] : null;
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function(evt) {
+        try {
+          const data = JSON.parse(evt.target.result);
+          
+          if (data.app !== 'KalimaCards') {
+            alert('Invalid file format. Please upload a valid KalimaCards backup file.');
+            return;
+          }
+          
+          if (confirm('Are you sure you want to import this progress backup? This will overwrite all your current learning status counters and starred bookmarks.')) {
+            if (data.stats) {
+              stats = {
+                known: data.stats.known || [],
+                learning: data.stats.learning || [],
+                seen: data.stats.seen || []
+              };
+              saveStats();
+            }
+            
+            if (data.starredWords) {
+              starredWords = new Set(data.starredWords);
+              localStorage.setItem('starredWords', JSON.stringify(Array.from(starredWords)));
+            }
+            
+            applyFilterAndReset();
+            alert('Progress backup restored successfully!');
+          }
+        } catch (err) {
+          alert('Failed to parse backup file: ' + err.message);
+        }
+        importFileInput.value = '';
+      };
+      reader.readAsText(file);
+    });
+  }
 
   // Filters & Settings
   frequencyFilter.addEventListener('change', applyFilterAndReset);

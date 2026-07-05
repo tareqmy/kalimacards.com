@@ -120,9 +120,18 @@
             <div class="progress-bar-fill" id="session-progress" style="width: 0%"></div>
           </div>
           <div class="action-divider" style="margin-top: 14px; border-top: 1px solid var(--panel-border); padding-top: 14px;">
-            <button id="reset-session" class="btn btn-secondary btn-full">
+            <button id="reset-session" class="btn btn-secondary btn-full" style="margin-bottom: 8px;">
               <i class="fa-solid fa-rotate-left"></i> Reset Statistics
             </button>
+            <div style="display: flex; gap: 8px; width: 100%;">
+              <button id="export-stats" class="btn btn-secondary" style="flex: 1; padding: 8px 10px; font-size: 0.75rem;" title="Download progress backup as JSON">
+                <i class="fa-solid fa-download"></i> Export
+              </button>
+              <button id="import-stats" class="btn btn-secondary" style="flex: 1; padding: 8px 10px; font-size: 0.75rem;" title="Restore progress backup from JSON">
+                <i class="fa-solid fa-upload"></i> Import
+              </button>
+            </div>
+            <input type="file" id="import-file-input" style="display: none;" accept=".json">
           </div>
         </div>
       </aside>
