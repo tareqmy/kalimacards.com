@@ -348,6 +348,12 @@ function applyFilterAndReset() {
   historyStack = [];
   historyPointer = -1;
 
+  // Update live word count display
+  const countEl = document.getElementById('filtered-word-count');
+  if (countEl) {
+    countEl.textContent = `(${filteredWords.length.toLocaleString()} words)`;
+  }
+
   if (filteredWords.length > 0) {
     loadNextCard(true); // Load first card
   } else {
