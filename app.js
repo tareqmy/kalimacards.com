@@ -130,6 +130,7 @@ const yesBtn = document.getElementById('yes-btn');
 const noBtn = document.getElementById('no-btn');
 const resetBtn = document.getElementById('reset-session');
 const themeToggle = document.getElementById('theme-toggle');
+const focusToggle = document.getElementById('focus-toggle');
 const corpusLink = document.getElementById('corpus-link');
 const speakBtnFront = document.getElementById('speak-btn-front');
 const speakBtnBack = document.getElementById('speak-btn-back');
@@ -181,6 +182,7 @@ let stats = {
 document.addEventListener('DOMContentLoaded', () => {
   detectDevice();
   loadTheme();
+  loadFocusMode();
   loadStats();
   fetchWords();
   setupEventListeners();
@@ -206,7 +208,7 @@ function detectDevice() {
     if (isMobile) {
       shortcutsEl.innerHTML = '<span class="mobile-tip"><i class="fa-solid fa-fingerprint"></i> Tap card to flip. Rate recall with buttons below.</span>';
     } else {
-      shortcutsEl.innerHTML = '<span>Shortcuts:</span> <kbd>Space</kbd> Flip &bull; <kbd>&rarr;</kbd> Next &bull; <kbd>&larr;</kbd> Prev &bull; <kbd>1</kbd> Hard &bull; <kbd>2</kbd> Easy &bull; <kbd>A</kbd> Audio';
+      shortcutsEl.innerHTML = '<span>Shortcuts:</span> <kbd>Space</kbd> Flip &bull; <kbd>&rarr;</kbd> Next &bull; <kbd>&larr;</kbd> Prev &bull; <kbd>1</kbd> Hard &bull; <kbd>2</kbd> Easy &bull; <kbd>A</kbd> Audio &bull; <kbd>F</kbd> Focus';
     }
   }
 }
@@ -228,6 +230,34 @@ function toggleTheme() {
   const isLight = document.body.classList.contains('light-theme');
   localStorage.setItem('theme', isLight ? 'light' : 'dark');
   themeToggle.innerHTML = isLight ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+}
+
+// --- Focus Mode Management ---
+function loadFocusMode() {
+  const savedFocus = localStorage.getItem('focusMode');
+  if (savedFocus === 'enabled') {
+    document.body.classList.add('focus-mode');
+    if (focusToggle) {
+      focusToggle.innerHTML = '<i class="fa-solid fa-compress"></i>';
+      focusToggle.title = 'Exit Focus Mode (F)';
+    }
+  } else {
+    document.body.classList.remove('focus-mode');
+    if (focusToggle) {
+      focusToggle.innerHTML = '<i class="fa-solid fa-expand"></i>';
+      focusToggle.title = 'Toggle Focus Mode (F)';
+    }
+  }
+}
+
+function toggleFocusMode() {
+  document.body.classList.toggle('focus-mode');
+  const isFocus = document.body.classList.contains('focus-mode');
+  localStorage.setItem('focusMode', isFocus ? 'enabled' : 'disabled');
+  if (focusToggle) {
+    focusToggle.innerHTML = isFocus ? '<i class="fa-solid fa-compress"></i>' : '<i class="fa-solid fa-expand"></i>';
+    focusToggle.title = isFocus ? 'Exit Focus Mode (F)' : 'Toggle Focus Mode (F)';
+  }
 }
 
 // --- Load and Save Progress Stats ---
@@ -926,6 +956,11 @@ function setupEventListeners() {
   // Theme Switcher
   themeToggle.addEventListener('click', toggleTheme);
 
+  // Focus Mode Switcher
+  if (focusToggle) {
+    focusToggle.addEventListener('click', toggleFocusMode);
+  }
+
   // --- Search / Dictionary Event Listeners ---
   if (searchInput && searchResults && clearSearch) {
     let selectedSearchIndex = -1;
@@ -1134,6 +1169,9 @@ function setupEventListeners() {
     } else if (e.key === 's' || e.key === 'S') {
       e.preventDefault();
       toggleStarCurrentWord();
+    } else if (e.key === 'f' || e.key === 'F') {
+      e.preventDefault();
+      toggleFocusMode();
     }
   });
 }

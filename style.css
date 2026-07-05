@@ -1599,5 +1599,53 @@ body.desktop-device .star-btn:hover {
   font-weight: 900; /* Force solid FontAwesome star */
 }
 
+/* --- Focus Mode Styles --- */
+body.focus-mode header > :not(.header-actions),
+body.focus-mode .header-actions > :not(#focus-toggle),
+body.focus-mode .controls-sidebar,
+body.focus-mode .keyboard-shortcuts,
+body.focus-mode .rules-reference,
+body.focus-mode footer {
+  display: none !important;
+}
+
+body.focus-mode .main-content {
+  grid-template-columns: 1fr;
+  max-width: 520px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+body.focus-mode .app-container {
+  min-height: 95vh;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+body.focus-mode header {
+  border-bottom: none;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  padding: 0;
+  z-index: 1000;
+}
+
+body.focus-mode .header-actions {
+  width: auto;
+}
+
+@media (max-width: 480px) {
+  body.focus-mode .app-container {
+    padding: 16px 8px;
+  }
+  
+  body.focus-mode header {
+    top: 12px;
+    right: 8px;
+  }
+}
+
 
 
