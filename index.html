@@ -96,6 +96,48 @@
     <main class="main-content">
       <!-- Sidebar / Controls Area -->
       <aside class="controls-sidebar" aria-label="Controls and Statistics">
+        <!-- Session Statistics Card -->
+        <div class="sidebar-card card-blur">
+          <div class="sidebar-card-header">
+            <h3><i class="fa-solid fa-chart-simple"></i> Session Stats</h3>
+          </div>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <span class="stat-label">Seen</span>
+              <span class="stat-val" id="stats-seen">0</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Knew It</span>
+              <span class="stat-val text-success" id="stats-known">0</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Learning</span>
+              <span class="stat-val text-warning" id="stats-learning">0</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Remaining</span>
+              <span class="stat-val" id="stats-remaining">0</span>
+            </div>
+          </div>
+          <div class="progress-bar-container">
+            <div class="progress-bar-fill" id="session-progress" style="width: 0%"></div>
+          </div>
+          <div class="action-divider" style="margin-top: 14px; border-top: 1px solid var(--panel-border); padding-top: 14px;">
+            <button id="reset-session" class="btn btn-secondary btn-full" style="margin-bottom: 8px;">
+              <i class="fa-solid fa-rotate-left"></i> Reset Statistics
+            </button>
+            <div style="display: flex; gap: 8px; width: 100%;">
+              <button id="export-stats" class="btn btn-secondary" style="flex: 1; padding: 8px 10px; font-size: 0.75rem;" title="Download progress backup as JSON">
+                <i class="fa-solid fa-download"></i> Export
+              </button>
+              <button id="import-stats" class="btn btn-secondary" style="flex: 1; padding: 8px 10px; font-size: 0.75rem;" title="Restore progress backup from JSON">
+                <i class="fa-solid fa-upload"></i> Import
+              </button>
+            </div>
+            <input type="file" id="import-file-input" style="display: none;" accept=".json">
+          </div>
+        </div>
+
         <!-- Filters Card -->
         <div class="sidebar-card card-blur">
           <div class="sidebar-card-header">
@@ -176,48 +218,6 @@
               </select>
               <i class="fa-solid fa-chevron-down select-arrow"></i>
             </div>
-          </div>
-        </div>
-
-        <!-- Session Statistics Card -->
-        <div class="sidebar-card card-blur">
-          <div class="sidebar-card-header">
-            <h3><i class="fa-solid fa-chart-simple"></i> Session Stats</h3>
-          </div>
-          <div class="stats-grid">
-            <div class="stat-card">
-              <span class="stat-label">Seen</span>
-              <span class="stat-val" id="stats-seen">0</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-label">Knew It</span>
-              <span class="stat-val text-success" id="stats-known">0</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-label">Learning</span>
-              <span class="stat-val text-warning" id="stats-learning">0</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-label">Remaining</span>
-              <span class="stat-val" id="stats-remaining">0</span>
-            </div>
-          </div>
-          <div class="progress-bar-container">
-            <div class="progress-bar-fill" id="session-progress" style="width: 0%"></div>
-          </div>
-          <div class="action-divider" style="margin-top: 14px; border-top: 1px solid var(--panel-border); padding-top: 14px;">
-            <button id="reset-session" class="btn btn-secondary btn-full" style="margin-bottom: 8px;">
-              <i class="fa-solid fa-rotate-left"></i> Reset Statistics
-            </button>
-            <div style="display: flex; gap: 8px; width: 100%;">
-              <button id="export-stats" class="btn btn-secondary" style="flex: 1; padding: 8px 10px; font-size: 0.75rem;" title="Download progress backup as JSON">
-                <i class="fa-solid fa-download"></i> Export
-              </button>
-              <button id="import-stats" class="btn btn-secondary" style="flex: 1; padding: 8px 10px; font-size: 0.75rem;" title="Restore progress backup from JSON">
-                <i class="fa-solid fa-upload"></i> Import
-              </button>
-            </div>
-            <input type="file" id="import-file-input" style="display: none;" accept=".json">
           </div>
         </div>
       </aside>
