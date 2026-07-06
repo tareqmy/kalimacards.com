@@ -150,6 +150,7 @@ const freqMinVal = document.getElementById('freq-min-val');
 const freqMaxVal = document.getElementById('freq-max-val');
 const sliderTrack = document.getElementById('slider-track');
 const starredOnlyToggle = document.getElementById('starred-only-toggle');
+const hideKnownToggle = document.getElementById('hide-known-toggle');
 const posFilter = document.getElementById('pos-filter');
 const coverageFilter = document.getElementById('coverage-filter');
 const learningMode = document.getElementById('learning-mode');
@@ -356,6 +357,11 @@ function applyFilterAndReset() {
       const key = `${w.arabic}_${w.transliteration}`;
       return starredWords.has(key);
     });
+  }
+
+  // Apply Hide Mastered filter if toggle is active
+  if (hideKnownToggle && hideKnownToggle.checked) {
+    tempWords = tempWords.filter(w => !stats.known.includes(w.transliteration));
   }
 
   // Apply cumulative coverage filter
@@ -598,7 +604,44 @@ function markAsKnown() {
   
   saveStats();
   animateButtonFeedback(yesBtn);
+
+  if (hideKnownToggle && hideKnownToggle.checked) {
+    const currentIdx = filteredWords.findIndex(w => w.transliteration === key);
+    if (currentIdx !== -1) {
+      handleKnownWordRemoval(currentIdx);
+      if (filteredWords.length > 0) {
+        loadNextCard();
+      } else {
+        showEmptyState();
+      }
+      return;
+    }
+  }
+  
   loadNextCard();
+}
+
+function handleKnownWordRemoval(removedIndex) {
+  // 1. Remove the word from filteredWords
+  filteredWords.splice(removedIndex, 1);
+  
+  // 2. Adjust historyStack indices
+  historyStack = historyStack
+    .map(idx => {
+      if (idx === removedIndex) return null;
+      return idx > removedIndex ? idx - 1 : idx;
+    })
+    .filter(idx => idx !== null);
+    
+  // 3. Adjust historyPointer
+  historyPointer = historyStack.length - 1;
+  
+  // 4. Update stats count displays
+  const countEl = document.getElementById('filtered-word-count');
+  if (countEl) {
+    countEl.textContent = `(${filteredWords.length.toLocaleString()} words)`;
+  }
+  updateStatsDisplay();
 }
 
 function markAsLearning() {
@@ -905,6 +948,16 @@ function setupEventListeners() {
     starredOnlyToggle.addEventListener('change', applyFilterAndReset);
   }
 
+  if (hideKnownToggle) {
+    const savedHideMastered = localStorage.getItem('hideMastered') === 'true';
+    hideKnownToggle.checked = savedHideMastered;
+    
+    hideKnownToggle.addEventListener('change', () => {
+      localStorage.setItem('hideMastered', hideKnownToggle.checked);
+      applyFilterAndReset();
+    });
+  }
+
   const minGap = 0;
   function handleMinSliderInput() {
     let minVal = parseInt(freqMinInput.value);
@@ -976,6 +1029,10 @@ function setupEventListeners() {
   if (resetFiltersBtn) {
     resetFiltersBtn.addEventListener('click', () => {
       if (starredOnlyToggle) starredOnlyToggle.checked = false;
+      if (hideKnownToggle) {
+        hideKnownToggle.checked = false;
+        localStorage.setItem('hideMastered', 'false');
+      }
       if (freqMinInput) freqMinInput.value = 0;
       if (freqMaxInput) freqMaxInput.value = uniqueFrequencies.length - 1;
       if (posFilter) posFilter.value = 'all';
@@ -1111,6 +1168,10 @@ function setupEventListeners() {
       
       if (filteredIdx === -1) {
         if (starredOnlyToggle) starredOnlyToggle.checked = false;
+        if (hideKnownToggle) {
+          hideKnownToggle.checked = false;
+          localStorage.setItem('hideMastered', 'false');
+        }
         if (freqMinInput) freqMinInput.value = 0;
         if (freqMaxInput) freqMaxInput.value = uniqueFrequencies.length - 1;
         updateSliderUI();

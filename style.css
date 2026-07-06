@@ -425,6 +425,15 @@ body.light-theme .custom-checkbox:checked::after {
   transform: scale(1.1) rotate(360deg);
 }
 
+.custom-checkbox-label .eye-icon {
+  color: var(--accent-blue);
+  transition: var(--transition-smooth);
+}
+
+.custom-checkbox:checked + .custom-checkbox-label .eye-icon {
+  transform: scale(1.1);
+}
+
 /* Double Range Slider Styling */
 .slider-header {
   display: flex;
