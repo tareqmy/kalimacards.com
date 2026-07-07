@@ -8,7 +8,7 @@
     "meanings": [
       "From",
       "Of",
-      "What"
+      "Among"
     ]
   },
   {
@@ -29,7 +29,8 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AfiY+pos%3Ap",
     "meanings": [
       "In",
-      "Therein"
+      "During",
+      "Concerning"
     ]
   },
   {
@@ -40,7 +41,8 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Cin%7E+pos%3Aacc",
     "meanings": [
       "Indeed",
-      "Only"
+      "Only",
+      "Certainly"
     ]
   },
   {
@@ -64,6 +66,7 @@
     "meanings": [
       "On",
       "Upon",
+      "Over",
       "To",
       "Towards"
     ]
@@ -75,10 +78,8 @@
     "part_of_speech": "Relative pronoun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%7Bl%7Ea*iY+pos%3Arel",
     "meanings": [
-      "Those who",
       "Those",
-      "Those whose",
-      "Those whom"
+      "Those who"
     ]
   },
   {
@@ -88,8 +89,7 @@
     "part_of_speech": "Negative particle",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AlaA+pos%3Aneg",
     "meanings": [
-      "Not",
-      "Do not"
+      "Not"
     ]
   },
   {
@@ -135,7 +135,8 @@
     "meanings": [
       "With",
       "To",
-      "For"
+      "For",
+      "Till"
     ]
   },
   {
@@ -145,11 +146,8 @@
     "part_of_speech": "Negative particle",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AmaA+pos%3Aneg",
     "meanings": [
-      "Even",
-      "That",
-      "Because",
-      "Because of",
-      "For"
+      "Not",
+      "None"
     ]
   },
   {
@@ -169,8 +167,8 @@
     "part_of_speech": "Conditional particle",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Cin+pos%3Acond",
     "meanings": [
-      "Indeed",
-      "Were"
+      "If",
+      "Though"
     ]
   },
   {
@@ -214,10 +212,7 @@
     "part_of_speech": "Demonstrative pronoun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A*a%60lik+pos%3Adem",
     "meanings": [
-      "That",
-      "Like this",
-      "Like that",
-      "This"
+      "That"
     ]
   },
   {
@@ -227,6 +222,7 @@
     "part_of_speech": "Preposition",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AEan+pos%3Ap",
     "meanings": [
+      "From",
       "For",
       "About",
       "Of"
@@ -250,7 +246,6 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Aqad+pos%3Acert",
     "meanings": [
       "Indeed",
-      "While indeed",
       "Certainly"
     ]
   },
@@ -315,7 +310,9 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Akul%7E+pos%3An",
     "meanings": [
-      "Everytime"
+      "Every",
+      "All",
+      "Each"
     ]
   },
   {
@@ -383,7 +380,6 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Ayawom+pos%3An",
     "meanings": [
       "Day",
-      "Days",
       "Today"
     ]
   },
@@ -416,8 +412,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AsamaA%5E%27+pos%3An",
     "meanings": [
       "Sky",
-      "Heaven",
-      "Heavens"
+      "Heaven"
     ]
   },
   {
@@ -427,10 +422,9 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Anafos+pos%3An",
     "meanings": [
-      "Themselves",
-      "Yourselves",
-      "Any soul",
-      "Soul"
+      "Soul",
+      "Self",
+      "Individual"
     ]
   },
   {
@@ -548,7 +542,7 @@
     "meanings": [
       "Between",
       "Among",
-      "Before"
+      "Infront"
     ]
   },
   {
@@ -560,7 +554,7 @@
     "meanings": [
       "True",
       "Truth",
-      "Due"
+      "Right"
     ]
   },
   {
@@ -624,9 +618,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Amu%26omin+pos%3An",
     "meanings": [
-      "Believing",
-      "Believers",
-      "Giver of Security"
+      "Believers"
     ]
   },
   {
@@ -638,8 +630,7 @@
     "meanings": [
       "If",
       "Even though",
-      "Even if",
-      "That"
+      "Even if"
     ]
   },
   {
@@ -684,7 +675,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Asabiyl+pos%3An",
     "meanings": [
       "Way",
-      "Wayfarer"
+      "Path"
     ]
   },
   {
@@ -720,8 +711,8 @@
     "meanings": [
       "Command",
       "Matter",
-      "Matters",
-      "Case"
+      "Case",
+      "Decision"
     ]
   },
   {
@@ -743,6 +734,7 @@
     "part_of_speech": "Location adverb",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AEind+pos%3Aloc",
     "meanings": [
+      "With",
       "From",
       "Near"
     ]
@@ -800,7 +792,6 @@
     "meanings": [
       "Better",
       "Goodness",
-      "Any good",
       "Best"
     ]
   },
@@ -900,8 +891,9 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Aduwn+pos%3An",
     "meanings": [
       "Other than",
-      "Without",
-      "Before"
+      "Excluding",
+      "Besides",
+      "Instead of"
     ]
   },
   {
@@ -942,7 +934,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AEabod+pos%3An",
     "meanings": [
       "Slave",
-      "Servants"
+      "Servant"
     ]
   },
   {
@@ -1000,10 +992,8 @@
     "part_of_speech": "Accusative particle",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AlaEal%7E+pos%3Aacc",
     "meanings": [
-      "That you may",
-      "Perhaps you",
-      "Perhaps you may",
-      "That they may"
+      "That [you] may",
+      "Perhaps [you] may"
     ]
   },
   {
@@ -1046,7 +1036,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Aka%60firuwn+pos%3An",
     "meanings": [
-      "Disbelieving",
       "Disbelievers"
     ]
   },
@@ -1057,8 +1046,7 @@
     "part_of_speech": "Negative particle",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Cin+pos%3Aneg",
     "meanings": [
-      "Indeed",
-      "Were"
+      "Not"
     ]
   },
   {
@@ -1135,7 +1123,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AZaAlim+pos%3An",
     "meanings": [
-      "Wrongdoing",
       "Wrongdoers"
     ]
   },
@@ -1156,8 +1143,9 @@
     "part_of_speech": "Adjective",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AEaZiym+pos%3Aadj",
     "meanings": [
-      "Bones",
-      "Great"
+      "Tremendous",
+      "Great",
+      "Mighty"
     ]
   },
   {
@@ -1178,7 +1166,8 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Cil%7EaA+pos%3Aexp",
     "meanings": [
       "Except",
-      "Until"
+      "Unless",
+      "But"
     ]
   },
   {
@@ -1190,7 +1179,7 @@
     "meanings": [
       "All-Knowing",
       "All-Knower",
-      "All-Aware"
+      "Learned"
     ]
   },
   {
@@ -1223,7 +1212,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AHat%7EaY%60+pos%3Ap",
     "meanings": [
       "Until",
-      "Till"
+      "Unless"
     ]
   },
   {
@@ -1282,11 +1271,8 @@
     "part_of_speech": "Interogative particle",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AmaA+pos%3Aintg",
     "meanings": [
-      "Even",
-      "That",
-      "Because",
-      "Because of",
-      "For"
+      "What",
+      "Why"
     ]
   },
   {
@@ -1343,7 +1329,8 @@
     "meanings": [
       "Example",
       "Likeness",
-      "Similiar"
+      "Similar",
+      "Comparison"
     ]
   },
   {
@@ -1435,7 +1422,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3ASalaw%60p+pos%3An",
     "meanings": [
       "Blessings",
-      "Prayers"
+      "Prayer"
     ]
   },
   {
@@ -1490,7 +1477,6 @@
     "part_of_speech": "Proper noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%24ayoTa%60n+pos%3Apn",
     "meanings": [
-      "Evil one",
       "Shaitaan",
       "Devil"
     ]
@@ -1639,7 +1625,8 @@
     "meanings": [
       "Spouse",
       "Husband",
-      "Wife"
+      "Wife",
+      "Mate"
     ]
   },
   {
@@ -1673,8 +1660,7 @@
     "meanings": [
       "Like it",
       "Similar",
-      "Like",
-      "Same manner"
+      "Like"
     ]
   },
   {
