@@ -1694,7 +1694,8 @@
     "meanings": [
       "Abide forever",
       "Abiding forever",
-      "Will abide"
+      "Will abide",
+      "Immortal"
     ]
   },
   {
@@ -1747,9 +1748,7 @@
     "part_of_speech": "Adjective",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Ealiym+pos%3Aadj",
     "meanings": [
-      "Painful",
-      "Painful punishment",
-      "Most painful"
+      "Painful"
     ]
   },
   {
@@ -1760,7 +1759,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7Eubiyn+pos%3An",
     "meanings": [
       "Clear",
-      "Open",
+      "Obvious",
       "Manifest",
       "Clearly"
     ]
@@ -1798,7 +1797,7 @@
     "meanings": [
       "People",
       "Mankind",
-      "Man"
+      "Human being"
     ]
   },
   {
@@ -1819,7 +1818,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Awajoh+pos%3An",
     "meanings": [
       "Face",
-      "Counenance"
+      "Countenance"
     ]
   },
   {
@@ -1864,8 +1863,7 @@
     "part_of_speech": "Time adverb",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Ayawoma%7Di*+pos%3At",
     "meanings": [
-      "That day",
-      "On that Day"
+      "That day"
     ]
   },
   {
@@ -1919,7 +1917,8 @@
     "part_of_speech": "Time adverb",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AbaEod+pos%3At",
     "meanings": [
-      "After"
+      "After",
+      "Thereafter"
     ]
   },
   {
@@ -1974,6 +1973,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AA%5EbaA%27+pos%3An",
     "meanings": [
       "Forefathers",
+      "Fathers",
       "Parents"
     ]
   },
@@ -1985,7 +1985,8 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Eum%7Eap+pos%3An",
     "meanings": [
       "Community",
-      "People"
+      "People",
+      "Nation"
     ]
   },
   {
@@ -2031,9 +2032,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%7Bbon+pos%3An",
     "meanings": [
-      "Sons",
-      "Son",
-      "Children"
+      "Son"
     ]
   },
   {
@@ -2043,9 +2042,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AEaziyz+pos%3An",
     "meanings": [
-      "All-Mighty",
-      "Stern",
-      "Grievous"
+      "All-Mighty"
     ]
   },
   {
@@ -2327,8 +2324,8 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Abay%7Einap+pos%3An",
     "meanings": [
-      "Clear",
-      "Clear Verses",
+      "Clear sign",
+      "Clear proof",
       "Evidence"
     ]
   },
@@ -2443,8 +2440,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Axaloq+pos%3An",
     "meanings": [
-      "Creation",
-      "Stature"
+      "Creation"
     ]
   },
   {
@@ -2578,7 +2574,6 @@
     "meanings": [
       "God-conscious",
       "Those who fear",
-      "Righteous",
       "Righteous ones"
     ]
   },
@@ -2649,7 +2644,7 @@
     "meanings": [
       "Beneath",
       "Under",
-      "Underneath"
+      "Below"
     ]
   },
   {
@@ -2771,10 +2766,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3EuwliY+pos%3An",
     "meanings": [
-      "O men",
-      "Those",
-      "Men",
-      "Owners"
+      "Owners of"
     ]
   },
   {
@@ -2983,7 +2975,6 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AHamod+pos%3An",
     "meanings": [
-      "All praises and thanks",
       "Praises",
       "Praises and thanks",
       "All the praise"
@@ -3117,7 +3108,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AsuboHa%60n+pos%3An",
     "meanings": [
       "Glory be to",
-      "Glory be"
+      "Exalted"
     ]
   },
   {
@@ -3173,7 +3164,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%24ariyk+pos%3An",
     "meanings": [
-      "Partners"
+      "Partner"
     ]
   },
   {
@@ -3470,9 +3461,9 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Aba%24ar+pos%3An",
     "meanings": [
+      "Man",
       "Human",
-      "Human being",
-      "Man"
+      "Human being"
     ]
   },
   {
@@ -3482,7 +3473,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A*anb+pos%3An",
     "meanings": [
-      "Sins"
+      "Sin"
     ]
   },
   {
@@ -3583,8 +3574,9 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%24adiyd+pos%3Aadj",
     "meanings": [
       "Severe",
-      "Mighty",
-      "Firm"
+      "Strong",
+      "Great",
+      "Mighty"
     ]
   },
   {
@@ -3618,8 +3610,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Civom+pos%3An",
     "meanings": [
-      "Sin",
-      "Sinfully"
+      "Sin"
     ]
   },
   {
@@ -3642,7 +3633,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3EaY%7E+pos%3Aintg",
     "meanings": [
       "Whichever",
-      "Which"
+      "What"
     ]
   },
   {
@@ -3663,7 +3654,10 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Amata%60E+pos%3An",
     "meanings": [
-      "Provision"
+      "Provision",
+      "Enjoyment",
+      "Baggage",
+      "Livelihood"
     ]
   },
   {
@@ -3758,7 +3752,8 @@
     "meanings": [
       "Trial",
       "Oppression",
-      "Temptation"
+      "Temptation",
+      "Discord"
     ]
   },
   {
@@ -3788,9 +3783,10 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Am%7EaEoruwf+pos%3An",
     "meanings": [
-      "Honorably",
-      "In fairness",
-      "Kindness"
+      "Suitable",
+      "Due fairness",
+      "Fair manner",
+      "Right"
     ]
   },
   {
@@ -3853,8 +3849,9 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3EaEolam+pos%3An",
     "meanings": [
-      "All-Knower",
-      "Most knowing"
+      "Better knowing",
+      "Most knowing",
+      "Knows best"
     ]
   },
   {
@@ -3875,8 +3872,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Afariyq+pos%3An",
     "meanings": [
       "Party",
-      "Group",
-      "Portion"
+      "Group"
     ]
   },
   {
@@ -4012,8 +4008,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AbaSiyr+pos%3An",
     "meanings": [
       "All-Seeing",
-      "All-Seer",
-      "Sight"
+      "All-Seer"
     ]
   },
   {
@@ -4034,7 +4029,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Aka%60*ib+pos%3An",
     "meanings": [
-      "Liars"
+      "Liar"
     ]
   },
   {
@@ -4084,7 +4079,8 @@
     "meanings": [
       "Bad",
       "Worse",
-      "Worst"
+      "Worst",
+      "Evil"
     ]
   },
   {
@@ -4165,9 +4161,9 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Ajund+pos%3An",
     "meanings": [
-      "Forces",
-      "Troops",
-      "Hosts"
+      "Force",
+      "Troop",
+      "Host"
     ]
   },
   {
@@ -4198,7 +4194,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AEaro%24+pos%3An",
     "meanings": [
-      "Roofs",
+      "Roof",
       "Throne"
     ]
   },
@@ -4276,7 +4272,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3Ea%24ad%7E+pos%3An",
     "meanings": [
       "Stronger",
-      "Severest"
+      "Most severe"
     ]
   },
   {
@@ -4288,7 +4284,8 @@
     "meanings": [
       "Statement",
       "Conversation",
-      "Talk"
+      "Talk",
+      "Narration"
     ]
   },
   {
@@ -4602,9 +4599,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AA%5Exar+pos%3Aadj",
     "meanings": [
       "Other",
-      "Another",
-      "Another time",
-      "Another people"
+      "Another"
     ]
   },
   {
@@ -4761,9 +4756,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AjunaAH+pos%3An",
     "meanings": [
       "Blame",
-      "Any sin",
-      "Sin",
-      "Any blame"
+      "Sin"
     ]
   },
   {
@@ -4930,7 +4923,8 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3ATaEaAm+pos%3An",
     "meanings": [
       "Food",
-      "Feeding"
+      "Feeding",
+      "Meal"
     ]
   },
   {
@@ -4940,7 +4934,7 @@
     "part_of_speech": "Adjective",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AZaAlim+pos%3Aadj",
     "meanings": [
-      "Wrongdoers"
+      "Wrongdoer"
     ]
   },
   {
@@ -5217,7 +5211,8 @@
     "meanings": [
       "Whether",
       "Either",
-      "If"
+      "If",
+      "Or"
     ]
   },
   {
