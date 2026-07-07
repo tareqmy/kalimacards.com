@@ -59,6 +59,20 @@
   
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
+  
+  <script>
+    // Synchronously load user theme preference to avoid color flashing
+    (function() {
+      let savedTheme = 'dark';
+      try {
+        savedTheme = localStorage.getItem('theme') || 'dark';
+      } catch (e) {}
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      if (savedTheme === 'light') {
+        document.documentElement.classList.add('light-theme');
+      }
+    })();
+  </script>
 </head>
 <body>
   <!-- Background Glow Effects -->
@@ -342,7 +356,7 @@
 
     <!-- Footer -->
     <footer>
-      <p>&copy; 2026 KalimaCards. Built by <a href="https://tareqmy.com" target="_blank" rel="noopener noreferrer">tareqmy</a>. Words and meanings sourced from <a href="https://corpus.quran.com" target="_blank" rel="noopener noreferrer">Quranic Arabic Corpus</a>.</p>
+      <p>Words and meanings sourced from <a href="https://corpus.quran.com" target="_blank" rel="noopener noreferrer">Quranic Arabic Corpus</a>.</p>
     </footer>
   </div>
 

@@ -59,11 +59,17 @@
   
   <script>
     // Synchronously load user theme preference to avoid color flashing
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    document.documentElement.setAttribute('data-theme', savedTheme);
+    (function() {
+      let savedTheme = 'dark';
+      try {
+        savedTheme = localStorage.getItem('theme') || 'dark';
+      } catch (e) {}
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      if (savedTheme === 'light') {
+        document.documentElement.classList.add('light-theme');
+      }
+    })();
   </script>
-</head>
-<body class="desktop-device">
   <!-- Background Glow Effects -->
   <div class="glow-sphere glow-1"></div>
   <div class="glow-sphere glow-2"></div>
@@ -73,9 +79,11 @@
     <header>
       <div class="logo">
         <h1>KalimaCards</h1>
-        <span class="subtitle">About the Creator</span>
       </div>
       <div class="header-actions">
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme" title="Toggle Light/Dark Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
         <a href="index.html" class="btn btn-secondary">
           <i class="fa-solid fa-house"></i> Home
         </a>
@@ -85,25 +93,6 @@
     <!-- Main Content -->
     <main class="main-content single-column">
       <section class="about-card card-blur">
-        <div class="profile-header">
-          <div class="profile-avatar">
-            <i class="fa-solid fa-user-tie"></i>
-          </div>
-          <div class="profile-title">
-            <h2>Tareq Mohammad Yousuf</h2>
-            <p class="profile-subtitle">Software Architect & Team Lead</p>
-          </div>
-        </div>
-
-        <div class="profile-bio">
-          <p>
-            Tareq Mohammad Yousuf is a veteran Software Architect, Developer, and Team Lead with over 20 years of experience building high-scale, reliable enterprise systems. As a specialist in Java, cloud infrastructure, and DevOps, he designs robust backend architectures and automated pipelines that power modern digital solutions.
-          </p>
-          <p>
-            With a passion for engineering excellence, Tareq is an active contributor to open-source systems, notably in telephony integrations (Asterisk-Java, ari4java), and is the creator of KalimaCards—an active recall tool designed to simplify Quranic vocabulary study.
-          </p>
-        </div>
-
         <h3 class="section-title"><i class="fa-solid fa-hands-praying"></i> Supplication & Gratitude</h3>
         <div class="profile-bio">
           <p>
@@ -132,9 +121,6 @@
 
         <h3 class="section-title"><i class="fa-solid fa-envelope"></i> Connect & Collab</h3>
         <div class="connect-links">
-          <a href="mailto:tareq.y@gmail.com" class="connect-item">
-            <i class="fa-solid fa-envelope"></i> tareq.y@gmail.com
-          </a>
           <a href="https://github.com/tareqmy" target="_blank" class="connect-item">
             <i class="fa-brands fa-github"></i> github.com/tareqmy
           </a>
@@ -147,8 +133,76 @@
 
     <!-- Footer -->
     <footer>
-      <p>&copy; 2026 KalimaCards. All rights reserved by <a href="https://tareqmy.com" target="_blank" rel="noopener noreferrer">tareqmy</a>. Words and meanings sourced from <a href="https://corpus.quran.com" target="_blank" rel="noopener noreferrer">Quranic Arabic Corpus</a>.</p>
+      <p>Words and meanings sourced from <a href="https://corpus.quran.com" target="_blank" rel="noopener noreferrer">Quranic Arabic Corpus</a>.</p>
     </footer>
   </div>
+
+  <!-- Device & Theme Scripts -->
+  <script>
+    // Device Detection
+    function detectDevice() {
+      const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+      const userAgent = navigator.userAgent.toLowerCase();
+      const isMobile = /iphone|ipad|ipod|android|blackberry|mini|windows\sphone|iemobile/i.test(userAgent) || (isTouch && window.innerWidth <= 860);
+
+      if (isMobile) {
+        document.body.classList.add('mobile-device');
+        document.body.classList.remove('desktop-device');
+      } else {
+        document.body.classList.add('desktop-device');
+        document.body.classList.remove('mobile-device');
+      }
+    }
+
+    // Theme Management
+    const themeToggle = document.getElementById('theme-toggle');
+    
+    function updateToggleIcon(theme) {
+      if (theme === 'light') {
+        themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+      } else {
+        themeToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
+      }
+    }
+    
+    // Set initial icon state
+    let savedTheme = 'dark';
+    try {
+      savedTheme = localStorage.getItem('theme') || 'dark';
+    } catch (e) {
+      console.warn('localStorage not accessible:', e);
+    }
+    updateToggleIcon(savedTheme);
+    
+    themeToggle.addEventListener('click', () => {
+      let currentTheme = 'dark';
+      try {
+        currentTheme = localStorage.getItem('theme') || 'dark';
+      } catch (e) {}
+      
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      
+      try {
+        localStorage.setItem('theme', newTheme);
+      } catch (e) {
+        console.warn('localStorage not accessible:', e);
+      }
+      
+      document.documentElement.setAttribute('data-theme', newTheme);
+      
+      if (newTheme === 'light') {
+        document.documentElement.classList.add('light-theme');
+        document.body.classList.add('light-theme');
+      } else {
+        document.documentElement.classList.remove('light-theme');
+        document.body.classList.remove('light-theme');
+      }
+      
+      updateToggleIcon(newTheme);
+    });
+
+    // Run on load
+    detectDevice();
+  </script>
 </body>
 </html>

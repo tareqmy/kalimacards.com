@@ -217,20 +217,46 @@ function detectDevice() {
 
 // --- Theme Management ---
 function loadTheme() {
-  const savedTheme = localStorage.getItem('theme');
+  let savedTheme = 'dark';
+  try {
+    savedTheme = localStorage.getItem('theme') || 'dark';
+  } catch (e) {
+    console.warn('localStorage not accessible:', e);
+  }
+  
   if (savedTheme === 'light') {
     document.body.classList.add('light-theme');
+    document.documentElement.classList.add('light-theme');
+    document.documentElement.setAttribute('data-theme', 'light');
     themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
   } else {
     document.body.classList.remove('light-theme');
+    document.documentElement.classList.remove('light-theme');
+    document.documentElement.setAttribute('data-theme', 'dark');
     themeToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
   }
 }
 
 function toggleTheme() {
-  document.body.classList.toggle('light-theme');
-  const isLight = document.body.classList.contains('light-theme');
-  localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  const isLight = !document.documentElement.classList.contains('light-theme');
+  const newTheme = isLight ? 'light' : 'dark';
+  
+  try {
+    localStorage.setItem('theme', newTheme);
+  } catch (e) {
+    console.warn('localStorage not accessible:', e);
+  }
+  
+  document.documentElement.setAttribute('data-theme', newTheme);
+  
+  if (isLight) {
+    document.documentElement.classList.add('light-theme');
+    document.body.classList.add('light-theme');
+  } else {
+    document.documentElement.classList.remove('light-theme');
+    document.body.classList.remove('light-theme');
+  }
+  
   themeToggle.innerHTML = isLight ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
 }
 

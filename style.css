@@ -45,7 +45,7 @@
 }
 
 /* Light Theme Variables */
-body.light-theme {
+.light-theme {
   --bg-color: #F1F5F9;
   --bg-gradient: radial-gradient(circle at 50% 50%, #F8FAFC 0%, #E2E8F0 100%);
   --panel-bg: rgba(255, 255, 255, 0.8);
@@ -397,7 +397,7 @@ body.desktop-device .icon-btn:hover {
   color: #090D1A;
 }
 
-body.light-theme .custom-checkbox:checked::after {
+.light-theme .custom-checkbox:checked::after {
   color: #ffffff;
 }
 
