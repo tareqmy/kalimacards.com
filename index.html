@@ -111,40 +111,60 @@
       <!-- Sidebar / Controls Area -->
       <aside class="controls-sidebar" aria-label="Controls and Statistics">
         <!-- Session Statistics Card -->
-        <div class="sidebar-card card-blur">
+        <div class="sidebar-card card-blur stats-sidebar-card">
           <div class="sidebar-card-header">
-            <h3><i class="fa-solid fa-chart-simple"></i> Session Stats</h3>
+            <h3><i class="fa-solid fa-chart-line"></i> Session Stats</h3>
           </div>
-          <div class="stats-grid">
-            <div class="stat-card">
-              <span class="stat-label">Seen</span>
-              <span class="stat-val" id="stats-seen">0</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-label">Knew It</span>
-              <span class="stat-val text-success" id="stats-known">0</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-label">Learning</span>
-              <span class="stat-val text-warning" id="stats-learning">0</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-label">Remaining</span>
-              <span class="stat-val" id="stats-remaining">0</span>
+          
+          <div class="stats-overview-box">
+            <div class="progress-info">
+              <span class="progress-title">Mastery Progress</span>
+              <div class="progress-bar-container">
+                <div class="progress-bar-fill" id="session-progress" style="width: 0%"></div>
+              </div>
             </div>
           </div>
-          <div class="progress-bar-container">
-            <div class="progress-bar-fill" id="session-progress" style="width: 0%"></div>
+
+          <div class="stats-grid-new">
+            <div class="stat-card-new seen" title="Words encountered during this study session">
+              <div class="stat-icon-wrapper"><i class="fa-regular fa-eye"></i></div>
+              <div class="stat-content">
+                <span class="stat-label-new">Seen</span>
+                <span class="stat-val-new" id="stats-seen">0</span>
+              </div>
+            </div>
+            <div class="stat-card-new known" title="Words you mastered ('Knew It')">
+              <div class="stat-icon-wrapper"><i class="fa-regular fa-circle-check"></i></div>
+              <div class="stat-content">
+                <span class="stat-label-new">Knew It</span>
+                <span class="stat-val-new text-success" id="stats-known">0</span>
+              </div>
+            </div>
+            <div class="stat-card-new learning" title="Words currently in learning state">
+              <div class="stat-icon-wrapper"><i class="fa-solid fa-rotate"></i></div>
+              <div class="stat-content">
+                <span class="stat-label-new">Learning</span>
+                <span class="stat-val-new text-warning" id="stats-learning">0</span>
+              </div>
+            </div>
+            <div class="stat-card-new remaining" title="Words left to master in current selection">
+              <div class="stat-icon-wrapper"><i class="fa-solid fa-hourglass-half"></i></div>
+              <div class="stat-content">
+                <span class="stat-label-new">Remaining</span>
+                <span class="stat-val-new" id="stats-remaining">0</span>
+              </div>
+            </div>
           </div>
-          <div class="action-divider" style="margin-top: 14px; border-top: 1px solid var(--panel-border); padding-top: 14px;">
-            <button id="reset-session" class="btn btn-secondary btn-full" style="margin-bottom: 8px;">
-              <i class="fa-solid fa-rotate-left"></i> Reset Statistics
+
+          <div class="stats-actions-container">
+            <button id="reset-session" class="btn-action reset" title="Clear all learning progress">
+              <i class="fa-solid fa-rotate-left"></i> Reset Progress
             </button>
-            <div style="display: flex; gap: 8px; width: 100%;">
-              <button id="export-stats" class="btn btn-secondary" style="flex: 1; padding: 8px 10px; font-size: 0.75rem;" title="Download progress backup as JSON">
+            <div class="backup-actions">
+              <button id="export-stats" class="btn-action export" title="Download progress backup as JSON">
                 <i class="fa-solid fa-download"></i> Export
               </button>
-              <button id="import-stats" class="btn btn-secondary" style="flex: 1; padding: 8px 10px; font-size: 0.75rem;" title="Restore progress backup from JSON">
+              <button id="import-stats" class="btn-action import" title="Restore progress backup from JSON">
                 <i class="fa-solid fa-upload"></i> Import
               </button>
             </div>
@@ -171,20 +191,29 @@
             </div>
             <div id="search-results" class="search-results-box" style="display: none;"></div>
           </div>
-          <div class="control-group">
-            <div class="starred-toggle-wrapper">
-              <input type="checkbox" id="starred-only-toggle" class="custom-checkbox">
-              <label for="starred-only-toggle" class="custom-checkbox-label">
+          
+          <div class="control-group toggles-group" style="display: flex; flex-direction: column; gap: 8px;">
+            <div class="switch-wrapper">
+              <label for="starred-only-toggle" class="switch-label">
                 <i class="fa-solid fa-star star-icon"></i> Starred Words Only
               </label>
+              <label class="switch">
+                <input type="checkbox" id="starred-only-toggle">
+                <span class="slider-switch"></span>
+              </label>
             </div>
-            <div class="starred-toggle-wrapper" style="margin-top: 10px;">
-              <input type="checkbox" id="hide-known-toggle" class="custom-checkbox">
-              <label for="hide-known-toggle" class="custom-checkbox-label">
+            
+            <div class="switch-wrapper">
+              <label for="hide-known-toggle" class="switch-label">
                 <i class="fa-solid fa-eye-slash eye-icon"></i> Hide Mastered Words
+              </label>
+              <label class="switch">
+                <input type="checkbox" id="hide-known-toggle">
+                <span class="slider-switch"></span>
               </label>
             </div>
           </div>
+
           <div class="control-group">
             <div class="slider-header">
               <label for="freq-min">Word Frequency</label>
@@ -201,7 +230,8 @@
           </div>
           <div class="control-group">
             <label for="coverage-filter">Top Words (By Cumulative Frequency)</label>
-            <div class="select-wrapper">
+            <div class="select-wrapper has-prefix">
+              <i class="fa-solid fa-layer-group select-prefix-icon"></i>
               <select id="coverage-filter">
                 <option value="all">All Words (100%)</option>
                 <option value="50">Top 50% (Core Vocabulary)</option>
@@ -213,7 +243,8 @@
           </div>
           <div class="control-group">
             <label for="pos-filter">Part of Speech</label>
-            <div class="select-wrapper">
+            <div class="select-wrapper has-prefix">
+              <i class="fa-solid fa-tags select-prefix-icon"></i>
               <select id="pos-filter">
                 <option value="all">All Parts of Speech</option>
                 <option value="verbs">Verbs Only</option>
@@ -225,7 +256,8 @@
           </div>
           <div class="control-group">
             <label for="learning-mode">Learning Mode</label>
-            <div class="select-wrapper">
+            <div class="select-wrapper has-prefix">
+              <i class="fa-solid fa-shuffle select-prefix-icon"></i>
               <select id="learning-mode">
                 <option value="random">Randomize Order</option>
                 <option value="sequential">Sequential (By Frequency)</option>
