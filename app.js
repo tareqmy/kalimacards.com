@@ -171,6 +171,7 @@ let uniqueFrequencies = []; // Unique frequency values sorted ascending
 let historyStack = [];     // Array of indices visited in filteredWords
 let historyPointer = -1;   // Current pointer in historyStack
 let isFlipped = false;     // Is the card currently flipped?
+let swiped = false;        // Has the card just been swiped?
 let currentWord = null;    // Current active word object
 
 // Persistent Stats (saved to localStorage)
@@ -537,6 +538,12 @@ function displayWord(index) {
   // Apply a smooth card enter animation
   flashcard.classList.add('scale-down');
   
+  // If it was swiped (opacity is 0), fade it back in smoothly
+  if (flashcard.style.opacity === '0') {
+    flashcard.style.transition = 'transform 0.3s ease-out, opacity 0.3s ease-out';
+    flashcard.style.opacity = '1';
+  }
+  
   setTimeout(() => {
     // Populate elements
     arabicWord.textContent = currentWord.arabic;
@@ -605,6 +612,11 @@ function displayWord(index) {
     
     // Remove scale animation
     flashcard.classList.remove('scale-down');
+    
+    // Clear inline transition after animation completes
+    setTimeout(() => {
+      flashcard.style.transition = '';
+    }, 300);
     
     updateStatsDisplay();
   }, 100);
@@ -695,6 +707,10 @@ function animateButtonFeedback(btn) {
 
 // --- Card Flip Interactions ---
 function toggleCardFlip() {
+  if (swiped) {
+    swiped = false;
+    return;
+  }
   if (!currentWord) return;
   isFlipped = !isFlipped;
   flashcard.classList.toggle('is-flipped', isFlipped);
@@ -845,6 +861,97 @@ function toggleStarCurrentWord(e) {
 function setupEventListeners() {
   // Card click flips the card
   flashcard.addEventListener('click', toggleCardFlip);
+  
+  // Swipe Gestures for Focus Mode
+  let touchStartX = null;
+  let touchStartY = null;
+  let isHorizontalSwipe = false;
+  let isSwipeAction = false;
+
+  flashcard.addEventListener('touchstart', (e) => {
+    if (!document.body.classList.contains('focus-mode')) return;
+    
+    // Ignore touch if it originated from a button, link, or interactive element
+    if (e.target.closest('button') || e.target.closest('a')) {
+      touchStartX = null;
+      return;
+    }
+    
+    const touch = e.changedTouches[0];
+    touchStartX = touch.clientX;
+    touchStartY = touch.clientY;
+    isHorizontalSwipe = false;
+    isSwipeAction = false;
+  }, { passive: true });
+
+  flashcard.addEventListener('touchmove', (e) => {
+    if (!document.body.classList.contains('focus-mode')) return;
+    if (touchStartX === null) return;
+    
+    const touch = e.changedTouches[0];
+    const deltaX = touch.clientX - touchStartX;
+    const deltaY = touch.clientY - touchStartY;
+
+    // Determine if horizontal swipe
+    if (!isHorizontalSwipe && Math.abs(deltaX) > 10 && Math.abs(deltaX) > Math.abs(deltaY)) {
+      isHorizontalSwipe = true;
+    }
+
+    if (isHorizontalSwipe) {
+      if (e.cancelable) {
+        e.preventDefault(); // Prevent native horizontal scroll / back-swipe page navigation
+      }
+      
+      isSwipeAction = true;
+      const currentFlip = isFlipped ? 'rotateY(180deg)' : '';
+      const rotation = deltaX * 0.08;
+      flashcard.style.transition = 'none';
+      flashcard.style.transform = `${currentFlip} translateX(${deltaX}px) rotate(${rotation}deg)`;
+      flashcard.style.opacity = Math.max(1 - Math.abs(deltaX) / 400, 0.4);
+    }
+  }, { passive: false });
+
+  flashcard.addEventListener('touchend', (e) => {
+    if (!document.body.classList.contains('focus-mode')) return;
+    if (touchStartX === null) return;
+    
+    const touch = e.changedTouches[0];
+    const deltaX = touch.clientX - touchStartX;
+    touchStartX = null; // Reset for next touch
+
+    if (isSwipeAction && Math.abs(deltaX) > 120) {
+      // Complete swipe
+      e.preventDefault();
+      
+      const currentFlip = isFlipped ? 'rotateY(180deg)' : '';
+      flashcard.style.transition = 'transform 0.25s ease-out, opacity 0.25s ease-out';
+      flashcard.style.transform = `${currentFlip} translateX(${deltaX > 0 ? 600 : -600}px) rotate(${deltaX > 0 ? 30 : -30}deg)`;
+      flashcard.style.opacity = '0';
+
+      setTimeout(() => {
+        // Reset card styling off-screen so it starts clean
+        flashcard.style.transition = 'none';
+        flashcard.style.transform = '';
+        
+        // Trigger actions
+        if (deltaX > 0) {
+          markAsKnown();
+        } else {
+          markAsLearning();
+        }
+      }, 250);
+    } else if (isSwipeAction) {
+      // Cancel swipe
+      const currentFlip = isFlipped ? 'rotateY(180deg)' : '';
+      flashcard.style.transition = 'transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1.15), opacity 0.3s ease-out';
+      flashcard.style.transform = `${currentFlip}`;
+      flashcard.style.opacity = '1';
+      
+      setTimeout(() => {
+        flashcard.style.transition = '';
+      }, 300);
+    }
+  }, { passive: false });
   
   // Stop propagation and prevent default page reset on corpus study link click
   if (corpusLink) {

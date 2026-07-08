@@ -1424,6 +1424,9 @@ body.desktop-device .study-link:hover {
   .main-content {
     grid-template-columns: 1fr;
     gap: 20px;
+    max-width: 520px;
+    width: 100%;
+    margin: 0 auto;
   }
   
   .controls-sidebar {
