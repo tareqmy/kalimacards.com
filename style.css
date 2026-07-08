@@ -75,6 +75,11 @@
   padding: 0;
 }
 
+html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 body {
   font-family: var(--font-sans);
   background: var(--bg-color);
@@ -87,9 +92,21 @@ body {
   overflow-x: hidden;
   position: relative;
   transition: background 0.5s ease, color 0.3s ease;
+  width: 100%;
 }
 
 /* --- Ambient Glowing Spheres (Premium Aesthetic) --- */
+.glow-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+}
+
 .glow-sphere {
   position: absolute;
   width: 400px;
@@ -1427,7 +1444,7 @@ body.desktop-device .study-link:hover {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .app-container {
     padding: 12px 8px;
     gap: 16px;
@@ -1871,7 +1888,7 @@ body.focus-mode .header-actions {
   width: auto;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   body.focus-mode .app-container {
     padding: 16px 8px;
   }
@@ -1879,6 +1896,19 @@ body.focus-mode .header-actions {
   body.focus-mode header {
     top: 12px;
     right: 8px;
+  }
+}
+
+/* Ensure cards and controls take full width on mobile devices/browsers */
+body.mobile-device .flashcard-container,
+body.mobile-device .controls-deck {
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (max-width: 860px) {
+  .card-display-area {
+    width: 100%;
   }
 }
 
