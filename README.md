@@ -1,5 +1,7 @@
 # KalimaCards 📖
 
+![KalimaCards Showcase](docs/kalimacards_showcase.jpg)
+
 **KalimaCards** is a premium, client-side active recall application designed to master Quranic Arabic vocabulary. It uses a frequency-based learning methodology, displaying Quranic lemmas (dictionary word forms) in order of their occurrence in the Holy Quran, allowing users to study the most common words first to maximize comprehension.
 
 Built with modern web technologies, it features an interactive, responsive user interface with glassmorphism styling, full offline support (PWA), detailed session statistics, star/bookmark capability, and a full-text search database of all vocabulary terms.
