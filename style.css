@@ -658,7 +658,7 @@ body.desktop-device .icon-btn:hover {
 /* New Stats Grid Layout */
 .stats-grid-new {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
 }
 
@@ -666,10 +666,10 @@ body.desktop-device .icon-btn:hover {
   background: var(--btn-secondary-bg);
   border: 1px solid var(--btn-secondary-border);
   border-radius: var(--border-radius-md);
-  padding: 12px;
+  padding: 10px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   transition: var(--transition-smooth);
 }
 
@@ -687,10 +687,10 @@ body.desktop-device .icon-btn:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 34px;
-  height: 34px;
+  width: 30px;
+  height: 30px;
   border-radius: var(--border-radius-sm);
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   background: rgba(255, 255, 255, 0.03);
   color: var(--text-secondary);
   flex-shrink: 0;
@@ -744,14 +744,18 @@ body.desktop-device .icon-btn:hover {
   display: flex;
   flex-direction: column;
   gap: 2px;
+  min-width: 0;
 }
 
 .stat-label-new {
-  font-size: 0.72rem;
+  font-size: 0.65rem;
   color: var(--text-muted);
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .stat-val-new {
