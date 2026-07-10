@@ -615,6 +615,9 @@ function displayWord(index) {
     // Clear inline transition after animation completes
     setTimeout(() => {
       flashcard.style.transition = '';
+      if (flashcard.style.opacity === '1') {
+        flashcard.style.opacity = '';
+      }
     }, 300);
     
     updateStatsDisplay();
@@ -708,6 +711,7 @@ function animateButtonFeedback(btn) {
 function toggleCardFlip() {
   if (!currentWord) return;
   isFlipped = !isFlipped;
+  flashcard.style.transform = ''; // Clear inline transform from swipes
   flashcard.classList.toggle('is-flipped', isFlipped);
   
   // Set accessibility tags
@@ -724,6 +728,7 @@ function toggleCardFlip() {
 function closeCardFlip() {
   isFlipped = false;
   flashcard.classList.remove('is-flipped');
+  flashcard.style.transform = ''; // Clear inline transform from swipes
   flashcard.setAttribute('aria-expanded', 'false');
   disableAssessment();
 }
@@ -965,6 +970,7 @@ function setupEventListeners() {
         
         setTimeout(() => {
           flashcard.style.transition = '';
+          flashcard.style.transform = '';
         }, 300);
       }
     }
