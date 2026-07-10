@@ -937,6 +937,8 @@ body.desktop-device .btn-secondary:hover {
   padding: 22px; /* More compact padding to maximize internal height */
 }
 
+
+
 .card-back::before {
   background: var(--accent-gold-gradient);
 }

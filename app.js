@@ -906,11 +906,10 @@ function setupEventListeners() {
       }
       
       isSwipeAction = true;
-      const currentFlip = isFlipped ? 'rotateY(180deg)' : '';
+      const currentFlip = isFlipped ? ' rotateY(180deg)' : '';
       const rotation = deltaX * 0.08;
       flashcard.style.transition = 'none';
-      flashcard.style.transform = `${currentFlip} translateX(${deltaX}px) rotate(${rotation}deg)`;
-      flashcard.style.opacity = Math.max(1 - Math.abs(deltaX) / 400, 0.4);
+      flashcard.style.transform = `translateX(${deltaX}px) rotate(${rotation}deg)${currentFlip}`;
 
       // Update swipe border color dynamically
       if (deltaX > 0) {
@@ -944,9 +943,9 @@ function setupEventListeners() {
       
       if (Math.abs(deltaX) > 120) {
         // Complete swipe
-        const currentFlip = isFlipped ? 'rotateY(180deg)' : '';
+        const currentFlip = isFlipped ? ' rotateY(180deg)' : '';
         flashcard.style.transition = 'transform 0.25s ease-out, opacity 0.25s ease-out';
-        flashcard.style.transform = `${currentFlip} translateX(${deltaX > 0 ? 600 : -600}px) rotate(${deltaX > 0 ? 30 : -30}deg)`;
+        flashcard.style.transform = `translateX(${deltaX > 0 ? 600 : -600}px) rotate(${deltaX > 0 ? 30 : -30}deg)${currentFlip}`;
         flashcard.style.opacity = '0';
 
         setTimeout(() => {
@@ -963,9 +962,9 @@ function setupEventListeners() {
         }, 250);
       } else {
         // Cancel swipe
-        const currentFlip = isFlipped ? 'rotateY(180deg)' : '';
+        const currentFlip = isFlipped ? ' rotateY(180deg)' : '';
         flashcard.style.transition = 'transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1.15), opacity 0.3s ease-out';
-        flashcard.style.transform = `${currentFlip}`;
+        flashcard.style.transform = `translateX(0px) rotate(0deg)${currentFlip}`;
         flashcard.style.opacity = '1';
         
         setTimeout(() => {
@@ -975,6 +974,14 @@ function setupEventListeners() {
       }
     }
   }, { passive: false });
+
+  flashcard.addEventListener('touchcancel', () => {
+    touchStartX = null;
+    flashcard.style.removeProperty('--swipe-border-color');
+    flashcard.style.transition = '';
+    flashcard.style.transform = '';
+    flashcard.style.opacity = '';
+  });
   
   // Stop propagation and prevent default page reset on corpus study link click
   if (corpusLink) {
