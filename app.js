@@ -167,6 +167,7 @@ const sessionProgress = document.getElementById('session-progress');
 // --- State Variables ---
 let allWords = [];         // Loaded from JSON
 let filteredWords = [];    // Filtered by frequency
+let filteredWordsForStats = []; // Filtered words matching active filters (excluding Hide Mastered)
 let uniqueFrequencies = []; // Unique frequency values sorted ascending
 let historyStack = [];     // Array of indices visited in filteredWords
 let historyPointer = -1;   // Current pointer in historyStack
@@ -385,11 +386,6 @@ function applyFilterAndReset() {
     });
   }
 
-  // Apply Hide Mastered filter if toggle is active
-  if (hideKnownToggle && hideKnownToggle.checked) {
-    tempWords = tempWords.filter(w => !stats.known.includes(w.transliteration));
-  }
-
   // Apply cumulative coverage filter
   if (coverageVal !== 'all') {
     const threshold = parseFloat(coverageVal);
@@ -407,23 +403,32 @@ function applyFilterAndReset() {
   }
 
   // 2. Apply part-of-speech filtering
+  let tempFilteredForStats;
   if (posVal === 'verbs') {
-    filteredWords = tempWords.filter(w => w.part_of_speech && w.part_of_speech.toLowerCase().startsWith('verb'));
+    tempFilteredForStats = tempWords.filter(w => w.part_of_speech && w.part_of_speech.toLowerCase().startsWith('verb'));
   } else if (posVal === 'nouns') {
-    filteredWords = tempWords.filter(w => w.part_of_speech && (w.part_of_speech.toLowerCase().includes('noun') || w.part_of_speech.toLowerCase() === 'noun'));
+    tempFilteredForStats = tempWords.filter(w => w.part_of_speech && (w.part_of_speech.toLowerCase().includes('noun') || w.part_of_speech.toLowerCase() === 'noun'));
   } else if (posVal === 'particles') {
-    filteredWords = tempWords.filter(w => w.part_of_speech && (
+    tempFilteredForStats = tempWords.filter(w => w.part_of_speech && (
       w.part_of_speech.toLowerCase().includes('particle') || 
       w.part_of_speech.toLowerCase().includes('preposition') || 
       w.part_of_speech.toLowerCase().includes('conjunction') ||
       w.part_of_speech.toLowerCase().includes('pronoun')
     ));
   } else {
-    filteredWords = tempWords;
+    tempFilteredForStats = tempWords;
   }
 
-  // Sort initially by frequency descending (default)
-  filteredWords.sort((a, b) => b.frequency - a.frequency);
+  // Sort and store the words matching active filters (excluding "Hide Mastered")
+  filteredWordsForStats = [...tempFilteredForStats];
+  filteredWordsForStats.sort((a, b) => b.frequency - a.frequency);
+
+  // Apply Hide Mastered filter if toggle is active for the deck
+  if (hideKnownToggle && hideKnownToggle.checked) {
+    filteredWords = filteredWordsForStats.filter(w => !stats.known.includes(w.transliteration));
+  } else {
+    filteredWords = [...filteredWordsForStats];
+  }
 
   // Reset navigation history
   historyStack = [];
@@ -745,14 +750,14 @@ function disableAssessment() {
 
 // --- Stats Display Updates ---
 function updateStatsDisplay() {
-  // Count stats specifically for the CURRENT list of filtered words
-  const filteredKeys = new Set(filteredWords.map(w => w.transliteration));
+  // Count stats specifically for the CURRENT list of filtered words (including hidden mastered words)
+  const filteredKeys = new Set(filteredWordsForStats.map(w => w.transliteration));
   
   const seenCount = stats.seen.filter(w => filteredKeys.has(w)).length;
   const knownCount = stats.known.filter(w => filteredKeys.has(w)).length;
   const learningCount = stats.learning.filter(w => filteredKeys.has(w)).length;
   
-  const totalInFilter = filteredWords.length;
+  const totalInFilter = filteredWordsForStats.length;
   const remainingCount = Math.max(0, totalInFilter - knownCount);
 
   // Update DOM elements
