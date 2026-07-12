@@ -33,49 +33,21 @@ kalimacards/
 ├── manifest.json         # PWA Manifest configuration for application installability
 ├── sw.js                 # PWA Service Worker for offline file caching
 ├── words.json            # Compiled dataset of Quranic words (vocabulary database)
-├── scraped_lemmas.json   # Scraped lemma raw data from corpus.quran.com
-├── scraped_verbs.json    # Scraped verb raw data from corpus.quran.com
-├── Makefile              # Local helper commands for serving and parsing
-├── docs/                 # Detailed system & developer documentation
-│   └── developer_guide.md# Guide explaining the data pipeline and schemas
-└── scripts/              # Python scripts for data processing and translation pipeline
-    ├── scrape_lemmas.py  # Scrapes raw lemmas and metadata from the Quranic Corpus
-    ├── scrape_verbs.py   # Scrapes raw verbs and verbal root occurrences
-    ├── translate_lemmas.py# Runs translation on scraped raw data
-    ├── merge_verbs.py    # Integrates scraped verbs and root metadata into words.json
-    ├── scrape_meanings.py# Fetches vocabulary translations from web resources
-    ├── detect_lazy.py    # Identifies unmapped or translation-needed words
-    ├── patch_words.py    # Overwrites modern translations with accurate classical meanings
-    ├── patch_lazy_words.py# Advanced/fallback patches for specific word groups
-    └── parse_corpus.py   # Converts CSV source files to words.json
+├── Makefile              # Local helper commands for serving
+└── docs/                 # Detailed system & developer documentation
+    └── developer_guide.md# Guide explaining the data schema and architecture
 ```
 
 ---
 
-## 🛠️ Data Ingestion & Build Pipeline
-
-The vocabulary dataset is prepared through a multi-stage Python ingestion pipeline that fetches data from the Quranic Corpus, translates it, merges roots/verb occurrences, and cleanses the translations using classical dictionaries.
-
-```mermaid
-flowchart TD
-    A[corpus.quran.com/lemmas.jsp] -->|scrape_lemmas.py| B[scraped_lemmas.json]
-    C[corpus.quran.com/verbs.jsp] -->|scrape_verbs.py| D[scraped_verbs.json]
-    B -->|translate_lemmas.py| E[words.json]
-    D -->|merge_verbs.py| E
-    A -->|scrape_meanings.py| E
-    E -->|detect_lazy.py| F[lazy_detected.json]
-    E -->|patch_words.py| E
-    E -->|patch_lazy_words.py| E
-```
-
-For in-depth explanations of the scripts, data schemas, and pipeline usage, please refer to the **[Developer & Data Pipeline Guide](file:///Users/tareqmy/development/javascriptprojects/kalimacards/docs/developer_guide.md)**.
+For in-depth explanations of the data schemas and PWA configuration, please refer to the **[Developer & Architecture Guide](file:///Users/tareqmy/development/javascriptprojects/kalimacards/docs/developer_guide.md)**.
 
 ---
 
 ## 🏃 Getting Started
 
 ### Prerequisites
-To run the local server or parse data, you need:
+To run the local server, you need:
 *   Python 3.x
 *   Make (optional, but recommended)
 
