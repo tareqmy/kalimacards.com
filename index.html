@@ -115,6 +115,9 @@
         <button id="focus-toggle" class="icon-btn" aria-label="Toggle focus mode" title="Toggle Focus Mode (F)">
           <i class="fa-solid fa-expand"></i>
         </button>
+        <button id="vocab-explorer-btn" class="icon-btn" aria-label="Vocabulary Explorer" title="Vocabulary Explorer">
+          <i class="fa-solid fa-list-ul"></i>
+        </button>
         <button id="settings-btn" class="icon-btn" aria-label="Filters and Settings" title="Filters & Settings">
           <i class="fa-solid fa-gear"></i>
         </button>
@@ -514,6 +517,62 @@
         <button id="apply-settings-btn" class="btn-action apply-settings" style="margin: 0; padding: 10px 24px;" title="Apply changes and close Settings">
           Apply & Close
         </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vocabulary Explorer Modal Overlay -->
+  <div class="vocab-modal-overlay" id="vocab-modal-overlay">
+    <div class="vocab-modal-card">
+      <button class="vocab-modal-close" id="vocab-modal-close" aria-label="Close vocabulary explorer">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      
+      <div class="vocab-modal-header">
+        <h3><i class="fa-solid fa-list-ul"></i> Vocabulary Explorer</h3>
+        <span class="vocab-total-count" id="vocab-total-count">0 words</span>
+      </div>
+
+      <div class="vocab-search-row">
+        <div class="search-wrapper">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" id="vocab-search-input" placeholder="Search Arabic, Buckwalter, or English meaning..." autocomplete="off">
+          <button id="vocab-clear-search" class="clear-search-btn" style="display: none;" title="Clear search">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="vocab-tabs-row">
+        <button class="vocab-tab active" data-tab="all">All</button>
+        <button class="vocab-tab" data-tab="starred"><i class="fa-solid fa-star"></i> Starred</button>
+        <button class="vocab-tab" data-tab="known"><i class="fa-solid fa-circle-check"></i> Mastered</button>
+        <button class="vocab-tab" data-tab="learning"><i class="fa-solid fa-rotate"></i> Learning</button>
+      </div>
+      
+      <div class="vocab-modal-body">
+        <div class="vocab-table-wrapper">
+          <table class="vocab-table">
+            <thead>
+              <tr>
+                <th style="width: 40px; text-align: center;">⭐</th>
+                <th>Word</th>
+                <th>Transliteration</th>
+                <th>Meaning</th>
+                <th class="col-hide-mobile">POS</th>
+                <th class="col-hide-mobile" style="text-align: right;">Occ.</th>
+                <th style="width: 80px; text-align: center;">Action</th>
+              </tr>
+            </thead>
+            <tbody id="vocab-table-body">
+              <!-- Dynamically populated rows -->
+            </tbody>
+          </table>
+          <div id="vocab-empty-state" class="vocab-empty-state" style="display: none;">
+            <i class="fa-solid fa-folder-open"></i>
+            <p>No words found in this selection.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
