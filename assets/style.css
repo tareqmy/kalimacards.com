@@ -1491,7 +1491,8 @@ body.desktop-device .study-link:hover {
     justify-content: space-between;
   }
 
-  .sync-indicator span {
+  .sync-indicator span,
+  .mastery-text {
     display: none;
   }
 
