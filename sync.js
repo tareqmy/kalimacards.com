@@ -221,9 +221,8 @@ export function queueCloudPush() {
   // Clear any existing sync timer
   if (syncTimeout) clearTimeout(syncTimeout);
 
-  dispatchSyncStatus('syncing', 'Saving changes...');
-
   syncTimeout = setTimeout(async () => {
+    dispatchSyncStatus('syncing', 'Saving changes...');
     try {
       const stats = getLocalStats();
       const starredWords = getLocalStars();

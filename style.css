@@ -1491,6 +1491,14 @@ body.desktop-device .study-link:hover {
     justify-content: space-between;
   }
 
+  .sync-indicator span {
+    display: none;
+  }
+
+  .sync-indicator {
+    padding: 6px 10px;
+  }
+
   .flashcard-container {
     width: 100%;
     max-width: 100%;
