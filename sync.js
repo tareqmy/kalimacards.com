@@ -12,6 +12,7 @@ import {
 let dynamoClient = null;
 let syncTimeout = null;
 let isSyncing = false;
+let lastPushedPayloadJson = null; // Track last successfully written payload to avoid redundant writes
 
 // Initialize DynamoDB Client with credentials
 function getDynamoClient() {
@@ -109,6 +110,13 @@ export async function pullCloudProgress() {
 
 // Push progress to DynamoDB
 export async function pushCloudProgress(stats, starredWords) {
+  const currentPayloadJson = JSON.stringify({ stats, starredWords });
+  if (currentPayloadJson === lastPushedPayloadJson) {
+    // Redundancy check: skip network write if payload has not changed since last push
+    markNeedsSync(false);
+    return;
+  }
+
   const client = getDynamoClient();
   const identityId = getIdentityId();
   if (!client || !identityId) {
@@ -132,6 +140,7 @@ export async function pushCloudProgress(stats, starredWords) {
     Item: marshall(payload, { removeUndefinedValues: true })
   }));
 
+  lastPushedPayloadJson = currentPayloadJson;
   markNeedsSync(false);
 }
 
@@ -171,6 +180,12 @@ export async function syncProgress() {
     let starsToSave = localStars;
 
     if (cloudData) {
+      // Initialize redundancy tracker with current cloud state
+      lastPushedPayloadJson = JSON.stringify({
+        stats: cloudData.stats || { known: [], learning: [], seen: [] },
+        starredWords: cloudData.starredWords || []
+      });
+
       // Merge local and cloud progress
       const merged = mergeProgress(localStats, localStars, cloudData);
       statsToSave = merged.stats;
@@ -186,7 +201,7 @@ export async function syncProgress() {
       }));
     }
 
-    // Push final merged data back to the cloud
+    // Push final merged data back to the cloud (will skip if identical to cloudData)
     await pushCloudProgress(statsToSave, starsToSave);
     
     dispatchSyncStatus('synced', 'All progress backed up');
@@ -219,7 +234,7 @@ export function queueCloudPush() {
       dispatchSyncStatus('error', 'Backup failed. Will retry later.');
       markNeedsSync(true);
     }
-  }, 3000); // 3 seconds debounce
+  }, 300000); // 300 seconds debounce
 }
 
 // Offline/Sync Queue Helpers
