@@ -115,6 +115,9 @@
         <button id="focus-toggle" class="icon-btn" aria-label="Toggle focus mode" title="Toggle Focus Mode (F)">
           <i class="fa-solid fa-expand"></i>
         </button>
+        <button id="settings-btn" class="icon-btn" aria-label="Filters and Settings" title="Filters & Settings">
+          <i class="fa-solid fa-gear"></i>
+        </button>
       </div>
     </header>
 
@@ -184,16 +187,12 @@
           </div>
         </div>
 
-        <!-- Filters Card -->
+        <!-- Search Card -->
         <div class="sidebar-card card-blur">
           <div class="sidebar-card-header">
-            <h3><i class="fa-solid fa-sliders"></i> Filters & Search</h3>
-            <button id="reset-filters-btn" class="reset-link-btn" title="Reset all filters to default">
-              <i class="fa-solid fa-arrow-rotate-left"></i> Reset
-            </button>
+            <h3><i class="fa-solid fa-magnifying-glass"></i> Search Database</h3>
           </div>
-          <div class="control-group">
-            <label for="search-input">Search Database</label>
+          <div class="control-group" style="margin-bottom: 0;">
             <div class="search-wrapper">
               <i class="fa-solid fa-magnifying-glass search-icon"></i>
               <input type="text" id="search-input" placeholder="Search Arabic or English..." autocomplete="off">
@@ -202,80 +201,6 @@
               </button>
             </div>
             <div id="search-results" class="search-results-box" style="display: none;"></div>
-          </div>
-          
-          <div class="control-group toggles-group" style="display: flex; flex-direction: column; gap: 8px;">
-            <div class="switch-wrapper">
-              <label for="starred-only-toggle" class="switch-label">
-                <i class="fa-solid fa-star star-icon"></i> Starred Words Only
-              </label>
-              <label class="switch">
-                <input type="checkbox" id="starred-only-toggle">
-                <span class="slider-switch"></span>
-              </label>
-            </div>
-            
-            <div class="switch-wrapper">
-              <label for="hide-known-toggle" class="switch-label">
-                <i class="fa-solid fa-eye-slash eye-icon"></i> Hide Mastered Words
-              </label>
-              <label class="switch">
-                <input type="checkbox" id="hide-known-toggle">
-                <span class="slider-switch"></span>
-              </label>
-            </div>
-          </div>
-
-          <div class="control-group">
-            <div class="slider-header">
-              <label for="freq-min">Word Frequency</label>
-              <span class="slider-value-display">
-                <span id="freq-min-val">1</span> - <span id="freq-max-val">3,226</span>
-                <span id="filtered-word-count" style="opacity: 0.7; font-weight: 400; margin-left: 4px;">(5,154 words)</span>
-              </span>
-            </div>
-            <div class="range-slider-wrapper">
-              <div class="slider-track" id="slider-track"></div>
-              <input type="range" id="freq-min" min="0" max="180" value="0" aria-label="Minimum word frequency">
-              <input type="range" id="freq-max" min="0" max="180" value="180" aria-label="Maximum word frequency">
-            </div>
-          </div>
-          <div class="control-group">
-            <label for="coverage-filter">Top Words (By Cumulative Frequency)</label>
-            <div class="select-wrapper has-prefix">
-              <i class="fa-solid fa-layer-group select-prefix-icon"></i>
-              <select id="coverage-filter">
-                <option value="all">All Words (100%)</option>
-                <option value="50">Top 50% (Core Vocabulary)</option>
-                <option value="75">Top 75% (Common Words)</option>
-                <option value="90">Top 90% (Extended Vocabulary)</option>
-              </select>
-              <i class="fa-solid fa-chevron-down select-arrow"></i>
-            </div>
-          </div>
-          <div class="control-group">
-            <label for="pos-filter">Part of Speech</label>
-            <div class="select-wrapper has-prefix">
-              <i class="fa-solid fa-tags select-prefix-icon"></i>
-              <select id="pos-filter">
-                <option value="all">All Parts of Speech</option>
-                <option value="verbs">Verbs Only</option>
-                <option value="nouns">Nouns & Proper Nouns</option>
-                <option value="particles">Particles & Prepositions</option>
-              </select>
-              <i class="fa-solid fa-chevron-down select-arrow"></i>
-            </div>
-          </div>
-          <div class="control-group">
-            <label for="learning-mode">Learning Mode</label>
-            <div class="select-wrapper has-prefix">
-              <i class="fa-solid fa-shuffle select-prefix-icon"></i>
-              <select id="learning-mode">
-                <option value="random">Randomize Order</option>
-                <option value="sequential">Sequential (By Frequency)</option>
-              </select>
-              <i class="fa-solid fa-chevron-down select-arrow"></i>
-            </div>
           </div>
         </div>
       </aside>
@@ -483,6 +408,112 @@
             <button class="btn-danger-cancel" id="delete-confirm-no-btn">Cancel</button>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Settings Modal Overlay -->
+  <div class="settings-modal-overlay" id="settings-modal-overlay">
+    <div class="settings-modal-card">
+      <button class="settings-modal-close" id="settings-modal-close" aria-label="Close settings">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      
+      <div class="settings-modal-header">
+        <h3><i class="fa-solid fa-sliders"></i> Filters & Settings</h3>
+      </div>
+      
+      <div class="settings-modal-body">
+        <!-- Filter Toggles -->
+        <div class="control-group toggles-group" style="display: flex; flex-direction: column; gap: 8px;">
+          <div class="switch-wrapper">
+            <label for="starred-only-toggle" class="switch-label">
+              <i class="fa-solid fa-star star-icon"></i> Starred Words Only
+            </label>
+            <label class="switch">
+              <input type="checkbox" id="starred-only-toggle">
+              <span class="slider-switch"></span>
+            </label>
+          </div>
+          
+          <div class="switch-wrapper">
+            <label for="hide-known-toggle" class="switch-label">
+              <i class="fa-solid fa-eye-slash eye-icon"></i> Hide Mastered Words
+            </label>
+            <label class="switch">
+              <input type="checkbox" id="hide-known-toggle">
+              <span class="slider-switch"></span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Frequency Range Slider -->
+        <div class="control-group">
+          <div class="slider-header">
+            <label for="freq-min">Word Frequency</label>
+            <span class="slider-value-display">
+              <span id="freq-min-val">1</span> - <span id="freq-max-val">3,226</span>
+              <span id="filtered-word-count" style="opacity: 0.7; font-weight: 400; margin-left: 4px;">(5,154 words)</span>
+            </span>
+          </div>
+          <div class="range-slider-wrapper">
+            <div class="slider-track" id="slider-track"></div>
+            <input type="range" id="freq-min" min="0" max="180" value="0" aria-label="Minimum word frequency">
+            <input type="range" id="freq-max" min="0" max="180" value="180" aria-label="Maximum word frequency">
+          </div>
+        </div>
+
+        <!-- Top Words (Coverage) -->
+        <div class="control-group">
+          <label for="coverage-filter">Top Words (By Cumulative Frequency)</label>
+          <div class="select-wrapper has-prefix">
+            <i class="fa-solid fa-layer-group select-prefix-icon"></i>
+            <select id="coverage-filter">
+              <option value="all">All Words (100%)</option>
+              <option value="50">Top 50% (Core Vocabulary)</option>
+              <option value="75">Top 75% (Common Words)</option>
+              <option value="90">Top 90% (Extended Vocabulary)</option>
+            </select>
+            <i class="fa-solid fa-chevron-down select-arrow"></i>
+          </div>
+        </div>
+
+        <!-- Part of Speech -->
+        <div class="control-group">
+          <label for="pos-filter">Part of Speech</label>
+          <div class="select-wrapper has-prefix">
+            <i class="fa-solid fa-tags select-prefix-icon"></i>
+            <select id="pos-filter">
+              <option value="all">All Parts of Speech</option>
+              <option value="verbs">Verbs Only</option>
+              <option value="nouns">Nouns & Proper Nouns</option>
+              <option value="particles">Particles & Prepositions</option>
+            </select>
+            <i class="fa-solid fa-chevron-down select-arrow"></i>
+          </div>
+        </div>
+
+        <!-- Learning Mode -->
+        <div class="control-group">
+          <label for="learning-mode">Learning Mode</label>
+          <div class="select-wrapper has-prefix">
+            <i class="fa-solid fa-shuffle select-prefix-icon"></i>
+            <select id="learning-mode">
+              <option value="random">Randomize Order</option>
+              <option value="sequential">Sequential (By Frequency)</option>
+            </select>
+            <i class="fa-solid fa-chevron-down select-arrow"></i>
+          </div>
+        </div>
+      </div>
+      
+      <div class="settings-modal-footer">
+        <button id="reset-filters-btn" class="reset-link-btn" title="Reset all filters to default">
+          <i class="fa-solid fa-arrow-rotate-left"></i> Reset
+        </button>
+        <button id="apply-settings-btn" class="btn-action apply-settings" style="margin: 0; padding: 10px 24px;" title="Apply changes and close Settings">
+          Apply & Close
+        </button>
       </div>
     </div>
   </div>
