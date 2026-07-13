@@ -785,13 +785,6 @@ function toggleCardFlip() {
   
   // Set accessibility tags
   flashcard.setAttribute('aria-expanded', isFlipped);
-
-  // Enable/disable assessment buttons based on flip state (active recall)
-  if (isFlipped) {
-    enableAssessment();
-  } else {
-    disableAssessment();
-  }
 }
 
 function closeCardFlip() {
@@ -799,17 +792,14 @@ function closeCardFlip() {
   flashcard.classList.remove('is-flipped');
   flashcard.style.transform = ''; // Clear inline transform from swipes
   flashcard.setAttribute('aria-expanded', 'false');
-  disableAssessment();
 }
 
 function enableAssessment() {
-  yesBtn.removeAttribute('disabled');
-  noBtn.removeAttribute('disabled');
+  // Permanently enabled
 }
 
 function disableAssessment() {
-  yesBtn.setAttribute('disabled', 'true');
-  noBtn.setAttribute('disabled', 'true');
+  // Permanently enabled
 }
 
 // --- Stats Display Updates ---
@@ -1509,15 +1499,11 @@ function setupEventListeners() {
       e.preventDefault();
       loadPrevCard();
     } else if (e.key === '1') {
-      if (isFlipped) {
-        e.preventDefault();
-        markAsLearning();
-      }
+      e.preventDefault();
+      markAsLearning();
     } else if (e.key === '2') {
-      if (isFlipped) {
-        e.preventDefault();
-        markAsKnown();
-      }
+      e.preventDefault();
+      markAsKnown();
     } else if (e.key === 'a' || e.key === 'A') {
       e.preventDefault();
       if (currentWord) speakArabic(currentWord.arabic);

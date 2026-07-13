@@ -109,7 +109,7 @@ To minimize database transaction costs, the synchronization logic in [`sync.js`]
 
 > [!TIP]
 > **1. Configure DynamoDB Provisioned Capacity (Free Forever Database)**
-> Instead of using On-Demand pricing ($17.00/mo), provision your table capacity manually:
+> Instead of using On-Demand pricing ($4.28/mo), provision your table capacity manually:
 > * Set **Read Capacity Units (RCU) = 5**
 > * Set **Write Capacity Units (WCU) = 15**
 > * Enable Auto-Scaling.
