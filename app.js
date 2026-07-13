@@ -329,6 +329,43 @@ function saveStars() {
   }
 }
 
+// --- Save and Load Filter Settings ---
+function saveFilterSettings() {
+  const settings = {
+    posFilter: posFilter ? posFilter.value : 'all',
+    coverageFilter: coverageFilter ? coverageFilter.value : 'all',
+    freqMinIdx: freqMinInput ? parseInt(freqMinInput.value) : 0,
+    freqMaxIdx: freqMaxInput ? parseInt(freqMaxInput.value) : 0,
+    starredOnly: starredOnlyToggle ? starredOnlyToggle.checked : false,
+    learningMode: learningMode ? learningMode.value : 'random'
+  };
+  localStorage.setItem('kalima_filters', JSON.stringify(settings));
+}
+
+function loadFilterSettings() {
+  const saved = localStorage.getItem('kalima_filters');
+  if (!saved) return;
+  try {
+    const settings = JSON.parse(saved);
+    if (posFilter && settings.posFilter) posFilter.value = settings.posFilter;
+    if (coverageFilter && settings.coverageFilter) coverageFilter.value = settings.coverageFilter;
+    if (starredOnlyToggle && typeof settings.starredOnly === 'boolean') starredOnlyToggle.checked = settings.starredOnly;
+    if (learningMode && settings.learningMode) learningMode.value = settings.learningMode;
+    // Frequency slider indices are restored after uniqueFrequencies is built
+    if (freqMinInput && typeof settings.freqMinIdx === 'number') {
+      const maxIdx = uniqueFrequencies.length - 1;
+      freqMinInput.value = Math.min(settings.freqMinIdx, maxIdx);
+    }
+    if (freqMaxInput && typeof settings.freqMaxIdx === 'number') {
+      const maxIdx = uniqueFrequencies.length - 1;
+      freqMaxInput.value = Math.min(settings.freqMaxIdx, maxIdx);
+    }
+    updateSliderUI();
+  } catch (e) {
+    console.warn('Failed to load filter settings:', e);
+  }
+}
+
 // --- Fetch Data ---
 async function fetchWords() {
   try {
@@ -359,6 +396,9 @@ async function fetchWords() {
       freqMaxInput.value = uniqueFrequencies.length - 1;
       updateSliderUI();
     }
+
+    // Restore saved filter settings (must happen after slider ranges are set)
+    loadFilterSettings();
     
     applyFilterAndReset();
   } catch (error) {
@@ -1137,7 +1177,10 @@ function setupEventListeners() {
 
   // Filters & Settings
   if (starredOnlyToggle) {
-    starredOnlyToggle.addEventListener('change', applyFilterAndReset);
+    starredOnlyToggle.addEventListener('change', () => {
+      saveFilterSettings();
+      applyFilterAndReset();
+    });
   }
 
   if (hideKnownToggle) {
@@ -1146,6 +1189,7 @@ function setupEventListeners() {
     
     hideKnownToggle.addEventListener('change', () => {
       localStorage.setItem('hideMastered', hideKnownToggle.checked);
+      saveFilterSettings();
       applyFilterAndReset();
     });
   }
@@ -1162,6 +1206,7 @@ function setupEventListeners() {
       freqMaxInput.style.zIndex = "9";
     }
     updateSliderUI();
+    saveFilterSettings();
     applyFilterAndReset();
   }
 
@@ -1185,7 +1230,10 @@ function setupEventListeners() {
   }
 
   if (posFilter) {
-    posFilter.addEventListener('change', applyFilterAndReset);
+    posFilter.addEventListener('change', () => {
+      saveFilterSettings();
+      applyFilterAndReset();
+    });
   }
 
   if (coverageFilter) {
@@ -1214,6 +1262,7 @@ function setupEventListeners() {
         }
       }
       updateSliderUI();
+      saveFilterSettings();
       applyFilterAndReset();
     });
   }
@@ -1238,6 +1287,7 @@ function setupEventListeners() {
         }
       }
       updateSliderUI();
+      saveFilterSettings();
       applyFilterAndReset();
     });
   }
@@ -1246,6 +1296,7 @@ function setupEventListeners() {
     // If switching learning mode, clear history so the order refreshes
     historyStack = [];
     historyPointer = -1;
+    saveFilterSettings();
     if (filteredWords.length > 0) {
       loadNextCard(true);
     }
@@ -1369,6 +1420,7 @@ function setupEventListeners() {
         updateSliderUI();
         if (posFilter) posFilter.value = 'all';
         if (coverageFilter) coverageFilter.value = 'all';
+        saveFilterSettings();
         applyFilterAndReset();
         filteredIdx = filteredWords.findIndex(w => w.arabic === targetWord.arabic && w.transliteration === targetWord.transliteration);
       }
