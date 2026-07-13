@@ -1,10 +1,14 @@
-const CACHE_NAME = 'kalimacards-cache-v3';
+const CACHE_NAME = 'kalimacards-cache-v4';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
   './about.html',
   './style.css',
   './app.js',
+  './config.js',
+  './auth.js',
+  './sync.js',
+  './lib/aws-sdk.js',
   './words.json',
   './manifest.json',
   './icon.svg',

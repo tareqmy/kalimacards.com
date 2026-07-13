@@ -1940,6 +1940,397 @@ body.mobile-device .controls-deck {
   max-width: 100%;
 }
 
+/* --- Authentication & Sync Styling --- */
+
+/* Sync status indicator in header */
+.sync-indicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  border-radius: var(--border-radius-sm);
+  background: var(--btn-secondary-bg);
+  border: 1px solid var(--btn-secondary-border);
+  color: var(--text-secondary);
+  transition: var(--transition-smooth);
+  cursor: pointer;
+}
+
+.sync-indicator:hover {
+  background: var(--btn-secondary-hover);
+  color: var(--text-primary);
+}
+
+.sync-indicator.syncing i {
+  animation: spin 1.5s linear infinite;
+  color: var(--accent-blue);
+}
+
+.sync-indicator.synced i {
+  color: var(--color-success);
+}
+
+.sync-indicator.error i {
+  color: var(--color-danger);
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* User Profile Header Button */
+.user-profile-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--btn-secondary-border);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  background: var(--btn-secondary-bg);
+}
+
+.user-profile-btn:hover {
+  border-color: var(--accent-blue);
+  transform: scale(1.05);
+}
+
+.user-profile-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-profile-btn i {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+}
+
+/* Auth Modal Overlay */
+.auth-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(4, 6, 14, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.auth-modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Auth Modal Card */
+.auth-modal-card {
+  width: 90%;
+  max-width: 420px;
+  background: var(--card-bg-front);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
+  border-radius: var(--border-radius-lg);
+  padding: 32px;
+  position: relative;
+  transform: scale(0.9);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  text-align: center;
+}
+
+.auth-modal-overlay.active .auth-modal-card {
+  transform: scale(1);
+}
+
+.auth-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.auth-modal-close:hover {
+  color: var(--text-primary);
+  transform: rotate(90deg);
+}
+
+.auth-modal-header {
+  margin-bottom: 24px;
+}
+
+.auth-modal-icon {
+  font-size: 3rem;
+  background: var(--accent-blue-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.auth-modal-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.auth-modal-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.auth-features-list {
+  text-align: left;
+  margin: 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--panel-border);
+}
+
+.auth-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+.auth-feature-item i {
+  color: var(--color-success);
+  font-size: 1rem;
+}
+
+/* Google Button Container */
+.google-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 24px 0 12px 0;
+  min-height: 40px;
+}
+
+/* Profile Info inside Auth Modal */
+.profile-user-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid var(--accent-blue);
+  margin: 0 auto 16px auto;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
+}
+
+.profile-user-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-user-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.profile-user-email {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.profile-sync-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 32px;
+  background: var(--color-success-bg);
+  color: var(--color-success);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.profile-sync-status-badge.syncing {
+  background: rgba(99, 102, 241, 0.15);
+  color: var(--accent-blue);
+  border-color: rgba(99, 102, 241, 0.2);
+}
+
+.profile-sync-status-badge.syncing i {
+  animation: spin 1.5s linear infinite;
+}
+
+/* Action Buttons */
+.auth-action-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: var(--border-radius-md);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-signout {
+  background: var(--btn-secondary-bg);
+  border: 1px solid var(--btn-secondary-border);
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.btn-signout:hover {
+  background: var(--btn-secondary-hover);
+}
+
+.btn-delete-acc {
+  background: rgba(239, 68, 68, 0.05);
+  border: 1px solid rgba(239, 68, 68, 0.15);
+  color: var(--color-danger);
+}
+
+.btn-delete-acc:hover {
+  background: var(--color-danger-bg);
+  border-color: var(--color-danger);
+}
+
+/* Modal Confirmation Screen */
+.delete-confirmation-box {
+  display: none;
+  background: rgba(239, 68, 68, 0.05);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: var(--border-radius-md);
+  padding: 16px;
+  margin-top: 16px;
+  text-align: left;
+}
+
+.delete-confirmation-box.active {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+.delete-confirm-title {
+  color: var(--color-danger);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+.delete-confirm-text {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.delete-confirm-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-danger-confirm {
+  background: var(--color-danger);
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: var(--border-radius-sm);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-danger-cancel {
+  background: var(--btn-secondary-bg);
+  border: 1px solid var(--btn-secondary-border);
+  color: var(--text-primary);
+  padding: 8px 12px;
+  border-radius: var(--border-radius-sm);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Guest sign-in prompt callout */
+.guest-signin-prompt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(99, 102, 241, 0.05) 100%);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: var(--border-radius-md);
+  padding: 16px 20px;
+  margin: 20px 0;
+  display: none; /* Controlled by JS */
+}
+
+.guest-signin-prompt-content {
+  text-align: left;
+}
+
+.guest-signin-prompt-title {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.guest-signin-prompt-subtitle {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.guest-signin-prompt-btn {
+  background: var(--accent-blue-gradient);
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: var(--border-radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);
+  transition: var(--transition-smooth);
+}
+
+.guest-signin-prompt-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(99, 102, 241, 0.4);
+}
+
+
 
 
 

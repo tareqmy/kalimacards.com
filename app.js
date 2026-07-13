@@ -1,3 +1,7 @@
+import { CONFIG } from './config.js';
+import { initAuth, handleGoogleLogin, signOut, deleteAccount, isAuthenticated, getCurrentUser } from './auth.js';
+import { syncProgress, queueCloudPush, deleteCloudProgress, checkPendingSync } from './sync.js';
+
 // --- Buckwalter Transliteration Converter ---
 const BuckwalterConverter = {
   // Buckwalter ASCII -> Arabic Unicode
@@ -189,6 +193,12 @@ document.addEventListener('DOMContentLoaded', () => {
   loadStats();
   fetchWords();
   setupEventListeners();
+  setupAuthEventListeners();
+  initAuth().then(() => {
+    if (isAuthenticated()) {
+      syncProgress();
+    }
+  });
 });
 
 // --- Device Detection ---
@@ -307,6 +317,16 @@ function loadStats() {
 
 function saveStats() {
   localStorage.setItem('kalima_stats', JSON.stringify(stats));
+  if (typeof queueCloudPush === 'function') {
+    queueCloudPush();
+  }
+}
+
+function saveStars() {
+  localStorage.setItem('starredWords', JSON.stringify(Array.from(starredWords)));
+  if (typeof queueCloudPush === 'function') {
+    queueCloudPush();
+  }
 }
 
 // --- Fetch Data ---
@@ -635,6 +655,10 @@ function markAsSeen(wordKey) {
     stats.seen.push(wordKey);
     saveStats();
   }
+  wordsReviewedInSession++;
+  if (typeof checkGuestSignInPrompt === 'function') {
+    checkGuestSignInPrompt();
+  }
 }
 
 function markAsKnown() {
@@ -853,7 +877,7 @@ function toggleStarCurrentWord(e) {
     starredWords.add(wordKey);
   }
   
-  localStorage.setItem('starredWords', JSON.stringify(Array.from(starredWords)));
+  saveStars();
   updateStarUI();
   
   // Re-filter and reload deck if in "starred words only" filter mode
@@ -1096,7 +1120,7 @@ function setupEventListeners() {
             
             if (data.starredWords) {
               starredWords = new Set(data.starredWords);
-              localStorage.setItem('starredWords', JSON.stringify(Array.from(starredWords)));
+              saveStars();
             }
             
             applyFilterAndReset();
@@ -1454,6 +1478,262 @@ function setupEventListeners() {
     }
   });
 }
+
+// --- Authentication & Cloud Sync Integration ---
+let wordsReviewedInSession = 0;
+
+function checkGuestSignInPrompt() {
+  const promptBanner = document.getElementById('guest-signin-prompt');
+  if (!promptBanner) return;
+
+  if (isAuthenticated()) {
+    promptBanner.style.display = 'none';
+    return;
+  }
+
+  // Show prompt after 10 word reviews in a single session
+  if (wordsReviewedInSession >= 10) {
+    promptBanner.style.display = 'flex';
+  } else {
+    promptBanner.style.display = 'none';
+  }
+}
+
+function openAuthModal() {
+  const overlay = document.getElementById('auth-modal-overlay');
+  if (overlay) {
+    overlay.classList.add('active');
+    updateAuthModalContent();
+    if (!isAuthenticated()) {
+      initGoogleSignIn();
+    }
+  }
+}
+
+function closeAuthModal() {
+  const overlay = document.getElementById('auth-modal-overlay');
+  const confirmBox = document.getElementById('delete-confirm-box');
+  if (overlay) {
+    overlay.classList.remove('active');
+  }
+  if (confirmBox) {
+    confirmBox.classList.remove('active');
+  }
+}
+
+function updateAuthModalContent() {
+  const isAuth = isAuthenticated();
+  const guestView = document.getElementById('auth-view-guest');
+  const userView = document.getElementById('auth-view-user');
+  
+  if (isAuth) {
+    if (guestView) guestView.style.display = 'none';
+    if (userView) userView.style.display = 'block';
+    
+    const user = getCurrentUser();
+    const nameEl = document.getElementById('user-display-name');
+    const emailEl = document.getElementById('user-display-email');
+    if (nameEl) nameEl.textContent = user.name || 'Student';
+    if (emailEl) emailEl.textContent = user.email || '';
+    
+    const avatarContainer = document.getElementById('user-avatar-container');
+    if (avatarContainer) {
+      if (user.picture) {
+        avatarContainer.innerHTML = `<img src="${user.picture}" alt="${user.name}">`;
+      } else {
+        avatarContainer.innerHTML = `<i class="fa-solid fa-user" style="font-size: 2.5rem; line-height: 80px; color: var(--text-secondary);"></i>`;
+      }
+    }
+  } else {
+    if (guestView) guestView.style.display = 'block';
+    if (userView) userView.style.display = 'none';
+  }
+}
+
+function initGoogleSignIn() {
+  if (!CONFIG.GOOGLE_CLIENT_ID) {
+    console.warn('Google Client ID is not configured. Google Sign-In button cannot be rendered.');
+    const btnContainer = document.getElementById('google-signin-btn');
+    if (btnContainer) {
+      btnContainer.innerHTML = `<span style="color: var(--color-danger); font-size: 0.85rem; display: block; padding: 10px;">Please configure Google Client ID in config.js</span>`;
+    }
+    return;
+  }
+
+  if (typeof google !== 'undefined' && google.accounts && google.accounts.id) {
+    google.accounts.id.initialize({
+      client_id: CONFIG.GOOGLE_CLIENT_ID,
+      callback: async (response) => {
+        try {
+          await handleGoogleLogin(response.credential);
+          await syncProgress();
+          closeAuthModal();
+        } catch (err) {
+          alert('Authentication failed: ' + err.message);
+        }
+      },
+      auto_select: false
+    });
+
+    google.accounts.id.renderButton(
+      document.getElementById('google-signin-btn'),
+      { 
+        theme: document.documentElement.classList.contains('light-theme') ? 'outline' : 'filled_blue', 
+        size: 'large',
+        shape: 'pill',
+        width: 250
+      }
+    );
+  } else {
+    // Retry in 300ms if GIS SDK is still loading asynchronously
+    setTimeout(initGoogleSignIn, 300);
+  }
+}
+
+function setupAuthEventListeners() {
+  const profileBtn = document.getElementById('profile-btn');
+  const syncIndicatorBtn = document.getElementById('sync-indicator-btn');
+  const authModalClose = document.getElementById('auth-modal-close');
+  const authModalOverlay = document.getElementById('auth-modal-overlay');
+  const authSignoutBtn = document.getElementById('auth-signout-btn');
+  const authDeleteBtn = document.getElementById('auth-delete-btn');
+  const deleteConfirmYes = document.getElementById('delete-confirm-yes-btn');
+  const deleteConfirmNo = document.getElementById('delete-confirm-no-btn');
+  const guestSigninPromptBtn = document.getElementById('guest-signin-prompt-btn');
+
+  if (profileBtn) profileBtn.addEventListener('click', openAuthModal);
+  
+  if (syncIndicatorBtn) {
+    syncIndicatorBtn.addEventListener('click', () => {
+      if (isAuthenticated()) {
+        syncProgress();
+      }
+    });
+  }
+  
+  if (authModalClose) authModalClose.addEventListener('click', closeAuthModal);
+  
+  if (authModalOverlay) {
+    authModalOverlay.addEventListener('click', (e) => {
+      if (e.target === authModalOverlay) closeAuthModal();
+    });
+  }
+  
+  if (guestSigninPromptBtn) guestSigninPromptBtn.addEventListener('click', openAuthModal);
+
+  if (authSignoutBtn) {
+    authSignoutBtn.addEventListener('click', () => {
+      if (confirm('Are you sure you want to sign out? Your local progress will remain on this device.')) {
+        signOut();
+        closeAuthModal();
+      }
+    });
+  }
+
+  if (authDeleteBtn) {
+    authDeleteBtn.addEventListener('click', () => {
+      const confirmBox = document.getElementById('delete-confirm-box');
+      if (confirmBox) confirmBox.classList.add('active');
+    });
+  }
+
+  if (deleteConfirmNo) {
+    deleteConfirmNo.addEventListener('click', () => {
+      const confirmBox = document.getElementById('delete-confirm-box');
+      if (confirmBox) confirmBox.classList.remove('active');
+    });
+  }
+
+  if (deleteConfirmYes) {
+    deleteConfirmYes.addEventListener('click', async () => {
+      try {
+        await deleteAccount(deleteCloudProgress);
+      } catch (err) {
+        alert('Failed to delete account: ' + err.message);
+      }
+    });
+  }
+}
+
+// Window Event Listeners for Authentication & Sync Events
+window.addEventListener('auth-status-changed', (e) => {
+  const { isAuthenticated: isAuth, user } = e.detail;
+  const profileBtn = document.getElementById('profile-btn');
+  const syncBtn = document.getElementById('sync-indicator-btn');
+  
+  if (isAuth) {
+    if (syncBtn) syncBtn.style.display = 'flex';
+    if (profileBtn) {
+      if (user && user.picture) {
+        profileBtn.innerHTML = `<img src="${user.picture}" alt="${user.name}">`;
+      } else {
+        profileBtn.innerHTML = `<i class="fa-solid fa-circle-user" style="color: var(--accent-blue);"></i>`;
+      }
+    }
+  } else {
+    if (syncBtn) syncBtn.style.display = 'none';
+    if (profileBtn) {
+      profileBtn.innerHTML = `<i class="fa-solid fa-circle-user"></i>`;
+    }
+  }
+  
+  checkGuestSignInPrompt();
+  updateAuthModalContent();
+});
+
+window.addEventListener('auth-sync-status', (e) => {
+  const { status, message } = e.detail;
+  const syncBtn = document.getElementById('sync-indicator-btn');
+  const syncText = document.getElementById('sync-text');
+  const modalBadge = document.getElementById('profile-sync-status');
+  const modalText = document.getElementById('profile-sync-text');
+  
+  if (!syncBtn) return;
+  
+  // Update classes
+  syncBtn.className = 'sync-indicator ' + status;
+  if (modalBadge) modalBadge.className = 'profile-sync-status-badge ' + status;
+  
+  if (status === 'syncing') {
+    syncBtn.querySelector('i').className = 'fa-solid fa-rotate';
+    if (syncText) syncText.textContent = 'Syncing...';
+    if (modalText) modalText.textContent = 'Saving changes...';
+  } else if (status === 'synced') {
+    syncBtn.querySelector('i').className = 'fa-solid fa-cloud';
+    if (syncText) syncText.textContent = 'Backup';
+    if (modalText) modalText.textContent = 'Synced & Secure';
+  } else if (status === 'error') {
+    syncBtn.querySelector('i').className = 'fa-solid fa-cloud-exclamation';
+    if (syncText) syncText.textContent = 'Offline';
+    if (modalText) modalText.textContent = 'Sync offline';
+  }
+  
+  syncBtn.title = message;
+});
+
+window.addEventListener('sync-completed', (e) => {
+  const { stats: newStats, starredWords: newStars } = e.detail;
+  stats = newStats;
+  starredWords = new Set(newStars);
+  
+  updateStatsDisplay();
+  updateStarUI();
+  applyFilterAndReset();
+});
+
+window.addEventListener('auth-account-deleted', () => {
+  stats = { known: [], learning: [], seen: [] };
+  starredWords = new Set();
+  
+  closeAuthModal();
+  wordsReviewedInSession = 0;
+  
+  updateStatsDisplay();
+  updateStarUI();
+  applyFilterAndReset();
+  
+  alert('Your account and synced progress have been successfully deleted.');
+});
 
 // --- PWA Service Worker Registration ---
 if ('serviceWorker' in navigator) {

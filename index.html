@@ -73,6 +73,9 @@
       }
     })();
   </script>
+  
+  <!-- Google Identity Services (GIS) SDK -->
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 <body>
   <!-- Background Glow Effects -->
@@ -96,8 +99,15 @@
           <i class="fa-solid fa-star"></i>
           <span>Mastery: <strong id="score-percentage">0%</strong></span>
         </div>
-        <a href="about.html" class="icon-btn" aria-label="About the Creator" title="About & Credentials">
+        <button id="sync-indicator-btn" class="sync-indicator" style="display: none;" title="Backup & Sync Status">
+          <i class="fa-solid fa-cloud"></i>
+          <span id="sync-text">Guest</span>
+        </button>
+        <button id="profile-btn" class="user-profile-btn" aria-label="User Account" title="Sign In / Account Settings">
           <i class="fa-solid fa-circle-user"></i>
+        </button>
+        <a href="about.html" class="icon-btn" aria-label="About the Creator" title="About & Credentials">
+          <i class="fa-solid fa-circle-question"></i>
         </a>
         <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme" title="Toggle Light/Dark Theme">
           <i class="fa-solid fa-moon"></i>
@@ -272,6 +282,15 @@
 
       <!-- Flashcard Deck Area -->
       <section class="card-display-area">
+        <!-- Guest Sign-in Banner -->
+        <div class="guest-signin-prompt" id="guest-signin-prompt">
+          <div class="guest-signin-prompt-content">
+            <div class="guest-signin-prompt-title">Backup & Sync Your Progress</div>
+            <div class="guest-signin-prompt-subtitle">Sign in with Google to sync your mastery and starred words across devices.</div>
+          </div>
+          <button class="guest-signin-prompt-btn" id="guest-signin-prompt-btn">Sign In</button>
+        </div>
+
         <!-- 3D Flashcard Container -->
         <div class="flashcard-container" id="flashcard-container">
           <div class="flashcard" id="flashcard" role="button" tabindex="0" aria-label="Flashcard. Click to reveal meaning.">
@@ -394,7 +413,81 @@
     </footer>
   </div>
 
-  <!-- Custom JS -->
-  <script src="app.js"></script>
+  <!-- Authentication & Sync Profile Modal -->
+  <div class="auth-modal-overlay" id="auth-modal-overlay">
+    <div class="auth-modal-card">
+      <button class="auth-modal-close" id="auth-modal-close" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      
+      <!-- Guest View (Not Signed In) -->
+      <div id="auth-view-guest">
+        <div class="auth-modal-header">
+          <span class="auth-modal-icon"><i class="fa-solid fa-cloud-arrow-up"></i></span>
+          <h2 class="auth-modal-title">Save Your Progress</h2>
+          <p class="auth-modal-subtitle">Backup your statistics, stars, and vocabulary progress to the cloud. Access them from any device.</p>
+        </div>
+        
+        <div class="auth-features-list">
+          <div class="auth-feature-item">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>Deduplicated progress merging across all devices</span>
+          </div>
+          <div class="auth-feature-item">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>Real-time automatic background backup</span>
+          </div>
+          <div class="auth-feature-item">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>Fully functional offline, auto-sync when online</span>
+          </div>
+        </div>
+        
+        <div class="google-btn-wrapper">
+          <div id="google-signin-btn"></div>
+        </div>
+        
+        <p class="auth-modal-subtitle" style="font-size: 0.75rem; margin-top: 16px;">
+          By signing in, you agree to backup your local learning progress to the AWS cloud database.
+        </p>
+      </div>
+      
+      <!-- Authenticated View (Signed In) -->
+      <div id="auth-view-user" style="display: none;">
+        <div class="auth-modal-header">
+          <div class="profile-user-avatar" id="user-avatar-container">
+            <i class="fa-solid fa-user" style="font-size: 2.5rem; line-height: 80px; color: var(--text-secondary);"></i>
+          </div>
+          <h2 class="profile-user-name" id="user-display-name">User Name</h2>
+          <p class="profile-user-email" id="user-display-email">user@example.com</p>
+        </div>
+        
+        <div class="profile-sync-status-badge" id="profile-sync-status">
+          <i class="fa-solid fa-cloud"></i> <span id="profile-sync-text">Synced & Secure</span>
+        </div>
+        
+        <button class="auth-action-btn btn-signout" id="auth-signout-btn">
+          <i class="fa-solid fa-right-from-bracket"></i> Sign Out
+        </button>
+        
+        <button class="auth-action-btn btn-delete-acc" id="auth-delete-btn">
+          <i class="fa-solid fa-trash-can"></i> Delete Account & Data
+        </button>
+        
+        <!-- Delete Confirmation Screen -->
+        <div class="delete-confirmation-box" id="delete-confirm-box">
+          <div class="delete-confirm-title">Are you absolutely sure?</div>
+          <div class="delete-confirm-text">This will permanently delete your sync record from the cloud and clear your local progress stats. This action cannot be undone.</div>
+          <div class="delete-confirm-actions">
+            <button class="btn-danger-confirm" id="delete-confirm-yes-btn">Yes, Delete Everything</button>
+            <button class="btn-danger-cancel" id="delete-confirm-no-btn">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom JS loaded as module -->
+  <script type="module" src="app.js"></script>
 </body>
 </html>
