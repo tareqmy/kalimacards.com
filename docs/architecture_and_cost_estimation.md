@@ -35,7 +35,7 @@ graph TD
 
 ### A. Client Side (PWA)
 * **Single Page Application (SPA):** Static HTML, Vanilla CSS, and modular Vanilla JS (`app.js`, `auth.js`, `sync.js`).
-* **Service Worker (`sw.js`):** Offline capabilities, aggressive local caching of static assets and [`words.json`](file:///Users/tareqmy/development/javascriptprojects/kalimacards/words.json) (1.38 MB file containing lexical dataset).
+* **Service Worker (`sw.js`):** Offline capabilities, aggressive local caching of static assets and [`words.json`](file:///Users/tareqmy/development/javascriptprojects/kalimacards/assets/words.json) (1.38 MB file containing lexical dataset).
 * **LocalStorage:** Stores client-side application state including user theme preferences, persistent stats (known, learning, seen words), starred items, and filter settings.
 
 ### B. Hosting (AWS)
@@ -69,7 +69,7 @@ graph TD
 
 ## 3. Data Sync & Traffic Characteristics
 
-To minimize database transaction costs, the synchronization logic in [`sync.js`](file:///Users/tareqmy/development/javascriptprojects/kalimacards/sync.js) uses client-side buffering:
+To minimize database transaction costs, the synchronization logic in [`sync.js`](file:///Users/tareqmy/development/javascriptprojects/kalimacards/lib/sync.js) uses client-side buffering:
 * **Debounced Writes:** Changes to user stats are debounced by **300 seconds (5 minutes)** before triggering a cloud sync. During active studying, intermediate writes are postponed.
 * **Exit-Flush Saves:** If a user closes the window or tab, a final sync is flushed immediately using the window `visibilitychange` listener.
 * **Payload Hash Matching:** The client tracks the last successfully written payload. If the local state is identical to the cloud (e.g. no changes, or no new edits after an initial sync), the network write is completely skipped.

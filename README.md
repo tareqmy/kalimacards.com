@@ -28,12 +28,21 @@ Built with modern web technologies, it features an interactive, responsive user 
 kalimacards/
 ├── index.html            # Main application layout and active recall interface
 ├── about.html            # Biography page of the creator (Tareq Mohammad Yousuf)
-├── app.js                # Core JS logic: state management, filtering, searching, transliteration
-├── style.css             # Vanilla CSS containing variables, dark/light modes, animations
-├── manifest.json         # PWA Manifest configuration for application installability
 ├── sw.js                 # PWA Service Worker for offline file caching
-├── words.json            # Compiled dataset of Quranic words (vocabulary database)
 ├── Makefile              # Local helper commands for serving
+├── assets/               # Static assets folder
+│   ├── style.css         # Vanilla CSS containing variables, dark/light modes, animations
+│   ├── manifest.json     # PWA Manifest configuration for application installability
+│   ├── words.json        # Compiled dataset of Quranic words (vocabulary database)
+│   ├── icon.svg          # Application icon
+│   ├── icon-maskable.svg # Maskable application icon
+│   └── fonts/            # Web fonts directory
+├── lib/                  # Application JavaScript modules and libraries
+│   ├── app.js            # Core JS logic: state management, filtering, searching, transliteration
+│   ├── auth.js           # Authentication management (Google Identity + AWS Cognito)
+│   ├── config.js         # Configuration settings (AWS resources, etc.)
+│   ├── sync.js           # DynamoDB sync integration for tracking user progress
+│   └── aws-sdk.js        # Bundled AWS SDK dependencies
 └── docs/                 # Detailed system & developer documentation
     └── developer_guide.md# Guide explaining the data schema and architecture
 ```

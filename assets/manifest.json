@@ -2,7 +2,7 @@
   "name": "KalimaCards - Quranic Arabic Flashcards",
   "short_name": "KalimaCards",
   "description": "Master Quranic Arabic vocabulary through interactive frequency-based flashcards and active recall.",
-  "start_url": "./index.html",
+  "start_url": "../index.html",
   "display": "standalone",
   "background_color": "#0d0e15",
   "theme_color": "#0d0e15",

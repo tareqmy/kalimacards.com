@@ -20,12 +20,12 @@ The following files implement authentication and synchronization in the codebase
 
 | File | Type | Description |
 | :--- | :--- | :--- |
-| **[config.js](file:///Users/tareqmy/development/javascriptprojects/kalimacards/config.js)** | Configuration | Holds user-specific AWS Region, Table name, Cognito Identity Pool ID, and Google Client ID. |
+| **[config.js](file:///Users/tareqmy/development/javascriptprojects/kalimacards/lib/config.js)** | Configuration | Holds user-specific AWS Region, Table name, Cognito Identity Pool ID, and Google Client ID. |
 | **[lib/aws-sdk.js](file:///Users/tareqmy/development/javascriptprojects/kalimacards/lib/aws-sdk.js)** | Library | Bundled and minified ES module containing Cognito Identity and DynamoDB Client commands. |
-| **[auth.js](file:///Users/tareqmy/development/javascriptprojects/kalimacards/auth.js)** | Controller | Decodes Google JWTs, coordinates with Cognito Identity Pools, and exposes session management helpers. |
-| **[sync.js](file:///Users/tareqmy/development/javascriptprojects/kalimacards/sync.js)** | Controller | Manages pulls, merges, pushes, offline queues, and background sync operations with DynamoDB. |
+| **[auth.js](file:///Users/tareqmy/development/javascriptprojects/kalimacards/lib/auth.js)** | Controller | Decodes Google JWTs, coordinates with Cognito Identity Pools, and exposes session management helpers. |
+| **[sync.js](file:///Users/tareqmy/development/javascriptprojects/kalimacards/lib/sync.js)** | Controller | Manages pulls, merges, pushes, offline queues, and background sync operations with DynamoDB. |
 | **[index.html](file:///Users/tareqmy/development/javascriptprojects/kalimacards/index.html)** | Interface | Includes the Google GIS script, Header buttons/sync badges, Guest prompt banner, and Auth modal overlay. |
-| **[style.css](file:///Users/tareqmy/development/javascriptprojects/kalimacards/style.css)** | Styling | Styles the auth modal overlay, account detail widgets, sync spinners, and guest banners. |
+| **[style.css](file:///Users/tareqmy/development/javascriptprojects/kalimacards/assets/style.css)** | Styling | Styles the auth modal overlay, account detail widgets, sync spinners, and guest banners. |
 | **[sw.js](file:///Users/tareqmy/development/javascriptprojects/kalimacards/sw.js)** | PWA | Caches new modules and configuration assets locally, enabling offline availability. |
 
 ---
@@ -44,7 +44,7 @@ The following files implement authentication and synchronization in the codebase
    - `http://localhost:8000` (for local development)
    - `https://kalimacards.com` (your production URL)
 8. Click **Create** and copy your **Client ID** (looks like `xxxxxx-xxxxxx.apps.googleusercontent.com`).
-9. Paste this client ID value into **[config.js](file:///Users/tareqmy/development/javascriptprojects/kalimacards/config.js)** under `GOOGLE_CLIENT_ID`.
+9. Paste this client ID value into **[config.js](file:///Users/tareqmy/development/javascriptprojects/kalimacards/lib/config.js)** under `GOOGLE_CLIENT_ID`.
 
 ---
 
@@ -75,7 +75,7 @@ The following files implement authentication and synchronization in the codebase
    - Enter your **Google Client ID** in the field.
 6. Click **Create Pool**.
 7. AWS will ask to create or update IAM roles for your authenticated and unauthenticated users. Click **Allow** to create default roles (`Cognito_kalimacards_identity_poolAuth_Role`).
-8. Copy the **Identity Pool ID** shown in the sample code snippet (e.g., `ap-south-1:xxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`) and paste it as `COGNITO_IDENTITY_POOL_ID` in **[config.js](file:///Users/tareqmy/development/javascriptprojects/kalimacards/config.js)**.
+8. Copy the **Identity Pool ID** shown in the sample code snippet (e.g., `ap-south-1:xxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`) and paste it as `COGNITO_IDENTITY_POOL_ID` in **[config.js](file:///Users/tareqmy/development/javascriptprojects/kalimacards/lib/config.js)**.
 
 ---
 

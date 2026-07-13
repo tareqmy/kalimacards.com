@@ -1,19 +1,19 @@
-const CACHE_NAME = 'kalimacards-cache-v4';
+const CACHE_NAME = 'kalimacards-cache-v5';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
   './about.html',
-  './style.css',
-  './app.js',
-  './config.js',
-  './auth.js',
-  './sync.js',
+  './assets/style.css',
+  './lib/app.js',
+  './lib/config.js',
+  './lib/auth.js',
+  './lib/sync.js',
   './lib/aws-sdk.js',
-  './words.json',
-  './manifest.json',
-  './icon.svg',
-  './icon-maskable.svg',
-  './fonts/fonts.css'
+  './assets/words.json',
+  './assets/manifest.json',
+  './assets/icon.svg',
+  './assets/icon-maskable.svg',
+  './assets/fonts/fonts.css'
 ];
 
 // Install Event - Pre-cache core shell
