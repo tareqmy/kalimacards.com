@@ -1039,6 +1039,19 @@ body.desktop-device .btn-secondary:hover {
   align-items: center;
   text-align: center;
   gap: 16px;
+  -webkit-user-select: text !important;
+  user-select: text !important;
+}
+
+.arabic-text,
+.arabic-mini,
+.transliteration,
+.transliteration-mini,
+.meaning-text,
+.word-root {
+  -webkit-user-select: text !important;
+  user-select: text !important;
+  cursor: text;
 }
 
 /* Quranic Arabic typography */
@@ -2042,12 +2055,44 @@ body.desktop-device .star-btn:hover {
 
 /* --- Focus Mode Styles --- */
 body.focus-mode header > :not(.header-actions),
-body.focus-mode .header-actions > :not(#focus-toggle),
+body.focus-mode .header-actions > :not(.actions-wrapper),
+body.focus-mode .actions-wrapper > :not(#focus-toggle),
 body.focus-mode .controls-sidebar,
 body.focus-mode .keyboard-shortcuts,
 body.focus-mode .rules-reference,
 body.focus-mode footer {
   display: none !important;
+}
+
+body.focus-mode .actions-wrapper {
+  display: flex !important;
+  position: static !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  width: auto !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  animation: none !important;
+}
+
+body.focus-mode .actions-wrapper #focus-toggle {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  background: var(--btn-secondary-bg) !important;
+  border: 1px solid var(--btn-secondary-border) !important;
+  justify-content: center !important;
+  padding: 0 !important;
+}
+
+body.focus-mode .actions-wrapper #focus-toggle:hover {
+  background: var(--btn-secondary-hover) !important;
+}
+
+body.focus-mode #focus-toggle::after {
+  content: none !important;
 }
 
 body.focus-mode .main-content {
