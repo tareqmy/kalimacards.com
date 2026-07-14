@@ -819,6 +819,12 @@ body.desktop-device .icon-btn:hover {
   transition: var(--transition-smooth);
 }
 
+.btn-action:disabled {
+  opacity: 0.4;
+  cursor: not-allowed !important;
+  pointer-events: none;
+}
+
 .btn-action.reset {
   background: rgba(239, 68, 68, 0.05);
   border-color: rgba(239, 68, 68, 0.15);
