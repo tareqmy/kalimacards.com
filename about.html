@@ -85,9 +85,6 @@
         <h1>KalimaCards</h1>
       </div>
       <div class="header-actions">
-        <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme" title="Toggle Light/Dark Theme">
-          <i class="fa-solid fa-moon"></i>
-        </button>
         <a href="index.html" class="btn btn-secondary">
           <i class="fa-solid fa-house"></i> Home
         </a>
@@ -175,52 +172,6 @@
       }
     }
 
-    // Theme Management
-    const themeToggle = document.getElementById('theme-toggle');
-    
-    function updateToggleIcon(theme) {
-      if (theme === 'light') {
-        themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
-      } else {
-        themeToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
-      }
-    }
-    
-    // Set initial icon state
-    let savedTheme = 'dark';
-    try {
-      savedTheme = localStorage.getItem('theme') || 'dark';
-    } catch (e) {
-      console.warn('localStorage not accessible:', e);
-    }
-    updateToggleIcon(savedTheme);
-    
-    themeToggle.addEventListener('click', () => {
-      let currentTheme = 'dark';
-      try {
-        currentTheme = localStorage.getItem('theme') || 'dark';
-      } catch (e) {}
-      
-      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-      
-      try {
-        localStorage.setItem('theme', newTheme);
-      } catch (e) {
-        console.warn('localStorage not accessible:', e);
-      }
-      
-      document.documentElement.setAttribute('data-theme', newTheme);
-      
-      if (newTheme === 'light') {
-        document.documentElement.classList.add('light-theme');
-        document.body.classList.add('light-theme');
-      } else {
-        document.documentElement.classList.remove('light-theme');
-        document.body.classList.remove('light-theme');
-      }
-      
-      updateToggleIcon(newTheme);
-    });
 
     // Run on load
     detectDevice();
