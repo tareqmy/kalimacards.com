@@ -200,10 +200,6 @@ header {
   gap: 12px;
 }
 
-.mobile-menu-btn {
-  display: none;
-}
-
 .stat-badge {
   display: flex;
   align-items: center;
@@ -239,6 +235,10 @@ header {
 body.desktop-device .icon-btn:hover {
   background: var(--btn-secondary-hover);
   transform: translateY(-2px);
+}
+
+.mobile-menu-btn {
+  display: none;
 }
 
 /* --- Main Layout Grid --- */
