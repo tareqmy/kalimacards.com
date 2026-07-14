@@ -372,6 +372,15 @@ body.desktop-device .icon-btn:hover {
   transition: var(--transition-smooth);
 }
 
+.select-wrapper select option {
+  background-color: #111827;
+  color: var(--text-primary);
+}
+
+.light-theme .select-wrapper select option {
+  background-color: #ffffff;
+}
+
 .select-wrapper select:focus {
   outline: none;
   border-color: var(--accent-blue);
