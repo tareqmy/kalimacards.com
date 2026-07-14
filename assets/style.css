@@ -1635,11 +1635,6 @@ body.desktop-device .study-link:hover {
     font-weight: 500;
   }
 
-  #about-btn::after {
-    content: "About Creator";
-    font-weight: 500;
-  }
-
   #theme-toggle::after {
     content: "Toggle Theme";
     font-weight: 500;
