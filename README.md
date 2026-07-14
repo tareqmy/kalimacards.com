@@ -98,6 +98,14 @@ Open your browser and navigate to `http://localhost:8000`.
 
 ---
 
+## 🤝 Special Thanks
+
+*   **Fahim Rahman** (Quality Assurance & testing support)
+    *   LinkedIn: [fahim-rahman-4b333791](https://www.linkedin.com/in/fahim-rahman-4b333791/)
+    *   GitHub: [@fahim-6](https://github.com/fahim-6/)
+
+---
+
 ## 📄 License
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
