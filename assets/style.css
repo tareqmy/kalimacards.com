@@ -881,7 +881,7 @@ body.desktop-device .btn-secondary:hover {
 /* 3D Card Flipping Container */
 .flashcard-container {
   width: 100%;
-  max-width: 520px;
+  max-width: 680px;
   height: 440px;
   perspective: 1200px;
 }
@@ -1205,7 +1205,7 @@ body.desktop-device .card-face:hover .interaction-hint {
   justify-content: center;
   gap: 16px;
   width: 100%;
-  max-width: 520px;
+  max-width: 680px;
 }
 
 .btn-nav {
