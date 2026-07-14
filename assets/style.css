@@ -370,19 +370,22 @@ body.desktop-device .icon-btn:hover {
   appearance: none;
   -webkit-appearance: none;
   transition: var(--transition-smooth);
+  color-scheme: dark; /* Tells Windows browsers to use dark-themed native dropdown rendering */
 }
 
 .light-theme .select-wrapper select {
   background-color: #f1f5f9; /* Solid light background matching light theme panel colors */
+  color-scheme: light; /* Tells Windows browsers to use light-themed native dropdown rendering */
 }
 
 .select-wrapper select option {
   background-color: #151a30; /* Match parent select solid background */
-  color: var(--text-primary);
+  color: #F8FAFC; /* Literal value — Windows browsers don't resolve CSS vars on <option> elements */
 }
 
 .light-theme .select-wrapper select option {
   background-color: #ffffff;
+  color: #0F172A; /* Literal dark text for light theme options */
 }
 
 .select-wrapper select:focus {
