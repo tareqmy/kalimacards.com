@@ -191,6 +191,9 @@
                 <i class="fa-solid fa-upload"></i> Import
               </button>
             </div>
+            <button id="exam-sidebar-btn" class="btn-action exam" title="Take an MCQ Exam on current words">
+              <i class="fa-solid fa-graduation-cap"></i> Take Exam
+            </button>
             <input type="file" id="import-file-input" style="display: none;" accept=".json">
           </div>
         </div>
@@ -579,6 +582,13 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- Exam Modal Overlay -->
+  <div class="exam-modal-overlay" id="exam-modal-overlay" style="display: none;">
+    <div class="exam-modal-card card-blur" id="exam-modal">
+      <!-- Content will be injected dynamically via JS -->
     </div>
   </div>
 
