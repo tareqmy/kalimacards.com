@@ -903,12 +903,12 @@ body.desktop-device .btn-secondary:hover {
 
 /* Desktop Hover Micro-lift and Glow */
 body.desktop-device .flashcard-container:hover .flashcard {
-  transform: translateY(-3px);
+  transform: translateY(-1.5px);
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 50px rgba(99, 102, 241, 0.2);
 }
 
 body.desktop-device .flashcard-container:hover .flashcard.is-flipped {
-  transform: translateY(-3px) rotateY(180deg);
+  transform: translateY(-1.5px) rotateY(180deg);
 }
 
 .flashcard:focus-visible {
