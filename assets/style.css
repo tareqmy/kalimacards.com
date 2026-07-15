@@ -1280,6 +1280,7 @@ body.desktop-device .btn-nav:hover {
   display: flex;
   gap: 12px;
   flex: 1;
+  align-items: center;
 }
 
 .btn-danger {
@@ -1314,6 +1315,42 @@ body.desktop-device .btn-success:hover:not(:disabled) {
   opacity: 0.3;
   cursor: not-allowed;
   transform: none;
+}
+
+/* --- Undo Button Styling --- */
+#undo-btn {
+  flex: 0 0 56px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--panel-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--panel-border);
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: var(--transition-smooth);
+}
+
+body.desktop-device #undo-btn:hover:not(:disabled) {
+  background: var(--btn-secondary-hover);
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.2);
+}
+
+#undo-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  transform: none !important;
+  border-color: var(--panel-border);
+  color: var(--text-muted);
 }
 
 /* --- Keyboard Shortcuts Help Banner --- */
@@ -1726,6 +1763,7 @@ body.desktop-device .study-link:hover {
     display: flex;
     gap: 8px;
     width: 100%;
+    align-items: center;
   }
 
   .assessment-buttons .btn {
@@ -1734,6 +1772,13 @@ body.desktop-device .study-link:hover {
     padding: 10px 8px;
     font-size: 0.8rem;
     white-space: nowrap;
+  }
+
+  #undo-btn {
+    flex: 0 0 42px !important;
+    width: 42px !important;
+    height: 42px !important;
+    font-size: 0.95rem;
   }
 
   #prev-btn {
