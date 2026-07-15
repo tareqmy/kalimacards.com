@@ -29,6 +29,7 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AfiY+pos%3Ap",
     "meanings": [
       "In",
+      "Therein",
       "During",
       "Concerning"
     ]
@@ -77,8 +78,8 @@
     "part_of_speech": "Relative pronoun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%7Bl%7Ea*iY+pos%3Arel",
     "meanings": [
-      "Those",
-      "Those who"
+      "He who",
+      "The one who"
     ]
   },
   {
@@ -131,8 +132,9 @@
     "part_of_speech": "Preposition",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3A%3CilaY%60+pos%3Ap",
     "meanings": [
-      "With",
       "To",
+      "Towards",
+      "With",
       "For",
       "Till"
     ]
@@ -220,8 +222,8 @@
     "url": "https://corpus.quran.com/search.jsp?q=lem%3AEan+pos%3Ap",
     "meanings": [
       "From",
-      "For",
       "About",
+      "For",
       "Of"
     ]
   },
@@ -609,7 +611,8 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Amu%26omin+pos%3An",
     "meanings": [
-      "Believers"
+      "Believer",
+      "Believing"
     ]
   },
   {
@@ -22290,8 +22293,7 @@
     "part_of_speech": "Noun",
     "url": "https://corpus.quran.com/search.jsp?q=lem%3Amawoluwd+pos%3An",
     "meanings": [
-      "Father",
-      "Son"
+      "Newborn child"
     ]
   },
   {
@@ -31785,7 +31787,8 @@
     "part_of_speech": "Verb (Form I)",
     "url": "https://corpus.quran.com/search.jsp?q=pos%3Av+%28I%29+root%3Afjr",
     "meanings": [
-      "to give lie"
+      "to give lie",
+      "to sin"
     ],
     "root": "ف ج ر"
   },
@@ -52996,7 +52999,8 @@
     "part_of_speech": "Verb (Form I)",
     "url": "https://corpus.quran.com/search.jsp?q=pos%3Av+%28I%29+root%3Aftr",
     "meanings": [
-      "to invent"
+      "to slacken",
+      "to abate"
     ],
     "root": "ف ت ر"
   },
