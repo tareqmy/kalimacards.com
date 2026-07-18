@@ -119,6 +119,9 @@
           <button id="settings-btn" class="icon-btn" aria-label="Filters and Settings" title="Filters & Settings">
             <i class="fa-solid fa-gear"></i>
           </button>
+          <button id="help-btn" class="icon-btn" aria-label="Keyboard Shortcuts & Gestures Help" title="Help & Shortcuts">
+            <i class="fa-solid fa-circle-question"></i>
+          </button>
         </div>
         <button id="mobile-menu-btn" class="icon-btn mobile-menu-btn" aria-label="Open menu" title="Menu">
           <i class="fa-solid fa-bars"></i>
@@ -606,6 +609,89 @@
   <div class="exam-modal-overlay" id="exam-modal-overlay" style="display: none;">
     <div class="exam-modal-card card-blur" id="exam-modal">
       <!-- Content will be injected dynamically via JS -->
+    </div>
+  </div>
+
+  <!-- Help Modal Overlay -->
+  <div class="help-modal-overlay" id="help-modal-overlay">
+    <div class="help-modal-card">
+      <button class="help-modal-close" id="help-modal-close" aria-label="Close help">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      
+      <div class="help-modal-header">
+        <h3><i class="fa-solid fa-circle-question"></i> Help & Guides</h3>
+      </div>
+
+      <div class="help-modal-body">
+        <div class="help-section">
+          <h4><i class="fa-solid fa-keyboard"></i> Keyboard Shortcuts</h4>
+          <div class="help-grid">
+            <div class="help-row">
+              <span class="help-key"><kbd>Space</kbd></span>
+              <span class="help-desc">Flip Card / Next Card</span>
+            </div>
+            <div class="help-row">
+              <span class="help-key"><kbd>&rarr;</kbd> / <kbd>&larr;</kbd></span>
+              <span class="help-desc">Next / Previous Card</span>
+            </div>
+            <div class="help-row">
+              <span class="help-key"><kbd>1</kbd> / <kbd>2</kbd></span>
+              <span class="help-desc">Mark Still Learning / Mastered</span>
+            </div>
+            <div class="help-row">
+              <span class="help-key"><kbd>A</kbd></span>
+              <span class="help-desc">Pronounce Arabic Word</span>
+            </div>
+            <div class="help-row">
+              <span class="help-key"><kbd>S</kbd></span>
+              <span class="help-desc">Toggle Star Status</span>
+            </div>
+            <div class="help-row">
+              <span class="help-key"><kbd>F</kbd></span>
+              <span class="help-desc">Toggle Focus Mode</span>
+            </div>
+            <div class="help-row">
+              <span class="help-key"><kbd>Z</kbd></span>
+              <span class="help-desc">Undo Last Progress Change</span>
+            </div>
+            <div class="help-row">
+              <span class="help-key"><kbd>Esc</kbd></span>
+              <span class="help-desc">Close Open Modal / Dialog</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="help-section" style="margin-top: 24px;">
+          <h4><i class="fa-solid fa-fingerprint"></i> Mobile & Touch Gestures</h4>
+          <div class="help-grid">
+            <div class="help-row">
+              <span class="help-gesture"><i class="fa-solid fa-hand-pointer"></i> Tap Card</span>
+              <span class="help-desc">Flip Card</span>
+            </div>
+            <div class="help-row">
+              <span class="help-gesture"><i class="fa-solid fa-arrow-right-long"></i> Swipe Right</span>
+              <span class="help-desc">Mark as Mastered (Green)</span>
+            </div>
+            <div class="help-row">
+              <span class="help-gesture"><i class="fa-solid fa-arrow-left-long"></i> Swipe Left</span>
+              <span class="help-desc">Mark as Still Learning (Orange)</span>
+            </div>
+            <div class="help-row">
+              <span class="help-gesture"><i class="fa-solid fa-arrow-up-long"></i> Swipe Up</span>
+              <span class="help-desc">Load Next Card</span>
+            </div>
+            <div class="help-row">
+              <span class="help-gesture"><i class="fa-solid fa-arrow-down-long"></i> Swipe Down</span>
+              <span class="help-desc">Load Previous Card</span>
+            </div>
+            <div class="help-row">
+              <span class="help-gesture"><i class="fa-solid fa-hand-back-fist"></i> Long Press</span>
+              <span class="help-desc">Toggle Star (with Vibration)</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
