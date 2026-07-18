@@ -1705,6 +1705,11 @@ body.desktop-device .study-link:hover {
     font-weight: 500;
   }
 
+  #help-btn::after {
+    content: "Help & Shortcuts";
+    font-weight: 500;
+  }
+
   .actions-wrapper .sync-indicator {
     order: -1;
     background: rgba(99, 102, 241, 0.08) !important;
